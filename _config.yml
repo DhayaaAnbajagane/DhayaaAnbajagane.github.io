@@ -82,10 +82,9 @@ analytics:
 author:
   name             : "Dhayaa Anbajagane"
   avatar           : "Dhayaa.jpg"
-  bio              : "PhD student at the University of Chicago. Interested in applying computational and statistical tools for Cosmology and Astrophysics"
+  bio              : "NSF Graduate Fellow at the University of Chicago. Interested in applying computational and statistical tools for Cosmology and Astrophysics"
   location         : "Chicago, IL"
-  location         : "University of Chicago"
-  employer         :
+  employer         : "University of Chicago"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : #"http://yourfullgooglescholarurl.com"
   email            : "dhayaa@uchicago.edu"
