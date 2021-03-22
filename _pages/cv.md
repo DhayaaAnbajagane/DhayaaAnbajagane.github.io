@@ -14,7 +14,7 @@ Education
 * B.S. in Physics (Honors), University of Michigan, Ann Arbor, 2020
 * Ph.D in Astronomy and Astrophysics, University of Chicago, 2025 (expected)
 
-<!--
+<!-- 
 Work experience
 ======
 * Summer 2015: Research Assistant
@@ -50,4 +50,4 @@ Teaching
   {% endfor %}</ul>
 Service and leadership
 ======
---!>
+ --!>
