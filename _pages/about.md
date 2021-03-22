@@ -14,8 +14,8 @@ Research Interests
 ------
 
 * Mass-estimation of Galaxy Clusters for cosmology
-		* Understanding the origin of the scatter in a given scaling relation
+	* Understanding the origin of the scatter in a given scaling relation
 * Convergence tests of multiple hydrodynamics simulations
 * N-pt correlation functions
 * *Interpretable* Machine Learning, Artificial Intelligence for astrophysics/cosmology
-		* Eg. Using Tree Regressors and CNNs but with complementary methods like [SHAP](https://github.com/slundberg/shap))
+	* Eg. Using Tree Regressors and CNNs but with complementary methods like [SHAP](https://github.com/slundberg/shap))
