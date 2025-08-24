@@ -1,0 +1,61 @@
+# If you have a `resume.json` file, copy it into `_data` and delete this file.
+# If you don't have a JSON Resume you can just edit this YAML file instead.
+# See also: <https://jsonresume.org/>.
+basics:
+  name: "Dhayaa Anbajagane"
+  label: "Cosmologist"
+  picture: ""
+  email: ""
+  phone: ""
+  website: ""
+  summary: >
+    A fifth year graduate student at UChicago, former undergrad at U. Michigan, 
+    and long-time resident of a coastal city in South India. I work on
+    all aspects of using structure formation for cosmology; making datasets from images, 
+    generating sims, validating models, and performing cosmological inference. 
+    My primary expertise is in photometric datasets, but I also work with mm-wave datasets
+    from CMB surveys.
+  location:
+    address: ""
+    postalCode: ""
+    city: "Chicago"
+    countryCode: "US"
+    region: "Illinois"
+  profiles:
+    - network: "LinkedIn"
+      username: "DhayaaAnbajagane"
+      url: "https://www.linkedin.com/in/anbajagane/"
+education:
+  - institution: "University of Chicago"
+    area: "Astronomy and Astrophysics"
+    studyType: "PhD"
+    startDate: "2020-10-01"
+    endDate: "2026-06-01 (expected)"
+    advisor: Chihway Chang
+
+  - institution: "University of Michigan, Ann Arbor"
+    area: "Physics (honors)"
+    studyType: "Undergrad"
+    startDate: "2016-09-05"
+    endDate: "2020-04-28"
+    advisor: Gus Evrard
+
+awards:
+  - title: "CCAP Price award"
+    date: "2023-08-01"
+    awarder: "OSU CCAPP"
+    summary: >
+      "Recognizes research excellence and exceptional promise in areas related to 
+      initiatives of the Center of Cosmology and Astroparticle physics at Ohio State University." 
+      Awarded to two students per year, globally.
+
+publications:
+  - name: See my full CV linked above
+
+languages:
+  - language: "English"
+    fluency: "Native"
+  - language: "Tamil"
+    fluency: "Native"
+  - language: "French"
+    fluency: "Intermediate"
