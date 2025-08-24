@@ -23,27 +23,3 @@ I've built a couple of tools and datasets that are in use by the community. If y
 ## Get in touch!
 
 If you're looking to contact me, you can find me at dhayaa at uchicago dot edu. If you're a common slack workspace (the LSST one is quite bit ;)) just send me a message!
-
-~~~
-├── _featured_categories
-│   └── example.md
-├── _projects
-│   └── *
-├── docs
-├── example
-├── licenses
-├── assets
-│   └── img
-│       ├── blog
-│       ├── docs
-│       └── projects
-├── CHANGELOG.md
-├── forms-by-example.md
-├── LICENSE.md
-└── NOTICE.md
-~~~
-
-[documentation]: docs/README.md
-[install]: docs/install.md
-[upgrade]: docs/upgrade.md
-[config]: docs/config.md
