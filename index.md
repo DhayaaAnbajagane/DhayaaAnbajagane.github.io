@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 'வணக்கம்!'
-sitemap: false
+sitemap: true
 ---
 
 
