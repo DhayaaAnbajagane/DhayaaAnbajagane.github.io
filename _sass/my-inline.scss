@@ -2,3 +2,33 @@
 // .sidebar a {
 //   text-shadow: rgba(0, 0, 0, 0.25) 0.1rem 0.1rem 0.15rem;
 // }
+
+
+.tagbox {
+  font-size: 170%;        /* make the squares bigger */
+  line-height: 0;         /* avoid extra vertical spacing */
+  display: inline-block;  /* for consistent baseline control */
+  vertical-align: -0.08em;/* nudge down a bit to align with text */
+}
+
+
+/* Global heading color */
+h1, h2, h3, h4, h5, h6 { color: #ff8484; }
+
+/* Ensure links inside headings inherit the same color */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
+
+/* Default (light mode) */
+.project-card-title a {
+  color: #ff8484;   /* your chosen color */
+}
+
+/* Optional hover effect */
+.project-card-title a:hover {
+  color: #ff8484;
+}
+
+.content p {
+  text-align: justify;
+  text-justify: inter-word; /* improves spacing in some browsers */
+}
