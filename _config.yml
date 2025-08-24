@@ -61,7 +61,7 @@ menu:
   - title:             Data
     url:               /data/
   - title:             About
-    url:               /index/
+    url:               /
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -80,8 +80,8 @@ copyright:             © 2025. All rights reserved.
 permalink:             /blog/:categories/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
-paginate:              10
-paginate_path:         /blog/:num/
+# paginate:              10
+# paginate_path:         /blog/:num/
 
 
 # Theme

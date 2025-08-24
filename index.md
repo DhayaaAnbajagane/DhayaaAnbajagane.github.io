@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 
+title: 'வணக்கம்!'
 sitemap: false
 ---
 
