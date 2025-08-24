@@ -8,7 +8,7 @@ no_groups: true
 0. 
 {:toc}
 
-**The question that motivates me most is "what happened at the first moments in our Universe?".** I work on understanding fundamental physics from the earliest epochs of our Universe using observations of structure (weak lensing, galaxy clusters, tSZ etc.). This naturally requires working on better understanding how we go from pixels to objects, and also on the astrophysical processes occuring within these structures. As a result I work on a broader range of topics, spanning the measurement, modelling, and inference for all these probes.
+**The question that motivates me most is "what happened in the first moments after the Big Bang?".** I work on uncovering fundamental physics from these epochs using observations of structure (weak lensing, galaxy clusters, tSZ etc.). This naturally requires better understanding how we go from pixels to objects, and also what astrophysical processes occur within these structures. As a result I work on a broader range of topics, spanning the measurement, modelling, and inference for all these probes.
 
 The data products and software packages from my research projects can be found at my [data products page](/data.md) and [code page](/code.md).
 
@@ -16,13 +16,13 @@ The data products and software packages from my research projects can be found a
 ## Inflation and Cosmological Colliders
 Inflation is our leading theory for the physics governing the earliest epochs in our Universe, and for what generated fluctuations in the initial density field. This process is mediated by a particle dubbed the "inflaton". However, we still have fundamental questions about this epoch. How many particles participated in inflation? What are their masses, spins, symmetries, etc.? What kinds of interactions do they have with each other? Changes to this physics alters the initial density field, and therefore the late-time structure we see. Searching for these signatures is akin to particle colliders on the Earth, like the LHC, but now using correlations on the sky. So this research program is also commonly referred to as "Cosmological Colliders"
 
-A core part of my research program is building new tools to extend the modelling of these signatures and thereby use new measurements of structure to answer these questions. These novel methods are publicly available in the [`Aarambam`](https://github.com/DhayaaAnbajagane/Aarambam) package, while all simulations from my program are publicly available in the [`Ulagam` suite](https://ulagam-simulations.readthedocs.io/en/latest/). 
-
-
 ![](/assets/img/research/FeynmanDiagrams.svg){:.lead style="width:100%;height:auto;display:block;margin:0 auto"}
 
 *Feynman diagram sketches of the different kinds of particle interactions during the inflationary epoch. My work focuses on all three, with a particular focus on the "Massive Exchange" interactions, also referred to as the Cosmological Collider.*
 {:.figcaption}
+
+A core part of my research program is building new tools to extend the modelling of these signatures and thereby use new measurements of structure to answer these questions. These novel methods are publicly available in the [`Aarambam`](https://github.com/DhayaaAnbajagane/Aarambam) package, while all simulations from my program are publicly available in the [`Ulagam` suite](https://ulagam-simulations.readthedocs.io/en/latest/). 
+
 
 ## Weak lensing
 Weak gravitational lensing is the distortion of light from distant sources due to the matter intervening the source and us, the observer. It is a powerful, mature technique for mapping the distribution of all matter (even those that don't emit light, i.e. dark matter) in the visible Universe. I have worked on everything from the processing of pixel-level data, the measurement of galaxy shapes and redshifts from this data, building models to analyse the measurements, and obtaining cosmology results. We refer to this as the "pixels-to-cosmology" pipeline, and I had led this for the DECADE (Dark Energy Camera All Data Everywhere) Cosmic Shear project. All I have also been actively involved in the pixel-level processing for the Dark Energy Survey, and am now working on the upcoming Rubin Observatory data, which will dramatically improve our ability to measure lensing.
