@@ -353,10 +353,10 @@ plugins:
 # ---------------------------------------------------------------------------------------
 
 # Where you proof that you own this site (used by jekyll-seo-tag)
-google_site_verification: oUj1-CRJJmBMOTVd0R3ex1Cmtp0tLApad3vZ9dS21QY
+google_site_verification: 4OGYgaQ_2gbnePQ8S9PPafD0CwPviwR1Wm23zsGPrwI
 # -- or --
 # webmaster_verifications:
-#   google:              <verification-id>
+#   google:              4OGYgaQ_2gbnePQ8S9PPafD0CwPviwR1Wm23zsGPrwI
 #   bing:                <verification-id>
 #   alexa:               <verification-id>
 #   yandex:              <verification-id>
