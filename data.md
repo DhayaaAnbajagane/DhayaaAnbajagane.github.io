@@ -23,7 +23,7 @@ The [Ulagam simulation suite](https://ulagam-simulations.readthedocs.io/) is set
 
 ## DELVE DR3
 
-The DELVE datarelease can be found [at Noirlab here](https://datalab.noirlab.edu/data/delve). The coadd images, produced as part of the DECADE campaign within DELVE, cover an additional $$14,\!000 \,\,{\rm deg}^2$$ of sky outside the DES DR2. The catalogs from this coadd processing can be found at [this NOIRLab table](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.coadd_objects). The raw images are being uploaded currently.
+The DELVE datarelease can be found [at Noirlab here](https://datalab.noirlab.edu/data/delve). The coadd images, produced as part of the DECADE campaign within DELVE, cover an additional $$14,\!000 \,\,{\rm deg}^2$ of sky outside the DES DR2. The catalogs from this coadd processing can be found at [this NOIRLab table](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.coadd_objects). The raw images are being uploaded currently.
 
 
 ## DES Y6 Balrog

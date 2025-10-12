@@ -4,20 +4,29 @@ title: DECADE public release
 sitemap: False
 ---
 
+<style>
+.page__content strong.bold-red { color: #e53935 !important; }
+@media (prefers-color-scheme: dark) {
+  .page__content strong.bold-red { color: #ff6659 !important; }
+}
+</style>
+
 ## List of data products
 First, we list the different products made available so far. Each is detailed further below in its own subsection. If you do not see a product of interest in this list, please contact me! Our goal is to have made all useful products available right away.
 
-1. **SHEAR CATALOG:** The shear catalog is available at [Noirlab](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.decade_shear), and [via Globus](https://app.globus.org/file-manager?origin_id=40aa75a4-3d93-4c27-b42a-a28c9bed89ca). If you want to query small subsets, then the Noirlab portal is the best place to go. If you want to use the full catalog (e.g., for correlation studies) the Globus portal is easier. This portal also contains a single HDF5 file (`shear_catalog_sparse.hdf`) which is a curated subset of all objects relevant for the cosmology analysis alone. This is a significantly smaller subset of the full catalog.
+**1. Shear Catalog:**{: .bold-accent} The shear catalog is available at [Noirlab](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.decade_shear), and [via Globus](https://app.globus.org/file-manager?origin_id=40aa75a4-3d93-4c27-b42a-a28c9bed89ca). If you want to query small subsets, then the Noirlab portal is the best place to go. If you want to use the full catalog (e.g., for correlation studies) the Globus portal is easier. This portal also contains a single HDF5 file (`shear_catalog_sparse.hdf`) which is a curated subset of all objects relevant for the cosmology analysis alone. This is a significantly smaller subset of the full catalog.
 
 
-2. **COSMOLOGY LIKELIHOOD:** The full cosmology likelihood is available in the `cosmosis-standard-library`. The ini file for the decam13k likelihood is [here](https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/decam-13k.ini) and is the recommended starting point. This file can run a combination of DECADE NGC, DECADE SGC, and DES Y3.
+**2. Cosmology Likelihood:**{: .bold-accent} The full cosmology likelihood is available in the `cosmosis-standard-library`. The ini file for the decam13k likelihood is [here](https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/decam-13k.ini) and is the recommended starting point. This file can run a combination of DECADE NGC, DECADE SGC, and DES Y3.
 
 
-3. **COSMIC SHEAR DATAVECTORS:** The associated cosmic shear datavectors, ensemble redshift distributions, and covariance matrices are available [in this public folder](https://drive.google.com/drive/folders/1hg8m-Zyk87wCI-ajMn5XstGZQ4bWDVUc?usp=sharing), and also already in the `cosmosis-standard-library`. See the ini file mentioned above to see the relative filepath within the CSL library. They are also found in the `datavectors` and `n_of_z` folders within the [Globus]() endpoint.
+**3. Cosmic Shear Datavectors:**{: .bold-accent} The associated cosmic shear datavectors, ensemble redshift distributions, and covariance matrices are available [in this public folder](https://drive.google.com/drive/folders/1hg8m-Zyk87wCI-ajMn5XstGZQ4bWDVUc?usp=sharing), and also already in the `cosmosis-standard-library`. See the ini file mentioned above to see the relative filepath within the CSL library. They are also found in the `datavectors` and `n_of_z` folders within the [Globus]() endpoint.
 
 
-4. **DELVE DR3:** The superset `DELVE DR3` catalog, which contains all detected objects, is available at [Noirlab via a queryable database](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.coadd_objects). See also this page for more details on the [DELVE data release](https://datalab.noirlab.edu/data/delve). The raw coadd images, including a cutout service, are made available via Noirlab.
+**4. DELVE DR3:**{: .bold-accent} The superset `DELVE DR3` catalog, which contains all detected objects, is available at [Noirlab via a queryable database](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.coadd_objects). See also this page for more details on the [DELVE data release](https://datalab.noirlab.edu/data/delve). The raw coadd images, including a cutout service, are made available via Noirlab.
 
+
+**5. Cosmology Posteriors:**{: .bold-accent} The chains from the various results shown in [Anbajagane, Chang et. al (2025e)](https://arxiv.org/abs/2509.03582) are all available as MCMC chains [provided here](https://drive.google.com/drive/folders/1hg8m-Zyk87wCI-ajMn5XstGZQ4bWDVUc?usp=sharing). See the subsection below for details on what chains are available and what the filenames map to.
 
 ## Shear catalog
 
@@ -46,38 +55,38 @@ And here is a description of all the columns in the catalog:
 
 | Column | Description |
 |---|---|
-| COADD_OBJECT_ID | Unique identifier for the coadded objects |
+| COADD\_OBJECT\_ID | Unique identifier for the coadded objects |
 | DEC | Declination, in degrees |
-| DNF_D1 | DNF photo-z photometric directional distance to nearest neighbor. |
-| DNF_DE1 | DNF photo-z photometric Euclidean distance to nearest neighbor. |
-| DNF_ID1 | DNF photo-z COADD_OBJECT_ID corresponding to the nearest neighbor in the training sample. |
-| DNF_Z | DNF photo-z primary point estimate obtained by fitting to the directional neighborhood.|
-| DNF_ZN | DNF photo-z nearest neighbor spec-z. Useful for estimating N(z) for a given sample. |
-| DNF_ZSIGMA | DNF photo-z uncertainty estimate from photometric uncertainties and residuals from the neighborhood fit |
-| DNF_ZERR_FIT | DNF photo-z error term derived from the residuals of the regression fit |
-| DNF_ZERR_PARAM | DNF photo-z error term due to magnitude/flux uncertainties propagation |
-| DNF_NNEIGHBORS | DNF photo-z number of neighbors used for the DNF_Z estimate |
-| FLAGS_FOOTPRINT | Use FLAGS_FOOTPRINT == 1 to select objects inside the standard "Gold" footprint.|
-| FLAGS_FOREGROUND | Flag describing whether the object is contained in a region with a foreground astrophysical object; recommend FLAGS_FOREGROUND = 0 for general extragalactic studies. |
-| MCAL_FLAGS | use MCAL_FLAGS == 0 for the science sample |
-| MCAL_FLUX_(RIZ)_(NOSHEAR, 1P, 1M, 2P, 2M) | Metacal fluxes in r, i, z bands |
-| MCAL_FLUX_(RIZ)_(NOSHEAR, 1P, 1M, 2P, 2M)_DERED_SFD98 | extinction-corrected (SFD98) version of metacal fluxes |
-| MCAL_FLUX_(RIZ)_ERR_(NOSHEAR, 1P, 1M, 2P, 2M) | The 1sigma error on the metacal fluxes |
-| MCAL_FLUX_(RIZ)_ERR_(NOSHEAR, 1P, 1M, 2P, 2M)_DERED_SFD98 | The 1sigma error on the extinction-corrected metacal fluxes |
-| MCAL_G_1_(NOSHEAR, 1P, 1M, 2P, 2M) | First component of object ellipticity |
-| MCAL_G_2_(NOSHEAR, 1P, 1M, 2P, 2M) | Second component of object ellipticity |
-| MCAL_G_COV_0_0_(NOSHEAR, 1P, 1M, 2P, 2M) | Covariance of the G_1 estimate |
-| MCAL_G_COV_0_1_(NOSHEAR, 1P, 1M, 2P, 2M) | Cross covariance of G_1 and G2 |
-| MCAL_G_COV_1_0_(NOSHEAR, 1P, 1M, 2P, 2M) | Cross covariance of G_2 and G_1 (same as COV_0_1) |
-| MCAL_G_COV_1_1_(NOSHEAR, 1P, 1M, 2P, 2M) | Covariance of the G_2 estimate |
-| MCAL_W_(NOSHEAR, 1P, 1M, 2P, 2M) | Shear weights used in the cosmology analysis |
-| MCAL_PSF_G_1_NOSHEAR | First component of PSF ellipticity |
-| MCAL_PSF_G_2_NOSHEAR | Second component of PSF ellipticity |
-| MCAL_PSF_T_NOSHEAR | Size of the PSF |
-| MCAL_S2N_(NOSHEAR, 1P, 1M, 2P, 2M) | Signal-to-noise of the object |
-| MCAL_SEL_(NOSHEAR, 1P, 1M, 2P, 2M) | Object selection for the cosmology sample. If "mcal_sel == 0" the object is not selected. Objects are assigned values of [1, 4] depending on which tomographic redshift bin they are assigned to. |
-| MCAL_T_(NOSHEAR, 1P, 1M, 2P, 2M) | Size of the object (after PSF deconvolution) |
-| MCAL_T_RATIO_(NOSHEAR, 1P, 1M, 2P, 2M) | Ratio of  object and PSF sizes |
+| DNF\_D1 | DNF photo-z photometric directional distance to nearest neighbor. |
+| DNF\_DE1 | DNF photo-z photometric Euclidean distance to nearest neighbor. |
+| DNF\_ID1 | DNF photo-z COADD\_OBJECT\_ID corresponding to the nearest neighbor in the training sample. |
+| DNF\_Z | DNF photo-z primary point estimate obtained by fitting to the directional neighborhood.|
+| DNF\_ZN | DNF photo-z nearest neighbor spec-z. Useful for estimating N(z) for a given sample. |
+| DNF\_ZSIGMA | DNF photo-z uncertainty estimate from photometric uncertainties and residuals from the neighborhood fit |
+| DNF\_ZERR\_FIT | DNF photo-z error term derived from the residuals of the regression fit |
+| DNF\_ZERR\_PARAM | DNF photo-z error term due to magnitude/flux uncertainties propagation |
+| DNF\_NNEIGHBORS | DNF photo-z number of neighbors used for the DNF\_Z estimate |
+| FLAGS\_FOOTPRINT | Use FLAGS\_FOOTPRINT == 1 to select objects inside the standard "Gold" footprint.|
+| FLAGS\_FOREGROUND | Flag describing whether the object is contained in a region with a foreground astrophysical object; recommend FLAGS\_FOREGROUND = 0 for general extragalactic studies. |
+| MCAL\_FLAGS | use MCAL\_FLAGS == 0 for the science sample |
+| MCAL\_FLUX\_(RIZ)\_(NOSHEAR, 1P, 1M, 2P, 2M) | Metacal fluxes in r, i, z bands |
+| MCAL\_FLUX\_(RIZ)\_(NOSHEAR, 1P, 1M, 2P, 2M)\_DERED\_SFD98 | extinction-corrected (SFD98) version of metacal fluxes |
+| MCAL\_FLUX\_(RIZ)\_ERR\_(NOSHEAR, 1P, 1M, 2P, 2M) | The 1sigma error on the metacal fluxes |
+| MCAL\_FLUX\_(RIZ)\_ERR\_(NOSHEAR, 1P, 1M, 2P, 2M)\_DERED\_SFD98 | The 1sigma error on the extinction-corrected metacal fluxes |
+| MCAL\_G\_1\_(NOSHEAR, 1P, 1M, 2P, 2M) | First component of object ellipticity |
+| MCAL\_G\_2\_(NOSHEAR, 1P, 1M, 2P, 2M) | Second component of object ellipticity |
+| MCAL\_G\_COV\_0\_0\_(NOSHEAR, 1P, 1M, 2P, 2M) | Covariance of the G\_1 estimate |
+| MCAL\_G\_COV\_0\_1\_(NOSHEAR, 1P, 1M, 2P, 2M) | Cross covariance of G\_1 and G2 |
+| MCAL\_G\_COV\_1\_0\_(NOSHEAR, 1P, 1M, 2P, 2M) | Cross covariance of G\_2 and G\_1 (same as COV\_0\_1) |
+| MCAL\_G\_COV\_1\_1\_(NOSHEAR, 1P, 1M, 2P, 2M) | Covariance of the G\_2 estimate |
+| MCAL\_W\_(NOSHEAR, 1P, 1M, 2P, 2M) | Shear weights used in the cosmology analysis |
+| MCAL\_PSF\_G\_1\_NOSHEAR | First component of PSF ellipticity |
+| MCAL\_PSF\_G\_2\_NOSHEAR | Second component of PSF ellipticity |
+| MCAL\_PSF\_T\_NOSHEAR | Size of the PSF |
+| MCAL\_S2N\_(NOSHEAR, 1P, 1M, 2P, 2M) | Signal-to-noise of the object |
+| MCAL\_SEL\_(NOSHEAR, 1P, 1M, 2P, 2M) | Object selection for the cosmology sample. If "mcal\_sel == 0" the object is not selected. Objects are assigned values of [1, 4] depending on which tomographic redshift bin they are assigned to. |
+| MCAL\_T\_(NOSHEAR, 1P, 1M, 2P, 2M) | Size of the object (after PSF deconvolution) |
+| MCAL\_T\_RATIO\_(NOSHEAR, 1P, 1M, 2P, 2M) | Ratio of  object and PSF sizes |
 | RA | Right ascension |
 
 Note that the catalogs contain redshift point estimates from the "Directional Neighborhood Fitting" (DNF) algorithm. These were not used in our fiducial cosmology analysis, but are provided here as they are useful for cluster lensing and other downstream uses of the public catalog. This redshift was determined using the SOF (single object fitting) fluxes provided in the DELVE DR3 processing. 
