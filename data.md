@@ -13,14 +13,15 @@ My work produces a variety of datasets from telescope images and also from simul
 
 ## DECADE shear catalogs and datavectors
 
-The [shear catalogs](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.decade_shear) are immenent at the DataLab by NOIRLab. The datavector for the NGC and SGC regions is available at the `cosmosis-standard-library` [in this location](https://github.com/joezuntz/cosmosis-standard-library/tree/main/likelihood/decade). The associated decam likelihood can be run [using this ini](https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/decam-13k.ini). The datavectors and cosmology posteriors derived in [Anbajagane & Chang+ 2025e]() are available [in this public folder](https://drive.google.com/drive/folders/1hg8m-Zyk87wCI-ajMn5XstGZQ4bWDVUc?usp=sharing), with descriptions of filenames [in this table](../data_release/decade).
+We've made all the DECADE dataproducts available to the public. [Please view this page for a detailed listing](../data_release/decade) of the dataproducts, their documentation, and how to access them. There are multiple repositories for accessing the different data. If you don't see a product you want, please reach out to us! We're currently working on derived galaxy clustering samples and a galaxy cluster catalog using the coadd data.
+
 
 ## Ulagam simulations
 
 The [Ulagam simulation suite](https://ulagam-simulations.readthedocs.io/) is set a full-sky N-body simulations that are focused on resolving signatures from primordial physics in the deeply nonlinear regime. The original sims were introduced in [Anbajagane+ 2024](https://arxiv.org/abs/2310.02349), and additional sims were added in [Anbajagane & Lee 2025a]() and [Anbajagane & Lee 2025b]().
 
 
-## DELVE DR3 Gold
+## DELVE DR3
 
 The DELVE datarelease can be found [at Noirlab here](https://datalab.noirlab.edu/data/delve). The coadd images, produced as part of the DECADE campaign within DELVE, cover an additional $$14,\!000 \,\,{\rm deg}^2$$ of sky outside the DES DR2. The catalogs from this coadd processing can be found at [this NOIRLab table](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.coadd_objects). The raw images are being uploaded currently.
 

@@ -1,12 +1,94 @@
 ---
 layout: page
-title: DECADE chains
+title: DECADE public release
 sitemap: False
 ---
 
+## List of data products
+First, we list the different products made available so far. Each is detailed further below in its own subsection. If you do not see a product of interest in this list, please contact me! Our goal is to have made all useful products available right away.
+
+1. **SHEAR CATALOG:** The shear catalog is available at [Noirlab](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.decade_shear), and [via Globus](https://app.globus.org/file-manager?origin_id=40aa75a4-3d93-4c27-b42a-a28c9bed89ca). If you want to query small subsets, then the Noirlab portal is the best place to go. If you want to use the full catalog (e.g., for correlation studies) the Globus portal is easier. This portal also contains a single HDF5 file (`shear_catalog_sparse.hdf`) which is a curated subset of all objects relevant for the cosmology analysis alone. This is a significantly smaller subset of the full catalog.
+
+
+2. **COSMOLOGY LIKELIHOOD:** The full cosmology likelihood is available in the `cosmosis-standard-library`. The ini file for the decam13k likelihood is [here](https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/decam-13k.ini) and is the recommended starting point. This file can run a combination of DECADE NGC, DECADE SGC, and DES Y3.
+
+
+3. **COSMIC SHEAR DATAVECTORS:** The associated cosmic shear datavectors, ensemble redshift distributions, and covariance matrices are available [in this public folder](https://drive.google.com/drive/folders/1hg8m-Zyk87wCI-ajMn5XstGZQ4bWDVUc?usp=sharing), and also already in the `cosmosis-standard-library`. See the ini file mentioned above to see the relative filepath within the CSL library. They are also found in the `datavectors` and `n_of_z` folders within the [Globus]() endpoint.
+
+
+4. **DELVE DR3:** The superset `DELVE DR3` catalog, which contains all detected objects, is available at [Noirlab via a queryable database](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.coadd_objects). See also this page for more details on the [DELVE data release](https://datalab.noirlab.edu/data/delve). The raw coadd images, including a cutout service, are made available via Noirlab.
+
+
+## Shear catalog
+
+Both Noirlab and Globus have the entire base shear catalog, i.e. any and all measurements of shape made for the DECADE coadd detections. This is a significantly larger superset of the fiducial cosmology catalog. The latter is also provided as a single HDF5 file for ease of use. The cosmology selections can be applied as
+
+~~~python
+with h5py.File('shear_catalog_sparse.hdf5', 'r') as f:
+    mask = f['MCAL_SEL_NOSHEAR'] == bin_ind  
+~~~
+
+where `bin_ind = (1, 2, 3, 4)`. We denote unselected objects with `bin_ind = 0`. A file in the `scripts` directory of the Globus endpoint lists the shear response calculation required. The quick calibration parameters are found below. If you are not using our fiducial selection, these numbers will be different. If you subselect objects based on area, it is mostly fine to use the numbers below. If you subselect on magnitudes and colors, then that is no longer true. We may be able to provide you with recalibrated numbers for simpler selection choices, please reach out!
+
+| Bin | $$m$$ [$$10^{-2}$$] | $$\sigma(\langle z\rangle)$$ [$$10^{-2}$$] | $$R = (R_{11, \rm tot} + R_{22, \rm tot})/2$$ | 
+|-----------------|:-----------|:------------|:------------|
+| NGC Bin 1 | $$-0.92 \pm 0.296$$ | $$1.63$$ | $$0.836$$ |
+| NGC Bin 2 | $$-1.90 \pm 0.421$$ | $$1.39$$ | $$0.771$$ |
+| NGC Bin 3 | $$-4.00 \pm 0.428$$ | $$1.01$$ | $$0.741$$ |
+| NGC Bin 4 | $$-3.73 \pm 0.462$$ | $$1.17$$ | $$0.621$$ |
+| SGC Bin 1 | $$-1.33 \pm 0.472$$ | $$1.61$$ | $$0.844$$| 
+| SGC Bin 2 | $$-2.26 \pm 0.657$$ | $$1.40$$ | $$0.778$$| 
+| SGC Bin 3 | $$-3.67 \pm 0.697$$ | $$1.00$$ | $$0.748$$| 
+| SGC Bin 4 | $$-5.72 \pm 0.804$$ | $$1.16$$ | $$0.626$$| 
+
+
+And here is a description of all the columns in the catalog:
+
+| Column | Description |
+|---|---|
+| COADD_OBJECT_ID | Unique identifier for the coadded objects |
+| DEC | Declination, in degrees |
+| DNF_D1 | DNF photo-z photometric directional distance to nearest neighbor. |
+| DNF_DE1 | DNF photo-z photometric Euclidean distance to nearest neighbor. |
+| DNF_ID1 | DNF photo-z COADD_OBJECT_ID corresponding to the nearest neighbor in the training sample. |
+| DNF_Z | DNF photo-z primary point estimate obtained by fitting to the directional neighborhood.|
+| DNF_ZN | DNF photo-z nearest neighbor spec-z. Useful for estimating N(z) for a given sample. |
+| DNF_ZSIGMA | DNF photo-z uncertainty estimate from photometric uncertainties and residuals from the neighborhood fit |
+| DNF_ZERR_FIT | DNF photo-z error term derived from the residuals of the regression fit |
+| DNF_ZERR_PARAM | DNF photo-z error term due to magnitude/flux uncertainties propagation |
+| DNF_NNEIGHBORS | DNF photo-z number of neighbors used for the DNF_Z estimate |
+| FLAGS_FOOTPRINT | Use FLAGS_FOOTPRINT == 1 to select objects inside the standard "Gold" footprint.|
+| FLAGS_FOREGROUND | Flag describing whether the object is contained in a region with a foreground astrophysical object; recommend FLAGS_FOREGROUND = 0 for general extragalactic studies. |
+| MCAL_FLAGS | use MCAL_FLAGS == 0 for the science sample |
+| MCAL_FLUX_(RIZ)_(NOSHEAR, 1P, 1M, 2P, 2M) | Metacal fluxes in r, i, z bands |
+| MCAL_FLUX_(RIZ)_(NOSHEAR, 1P, 1M, 2P, 2M)_DERED_SFD98 | extinction-corrected (SFD98) version of metacal fluxes |
+| MCAL_FLUX_(RIZ)_ERR_(NOSHEAR, 1P, 1M, 2P, 2M) | The 1sigma error on the metacal fluxes |
+| MCAL_FLUX_(RIZ)_ERR_(NOSHEAR, 1P, 1M, 2P, 2M)_DERED_SFD98 | The 1sigma error on the extinction-corrected metacal fluxes |
+| MCAL_G_1_(NOSHEAR, 1P, 1M, 2P, 2M) | First component of object ellipticity |
+| MCAL_G_2_(NOSHEAR, 1P, 1M, 2P, 2M) | Second component of object ellipticity |
+| MCAL_G_COV_0_0_(NOSHEAR, 1P, 1M, 2P, 2M) | Covariance of the G_1 estimate |
+| MCAL_G_COV_0_1_(NOSHEAR, 1P, 1M, 2P, 2M) | Cross covariance of G_1 and G2 |
+| MCAL_G_COV_1_0_(NOSHEAR, 1P, 1M, 2P, 2M) | Cross covariance of G_2 and G_1 (same as COV_0_1) |
+| MCAL_G_COV_1_1_(NOSHEAR, 1P, 1M, 2P, 2M) | Covariance of the G_2 estimate |
+| MCAL_W_(NOSHEAR, 1P, 1M, 2P, 2M) | Shear weights used in the cosmology analysis |
+| MCAL_PSF_G_1_NOSHEAR | First component of PSF ellipticity |
+| MCAL_PSF_G_2_NOSHEAR | Second component of PSF ellipticity |
+| MCAL_PSF_T_NOSHEAR | Size of the PSF |
+| MCAL_S2N_(NOSHEAR, 1P, 1M, 2P, 2M) | Signal-to-noise of the object |
+| MCAL_SEL_(NOSHEAR, 1P, 1M, 2P, 2M) | Object selection for the cosmology sample. If "mcal_sel == 0" the object is not selected. Objects are assigned values of [1, 4] depending on which tomographic redshift bin they are assigned to. |
+| MCAL_T_(NOSHEAR, 1P, 1M, 2P, 2M) | Size of the object (after PSF deconvolution) |
+| MCAL_T_RATIO_(NOSHEAR, 1P, 1M, 2P, 2M) | Ratio of  object and PSF sizes |
+| RA | Right ascension |
+
+Note that the catalogs contain redshift point estimates from the "Directional Neighborhood Fitting" (DNF) algorithm. These were not used in our fiducial cosmology analysis, but are provided here as they are useful for cluster lensing and other downstream uses of the public catalog. This redshift was determined using the SOF (single object fitting) fluxes provided in the DELVE DR3 processing. 
+
+The metacal-based quantities have five variants. `Noshear` is the fiducial result, while `1p, 1m, 2p, 2m` are variants where the galaxy image was sheared in a specific direction. The latter are used to estimate the shear response. Metacal was only run on `riz` bands. 
+
+
+## Cosmology Posteriors
 This table describes the chains [provided here](https://drive.google.com/drive/folders/1hg8m-Zyk87wCI-ajMn5XstGZQ4bWDVUc?usp=sharing). In all analyses, we do not consider the shear ratio measurements from DES.
 
-## Table of filenames
+### Table of filenames
 
 | Filename | Description |
 |-----------------|:-----------|
@@ -27,7 +109,7 @@ This table describes the chains [provided here](https://drive.google.com/drive/f
 | decam13k-Tagn-wide.txt | The "Tagn Wide" constraints from the paper|
 
 
-## Reading out the chains
+### Reading out the chains
 
 Here are some utils for reading the chains into a dataframe.
 
