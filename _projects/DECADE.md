@@ -22,7 +22,7 @@ In a series of papers:
 2. [Anbajagane+ 2025b](https://arxiv.org/abs/2502.17675) for the redshift calibration 
 3. [Anbajagane, Chang+ 2025c](https://arxiv.org/abs/2502.17676) for the modelling/covariance validation and survey inhomogeneity checks
 4. [Anbajagane, Chang+ 2025d](https://arxiv.org/abs/2502.17677) for the first results using the NGC region, and 
-5. [Anbajagane, Chang+ 2025e]() for the final, NGC plus SGC results 
+5. [Anbajagane, Chang+ 2025e](https://arxiv.org/abs/2509.03582) for the final, NGC plus SGC results 
 
 I led the end-to-end analysis, from pixels to calibration to modelling to cosmology, of all the DECADE image data. The final dataset covers $$9,\!000\,{\rm deg}^2$$ on its own and $$13,\!000\,{\rm deg}^2$$ when combined with DES. Our modelling uses conservative choices (scale cuts, TATT IA modelling) and delivers the highest precision lensing constraints with these choices. The dataset triples the coverage of lensing surveys on the sky. The list of data products from this are found in [my data page](/data.md).
 
