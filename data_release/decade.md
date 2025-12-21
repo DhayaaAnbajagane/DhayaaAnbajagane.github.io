@@ -30,14 +30,23 @@ First, we list the different products made available so far. Each is detailed fu
 
 ## Shear catalog
 
-Both Noirlab and Globus have the entire base shear catalog, i.e. any and all measurements of shape made for the DECADE coadd detections. This is a significantly larger superset of the fiducial cosmology catalog. The latter is also provided as a single HDF5 file for ease of use. The cosmology selections can be applied as
+Both Noirlab and Globus have the entire base shear catalog, i.e. any and all measurements of shape made for the DECADE coadd detections. This is a significantly larger superset of the fiducial cosmology catalog. The latter catalog is also provided as a single HDF5 file for ease of use.
+
+### Shear selection
+
+The cosmology selections can be applied, starting from the sparse catalog, as
 
 ~~~python
 with h5py.File('shear_catalog_sparse.hdf5', 'r') as f:
-    mask = f['MCAL_SEL_NOSHEAR'] == bin_ind  
+    mask = f['MCAL_SEL_NOSHEAR'][:] == bin_ind  
 ~~~
 
-where `bin_ind = (1, 2, 3, 4)`. We denote unselected objects with `bin_ind = 0`. A file in the `scripts` directory of the Globus endpoint lists the shear response calculation required. The quick calibration parameters are found below. If you are not using our fiducial selection, these numbers will be different. If you subselect objects based on area, it is mostly fine to use the numbers below. If you subselect on magnitudes and colors, then that is no longer true. We may be able to provide you with recalibrated numbers for simpler selection choices, please reach out!
+where `bin_ind = (1, 2, 3, 4)`. We denote unselected objects with `bin_ind = 0`. 
+
+
+### Shear responses
+
+The `compute_response.py` file in the `scripts` directory of the Globus endpoint lists the shear response calculation required. The quick calibration parameters are found below. If you are not using our fiducial selection, these numbers will be different. If you subselect objects based on area, it is mostly fine to use the numbers below. If you subselect on magnitudes and colors, then that is no longer true. We may be able to provide you with recalibrated numbers for simpler selection choices, please reach out!
 
 | Bin | $$m$$ [$$10^{-2}$$] | $$\sigma(\langle z\rangle)$$ [$$10^{-2}$$] | $$R = (R_{11, \rm tot} + R_{22, \rm tot})/2$$ | 
 |-----------------|:-----------|:------------|:------------|
@@ -50,8 +59,19 @@ where `bin_ind = (1, 2, 3, 4)`. We denote unselected objects with `bin_ind = 0`.
 | SGC Bin 3 | $$-3.67 \pm 0.697$$ | $$1.00$$ | $$0.748$$| 
 | SGC Bin 4 | $$-5.72 \pm 0.804$$ | $$1.16$$ | $$0.626$$| 
 
+All of the above will compute the average response for a given ensemble. If you want them for individual galaxies, you can follow the script mentioned above, and do
 
-And here is a description of all the columns in the catalog:
+~~~python
+with h5py.File('shear_catalog_sparse.hdf5', 'r') as f:
+    R11 = (f['MCAL_G_1_1P'][:] - f['MCAL_G_1_1M'][:])/0.02
+    R22 = (f['MCAL_G_2_2P'][:] - f['MCAL_G_2_2M'][:])/0.02
+~~~
+
+
+
+### Column descriptions
+
+Here is a description of all the columns in the catalog:
 
 | Column | Description |
 |---|---|
