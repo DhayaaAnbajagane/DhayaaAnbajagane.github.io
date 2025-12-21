@@ -67,7 +67,7 @@ with h5py.File('shear_catalog_sparse.hdf5', 'r') as f:
     R22 = (f['MCAL_G_2_2P'][:] - f['MCAL_G_2_2M'][:])/0.02
 ~~~
 
-
+Note that the above is the response $$R_\gamma$$ pertaining to an individual galaxy. The ensemble-averaged response of a sample is $$R_{\rm tot} = \langle R_\gamma \rangle + R_{\rm sel}$$. This is the number listed in the table above, and computed in the script. Please [see Section 3.1 in the shear catalpg paper](https://arxiv.org/abs/2502.17674) for more details.
 
 ### Column descriptions
 
