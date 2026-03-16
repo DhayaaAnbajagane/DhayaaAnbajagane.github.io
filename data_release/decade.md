@@ -195,3 +195,43 @@ def setup_MCsamples(C, P):
     
     return F
 ~~~
+
+
+## Balrog catalog
+
+Balrog is a synthetic source injection catalog, designed to estimate the transfer function of DES and DECADE. It is produced by injecting simulated light profiles into the real images and reprocessing them the same way we do the data. This provides a mapping between input photometry and the output photometry/measurements.
+
+The catalog can be found in the `balrog/matched_catalog.hdf5` dataset. This contains two groups, `NGC` and `SGC`. In both cases, we simulated around 1000 coadd tiles, which is about 500 sq. deg, or 10% of the survey. Each group contains a variety of columns, noted below. The sample used for our main calibrations is selected using `mask = good_inj`. Any injections that are not in `good_inj` are discarded in our analysis. Selected objects can be found using the `selection` flag. This includes all area masks as well.
+
+>Note: Balrog in DECADE (following DES Y6) uses a new injection scheme, where some objects are injected many more times than others. This lets us boost the statistics of objects more likely to pass our selection cuts and make it into the final selection. All redshift estimation uses the probability, $$p({\rm sel}) = N_{\rm sel} / N_{\rm inj}$$, and is therefore agnostic to the differences in $$N_{\rm inj}$$ between two objects A and B. Any other uses of Balrog should ensure this preferential injection scheme is accounted for. Please reach out to Dhayaa if you have questions.
+{: .note }
+
+### Column descriptions
+
+Here is a description of all the columns in the catalog:
+
+| Column                            | Description |
+| --------------------------------- | ------------------------------------------------------------------- |
+| d_arcsec                          | Angular separation between the injected object position and the nearest detected object, in arcseconds. |
+| d_contam_arcsec                   | Angular distance to the second nearest neighbor object, in arcseconds. If this is < 1.5 arcsec, we consider the injection contaminated.|
+| dec                               | Declination of the detected object, in degrees.|
+| good_inj                          | Flag indicating whether this specific injection is good for the cosmology analysis. Injections are removed if they come from deepfield objects that we don't use (e.g., they only have 4-band and not 8-band flux measurements), or fail the d_contam_arcsec < 1.5 cut.|
+| id_y3_deepfield                   | Unique identifier of the injection associated with the DES Y3 deep field catalog.  |
+| injection_class                   | Index identifying which injection scheme the object was placed under. Follows, 0 - uniform/random sampling, 1 - preferentially sample mag_i < 23.5 with sigmoid, 2 - Same as (1) but only inject deepfield objects with redshift estimates.|
+| mcal_T_noshear                    | Size of the object (after PSF deconvolution) |
+| mcal_T_ratio_noshear              | Ratio of  object and PSF sizes |
+| mcal_flux_noshear_dered_sfd98     | Flux (in riz) corrected for Galactic extinction using the SFD98. Convert to mag as $$m = 30 - 2.5\\log_{10}f$$|
+| mcal_flux_err_noshear_dered_sfd98 | Flux (in riz) corrected for Galactic extinction using the SFD98. |
+| mcal_g_noshear                    | Object ellipticity components |
+| mcal_psf_T_noshear                | Size of the PSF  in arcsec^2 |
+| mcal_psf_g_noshear                | PSF ellipticity components |
+| mcal_s2n_noshear                  | Signal-to-noise ratio of the object.|
+| ra                                | Right ascension of the detected object, in degrees.                            |
+| selection                         | Flag indicating if the object passes the cosmology sample selection criteria   |
+| tomobin                           | Tomographic redshift bin assignment used for cosmological analysis. Some objecs that don't pass the selection criteria still have assignments, but note these objects are not actually used in anny calibrations. |
+| true_bdf_flux_i                   | True (i)-band flux in the object's BDF fit model from DES Y3 deepfields |
+| true_bdf_flux_r                   | True (r)-band flux in the object's BDF fit model from DES Y3 deepfields |
+| true_bdf_flux_z                   | True (z)-band flux in the object's BDF fit model from DES Y3 deepfields |
+| true_dec                          | Declination of the the chosen injection location |
+| true_ra                           | Right ascension of the the chosen injection location |
+| z_weights                         | The weighting used in redshift estimation, $$w_z = w_\gamma \times R_\gamma$$, which includes both the shear weight and the response. See equation (5) in [Paper II](https://arxiv.org/pdf/2502.17675)|
