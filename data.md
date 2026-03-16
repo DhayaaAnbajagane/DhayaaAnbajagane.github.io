@@ -11,7 +11,7 @@ no_groups: true
 My work produces a variety of datasets from telescope images and also from simulations. Here is a list of some of the dataproducts whose development I led or was heavily involved in, and how to get access to them.
 
 
-## DECADE shear catalogs and datavectors
+## DECADE shear catalogs, datavectors, and calibration products
 
 We've made all the DECADE dataproducts available to the public. [Please view this page for a detailed listing](../data_release/decade) of the dataproducts, their documentation, and how to access them. There are multiple repositories for accessing the different data. If you don't see a product you want, please reach out to us! We're currently working on derived galaxy clustering samples and a galaxy cluster catalog using the coadd data.
 
