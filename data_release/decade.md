@@ -29,7 +29,7 @@ First, we list the different products made available so far. Each is detailed fu
 **5. Cosmology Posteriors:**{: .bold-accent} The chains from the various results shown in [Anbajagane, Chang et. al (2025e)](https://arxiv.org/abs/2509.03582) are all available as MCMC chains [provided here](https://drive.google.com/drive/folders/1hg8m-Zyk87wCI-ajMn5XstGZQ4bWDVUc?usp=sharing). See the subsection below for details on what chains are available and what the filenames map to.
 
 
-**6. Balrog (SSI) Catalog:**{: .bold-accent} The Balrog catalog is available [via Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671). This is used to compute the transfer function, i.e., the probability of selecting an object in our sample given some object properties.
+**6. Balrog (SSI) Catalog:**{: .bold-accent} The Balrog catalog is available [via Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671). This is used to compute the transfer function, i.e., the probability of selecting an object in our sample given some object properties. The main file of interest is the ``balrog/matched_catalog.hdf5`` file, which contains the injections matched to their noisy, "widefield" realizations.
 
 
 ## Shear catalog
