@@ -6,7 +6,7 @@ sitemap: true
 
 
 ## Who am I?
-A fifth-year graduate student at UChicago and the Kavli Institute for Cosmological Physics. I did my undergrad at the University of Michigan (Go Blue!), and spent the eighteen years prior to that growing up in a coastal city in South India. I pronounce my name just the way it is written (Da-ya An-buh-jug-uh-ne). My full name in the Tamil script is written as தயா அன்பழகன். The phrase தயா is a Sanskrit word for compassion, and அன்பழகன் is derived from the Tamil word for beauty and affection.
+A sixth-year graduate student at UChicago and the Kavli Institute for Cosmological Physics. I will be starting as a NASA Einstein and KIPAC fellow at Stanford in Fall 2026. I did my undergrad at the University of Michigan (Go Blue!), and spent the eighteen years prior to that growing up in a coastal city in South India. I pronounce my name just the way it is written (Da-ya An-buh-jug-uh-neigh). My full name in the Tamil script is written as தயா அன்பழகன். The phrase தயா is a Sanskrit word for compassion, and அன்பழகன் is derived from the Tamil word for beauty and affection.
 
 
 ## What do I do?
