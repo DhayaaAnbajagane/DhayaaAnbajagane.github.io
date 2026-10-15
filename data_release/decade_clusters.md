@@ -1,13 +1,15 @@
 ---
 layout: page
 title: DECADE redMaPPer public release
-sitemap: False
+sitemap: true
 ---
 
 0. 
 {:toc}
 
 We have generated cluster catalogs for the DECADE and DES footprints, at richness thresholds λ > 20 (main sample) and λ > 5. This was produced using redMaPPer v0.8.7. For each footprint we provide clusters with halo mass estimates, member galaxies, randoms and per-cluster weak-lensing profiles.
+
+All cluster products can be found at the same [Globus endpoint](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671) used for the shear data. Please look in the `cluster catalog` folder.
 
 <!-- TODO: add paper link / arXiv number and a citation request -->
 

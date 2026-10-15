@@ -6,11 +6,13 @@ description: >
   the tSZ effect, and primordial physics with late-time structure.
 hide_description: true
 left_column:
-  - work
-  - education
-  - volunteer
+  - cv:work
+  - cv:education
+  - cv:service
+  - cv:teaching
+  - cv:mentoring
 right_column:
-  - awards
+  - cv:awards
   - languages
 no_language_icons: false
 no_skill_icons: false

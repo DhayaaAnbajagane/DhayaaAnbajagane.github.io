@@ -25,7 +25,8 @@ title:                 Dhayaa Anbajagane
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  "Dhayaa Anbajagane - cosmology PhD researcher at the University of Chicago (KICP): methods, data products, publications, and code."
+  Dhayaa Anbajagane, NASA Einstein and KIPAC Fellow at Stanford: cosmology with weak lensing,
+  galaxy clusters, the tSZ effect, and primordial physics. Research, publications, code, and data releases.
 
 # A shorter description for the sidebar.
 tagline:               "Cosmology. Coding. <span class='tagbox' aria-hidden='true'>&#x25A0;&#x25A0;</span>."
@@ -43,7 +44,6 @@ logo:                  /assets/img/Profile.jpg
 author:
   # Used by `jekyll-feed`:
   name:                Dhayaa Anbajagane
-  email:               None
   url:                 "https://dhayaaanbajagane.github.io"  # Google recommends author.url
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
@@ -65,13 +65,7 @@ menu:
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
-legal:
-  - title:             LICENSE
-    url:               /LICENSE/
-  - title:             NOTICE
-    url:               /NOTICE/
-  - title:             CHANGELOG
-    url:               /CHANGELOG/
+legal:                []
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2026. All rights reserved.
@@ -107,7 +101,7 @@ accent_color:          rgb(79,177,186)
 # Defaults to `accent_color`.
 theme_color:           rgb(25,55,71)
 
-favicon: /assets/img/Galaxy.jpg
+favicon: /assets/icons/favicon-32x32.png
 
 # IMPORTANT:
 # As of Hydejack 9.2, Google Fonts are turned off by default due to a stronger focus on privacy.
@@ -248,7 +242,7 @@ hydejack:
   no_theme_color:      false
 
   # Disable the breadcrumbs above the title
-  no_breadcrumbs:      false
+  no_breadcrumbs:      true
 
   # Set to `true` when building with the `--lsi` option.
   # The net effect is to use the Jekyll-provided `site.related_posts` variable.
@@ -325,10 +319,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - functions
+  # Local copies of the CV (the published PDF is assets/CV.pdf)
+  - My_CV*
 include:
   - _routes.json
   - .well-known
-  - LICENSE.md
 
 
 # Plugins

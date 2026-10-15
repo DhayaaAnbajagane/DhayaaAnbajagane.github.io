@@ -1,0 +1,278 @@
+{
+ "source": "Overleaf",
+ "sections": {
+  "work": {
+   "title": "Research Positions",
+   "entries": [
+    {
+     "when": "2026 –",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">NASA Einstein Fellow</strong> at Stanford"
+     ]
+    },
+    {
+     "when": "2026 –",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">KIPAC Fellow</strong> at Stanford/SLAC."
+     ]
+    }
+   ]
+  },
+  "education": {
+   "title": "Education",
+   "entries": [
+    {
+     "when": "2020 – 2026",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Ph.D., University of Chicago</strong> in Astronomy and Astrophysics.",
+      "Advisor: Chihway Chang",
+      "Thesis: <em>\"Constraining the physics of inflation using wide-field weak lensing and tSZ surveys\"</em>",
+      "Research Interests: Weak lensing, inflation, wide-field photometric surveys, millimeter-wave surveys, cosmological simulations, data processing"
+     ]
+    },
+    {
+     "when": "2016 – 2020",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">B.Sc., University of Michigan, Ann Arbor</strong> in Physics.",
+      "Advisor: August Evrard",
+      "Thesis: <em>“Stellar property statistics of massive halos in cosmological simulations”</em>."
+     ]
+    }
+   ]
+  },
+  "teaching": {
+   "title": "Teaching",
+   "entries": [
+    {
+     "when": "Spring 2023, 2024",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Intro to Astrophysics</strong>, Teaching Assistant &amp; Guest lecturer for ASTRO 133, Introduction to Astrophysics for Majors"
+     ]
+    },
+    {
+     "when": "Summer 2020, 2021",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">General Relativity</strong>, Teaching Assistant for Michigan Math and Science Scholars — a 3 week summer program for high school students"
+     ]
+    }
+   ]
+  },
+  "awards": {
+   "title": "Awards and Honors",
+   "entries": [
+    {
+     "when": "2026",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">NASA Hubble Einstein Fellowship</strong>"
+     ]
+    },
+    {
+     "when": "2026",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Stanford KIPAC Fellowship</strong>"
+     ]
+    },
+    {
+     "when": "2026",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">NASA Brinson Fellowship (Declined)</strong>"
+     ]
+    },
+    {
+     "when": "2026",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Perimeter Institute Senior Named Fellowship (Declined)</strong>"
+     ]
+    },
+    {
+     "when": "2026",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Princeton Spitzer Fellowship (Declined)</strong>"
+     ]
+    },
+    {
+     "when": "2026",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Berkeley BCCP Fellowship (Declined)</strong>"
+     ]
+    },
+    {
+     "when": "2025",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">DES Builder,</strong> recognition for building key DES infrastructure, primarily related to image processing, catalog generation, redshift/shear estimation, and other survey calibrations/characterizations."
+     ]
+    },
+    {
+     "when": "2023",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">CCAPP Price Prize,</strong> “recognizes research excellence and exceptional promise in areas related to initiatives of the Center of Cosmology and Astroparticle physics at Ohio State University.” Awarded to two students per year, globally."
+     ]
+    },
+    {
+     "when": "2023",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">DELVE Builder,</strong> recognition for leading development of weak lensing pipeline, shear catalogs, redshift catalogs, and calibrations for the DELVE survey"
+     ]
+    },
+    {
+     "when": "2020",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">NSF Graduate Research Fellow,</strong> awarded $100,000+ over 3 years for development of personal research program."
+     ]
+    },
+    {
+     "when": "2019",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Honors Fellow,</strong> University of Michigan. Awarded $10,000 for developing undergraduate thesis work within an interdisciplinary cohort. Given to 25 students per year."
+     ]
+    },
+    {
+     "when": "2019",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Graf-Meiland Scholar,</strong> University of Michigan. Awards $5,000 each to three students annually for excellence in interdisciplinary research and academic pedagogy"
+     ]
+    }
+   ]
+  },
+  "service": {
+   "title": "Service",
+   "entries": [
+    {
+     "when": "2022 – now",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Working group lead, Synthetic Source Injection</strong>, Dark Energy Survey. <em>Lead a group of grad students, postdocs, and senior researchers in developing data-driven methods to calibrate the image data and processing pipelines for the Dark Energy Survey legacy dataset. Our group produced the largest synthetic, calibration catalog to date.</em>"
+     ]
+    },
+    {
+     "when": "2022 – now",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Organizer, Broader Horizons seminar series</strong>, Astronomy and Astrophysics, University of Chicago. <em>Lead a seminar series that invites former dept. alumni to visit the dept. and present their academic/industry experiences to our community.</em>"
+     ]
+    },
+    {
+     "when": "2022 – now",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Graduate Rep., Committee on dept. community</strong>, Astronomy and Astrophysics, University of Chicago. <em>Oversee community-wide survey of dept., used to inform dept. policy changes. Lead procurement and development of dept. resources for our community, such as student guides, alumni lists, professional development seminars etc.</em>"
+     ]
+    },
+    {
+     "when": "2023",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Volunteer lecturer, Lifelong learning</strong> <em>Served as a speaker for the Lifelong learning program, giving astronomy talks to senior citizens.</em>"
+     ]
+    },
+    {
+     "when": "2023",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Volunteer assistant, Space Explorers</strong> <em>Served as voluntary teaching assistant in program for high school students in the Chicago south side community</em>"
+     ]
+    }
+   ]
+  },
+  "mentoring": {
+   "title": "Mentoring",
+   "entries": [
+    {
+     "when": "2026 –",
+     "students": [
+      {
+       "name": "Kyle Miller",
+       "now": "",
+       "project": "<em>PNG constraints with WL 3pt functions</em>"
+      },
+      {
+       "name": "Ben Sherwin",
+       "now": "",
+       "project": "<em>Baryons and Cosmology from 3pt cross-correlations</em>"
+      },
+      {
+       "name": "Lyla Choi",
+       "now": "",
+       "project": "<em>Non-linear predictions of cosmological colliders</em>"
+      }
+     ]
+    },
+    {
+     "when": "2025 –",
+     "students": [
+      {
+       "name": "Manuel Gaido",
+       "now": "",
+       "project": "<em>Population-level cosmology analyses of optical galaxy clusters</em>"
+      },
+      {
+       "name": "Raul Texeira",
+       "now": "",
+       "project": "<em>Systematics calibration of clustering in weak lensing samples</em>"
+      }
+     ]
+    },
+    {
+     "when": "2024 –",
+     "students": [
+      {
+       "name": "Camilla Delgado",
+       "now": "",
+       "project": "<em>Connecting simulation subgrid models to baryon imprints</em>"
+      },
+      {
+       "name": "Elisa (Jiayi) Gao",
+       "now": "",
+       "project": "<em>Modelling the distribution of halo concentration with normalizing flows</em>"
+      }
+     ]
+    },
+    {
+     "when": "2025 – 2026",
+     "students": [
+      {
+       "name": "Benjamin Cohen",
+       "now": "PhD at Princeton",
+       "project": "<em>Probing the physics of inflation with dwarf galaxies</em>"
+      }
+     ]
+    },
+    {
+     "when": "2023 – 2024",
+     "students": [
+      {
+       "name": "Zhuoqi (Jackie) Zhang",
+       "now": "PhD at Stanford",
+       "project": "<em>Validation of the DECADE cosmic shear catalog</em>"
+      },
+      {
+       "name": "Nathalie Chicoine",
+       "now": "PhD at UPitt",
+       "project": "<em>Modelling choices for DECADE cosmic shear</em>"
+      }
+     ]
+    },
+    {
+     "when": "2022 – 2024",
+     "students": [
+      {
+       "name": "Mufan (Jon) Shao",
+       "now": "PhD at Princeton",
+       "project": "<em>Baryonic effects on halo properties</em>"
+      },
+      {
+       "name": "Raul Teixeira",
+       "now": "PhD at Duke",
+       "project": "<em>Photometric redshift estimates in the DECADE survey</em>"
+      },
+      {
+       "name": "Louise Gagnon",
+       "now": "Consultant at IBM",
+       "project": "<em>Observability of primordial signatures on large-scales</em>"
+      },
+      {
+       "name": "Samuel Charney",
+       "now": "PhD at UWash",
+       "project": "<em>Analytic model of cosmological shocks around galaxy clusters</em>"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,15 +1,8 @@
 ---
 layout: page
 title: DECADE public release
-sitemap: False
+sitemap: true
 ---
-
-<style>
-.page__content strong.bold-red { color: #e53935 !important; }
-@media (prefers-color-scheme: dark) {
-  .page__content strong.bold-red { color: #ff6659 !important; }
-}
-</style>
 
 0. 
 {:toc}
@@ -20,7 +13,7 @@ First, we list the different products made available so far. Each is detailed fu
 **1. Shear Catalog:**{: .bold-accent} The shear catalog is available at [Noirlab](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.decade_shear), and [via Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671). If you want to query small subsets, then the Noirlab portal is the best place to go. If you want to use the full catalog (e.g., for correlation studies) the Globus portal is easier. This portal also contains a single HDF5 file (`shear_catalog_sparse.hdf5`) which is a curated subset of all objects relevant for the cosmology analysis alone. This is a significantly smaller subset of the full catalog. The Globus portal also contains the redshift distributions for the four bins. The necessary calibrations are found in the Table below, and can also be obtained from the [paper release here](/_projects/DECADE.md). You will need to apply the shear response yourself.
 
 
-**2. Cosmology Likelihood:**{: .bold-accent} The full cosmology likelihood is available in the `cosmosis-standard-library`. The ini file for the decam13k likelihood is [here](https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/decam-13k.ini) and is the recommended starting point. This file can run a combination of DECADE NGC, DECADE SGC, and DES Y3. All the necessary data for the likelihood runs are already on cosmosis.
+**2. Cosmology Likelihood:**{: .bold-accent} The full cosmology likelihood is available in the `cosmosis-standard-library`. The ini file for the decam13k likelihood is [`decam-13k.ini` in the CosmoSIS standard library](https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/decam-13k.ini) and is the recommended starting point. This file can run a combination of DECADE NGC, DECADE SGC, and DES Y3. All the necessary data for the likelihood runs are already on cosmosis.
 
 
 **3. Cosmic Shear Datavectors:**{: .bold-accent} The associated cosmic shear datavectors, ensemble redshift distributions, and covariance matrices are available [in this public folder](https://drive.google.com/drive/folders/1hg8m-Zyk87wCI-ajMn5XstGZQ4bWDVUc?usp=sharing), and also already in the `cosmosis-standard-library`. See the ini file mentioned above to see the relative filepath within the CSL library. They are also found in the `datavectors` and `n_of_z` folders within the [Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671) endpoint.
@@ -135,6 +128,8 @@ Both Noirlab and Globus have the entire base shear catalog, i.e. any and all mea
 The cosmology selections can be applied, starting from the sparse catalog, as
 
 ~~~python
+import h5py
+
 with h5py.File('shear_catalog_sparse.hdf5', 'r') as f:
     mask = f['MCAL_SEL_NOSHEAR'][:] == bin_ind  
 ~~~
@@ -160,6 +155,8 @@ The `compute_response.py` file in the `scripts` directory of the Globus endpoint
 All of the above will compute the average response for a given ensemble. If you want them for individual galaxies, you can follow the script mentioned above, and do
 
 ~~~python
+import h5py
+
 with h5py.File('shear_catalog_sparse.hdf5', 'r') as f:
     R11 = (f['MCAL_G_1_1P'][:] - f['MCAL_G_1_1M'][:])/0.02
     R22 = (f['MCAL_G_2_2P'][:] - f['MCAL_G_2_2M'][:])/0.02
@@ -167,7 +164,7 @@ with h5py.File('shear_catalog_sparse.hdf5', 'r') as f:
 
 Note that the above is the response $$R_\gamma$$ pertaining to an individual galaxy. The ensemble-averaged response of a sample is $$R_{\rm tot} = \langle R_\gamma \rangle + R_{\rm sel}$$. This is the number listed in the table above, and computed in the script. Please [see Section 3.1 in the shear catalog paper](https://arxiv.org/abs/2502.17674) for more details.
 
-### Column descriptions
+### Shear catalog columns
 
 Here is a description of all the columns in the catalog:
 
@@ -205,7 +202,7 @@ Here is a description of all the columns in the catalog:
 | MCAL\_SEL\_(NOSHEAR, 1P, 1M, 2P, 2M) | Object selection for the cosmology sample. If "mcal\_sel == 0" the object is not selected. Objects are assigned values of [1, 4] depending on which tomographic redshift bin they are assigned to. |
 | MCAL\_T\_(NOSHEAR, 1P, 1M, 2P, 2M) | Size of the object (after PSF deconvolution) |
 | MCAL\_T\_RATIO\_(NOSHEAR, 1P, 1M, 2P, 2M) | Ratio of object and PSF sizes |
-| RA | Right ascension |
+| RA | Right ascension, in degrees |
 
 Note that the catalogs contain redshift point estimates from the "Directional Neighborhood Fitting" (DNF) algorithm. These were not used in our fiducial cosmology analysis, but are provided here as they are useful for cluster lensing and other downstream uses of the public catalog. This redshift was determined using the SOF (single object fitting) fluxes provided in the DELVE DR3 processing. 
 
@@ -310,7 +307,7 @@ Balrog is a synthetic source injection catalog, designed to estimate the transfe
 >Balrog in DECADE (following DES Y6) uses a new injection scheme, where some objects are injected many more times than others. This lets us boost the statistics of objects more likely to pass our selection cuts and make it into the final selection. All redshift estimation uses the probability, $$p({\rm sel}) = N_{\rm sel} / N_{\rm inj}$$, and is therefore agnostic to the differences in $$N_{\rm inj}$$ between two objects A and B. Any other uses of Balrog should ensure this preferential injection scheme is accounted for. Please reach out to Dhayaa if you have questions.
 {: .note }
 
-### Column descriptions
+### Balrog catalog columns
 
 Here is a description of all the columns in the catalog:
 

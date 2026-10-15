@@ -13,12 +13,12 @@ My work produces a variety of datasets from telescope images and also from simul
 
 ## DECADE shear catalogs, datavectors, and calibration products
 
-We've made all the DECADE data products available to the public. [Please view this page for a detailed listing](../data_release/decade) of the data products, their documentation, and how to access them. There are multiple repositories for accessing the different data. If you don't see a product you want, please reach out to us!
+We've made all the DECADE data products available to the public. See the [DECADE shear data release page](/data_release/decade/) for a detailed listing of the data products, their documentation, and how to access them. There are multiple repositories for accessing the different data. If you don't see a product you want, please reach out to us!
 
 
 ## DECADE/DES cluster catalogs and lensing profiles
 
-We have produced redMaPPer catalogs for the DECADE and DES Y6 data. [Please view this page for a detailed listing](../data_release/decade_clusters) of the data products, their documentation, and how to access them. If you don't see a product you want, please reach out to us! The redMaGiC samples associated with this release will be provided at a later date, once their systematics calibration is complete.
+We have produced redMaPPer catalogs for the DECADE and DES Y6 data. See the [DECADE/DES cluster catalog release page](/data_release/decade_clusters/) for a detailed listing of the data products, their documentation, and how to access them. If you don't see a product you want, please reach out to us! The redMaGiC samples associated with this release will be provided at a later date, once their systematics calibration is complete.
 
 
 ## Ulagam simulations

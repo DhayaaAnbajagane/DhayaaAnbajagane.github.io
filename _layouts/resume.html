@@ -60,6 +60,7 @@ layout: base
         {% when 'interests' %}
           {% include pro/resume/interests.html %}
         {% else %}
+          {% include my-resume-section.html section=sec %}
         {% endcase %}
       {% endfor %}
     </div>
@@ -85,6 +86,7 @@ layout: base
         {% when 'interests' %}
           {% include pro/resume/interests.html %}
         {% else %}
+          {% include my-resume-section.html section=sec %}
         {% endcase %}
       {% endfor %}
     </div>

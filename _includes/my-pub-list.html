@@ -1,0 +1,59 @@
+{% comment %}
+  Publication list (summary line, color key, first-author papers and other major contributions),
+  shared by the CV page (_includes/my-resume-after.html) and the Publications page
+  (`show_publications: true`, rendered from _layouts/projects.html).
+  Papers come from _data/publications.json (refreshed weekly from NASA ADS by
+  .github/workflows/update-publications.yml) and are grouped and highlighted using
+  _data/publication_groups.yml. Supporting contributions are left to the PDF CV.
+{% endcomment %}
+{% assign pubs = site.data.publications %}
+{% assign groups = site.data.publication_groups %}
+{% assign major = groups.major %}
+<p class="faded">
+  {{ pubs.stats.papers }} publications{% if pubs.stats.citations %} with {{ pubs.stats.citations }} citations, h-index of {{ pubs.stats.h_index }}{% endif %};
+  {{ pubs.stats.first_author }} as first author{% if pubs.stats.first_author_citations %} ({{ pubs.stats.first_author_citations }} citations, h-index of {{ pubs.stats.first_author_h_index }}){% endif %}.
+  Updated {{ pubs.updated }} from {{ pubs.source }}. Below are first-author papers and other major contributions;
+  the full list is in the <a href="{{ '/assets/CV.pdf' | relative_url }}" class="no-mark-external">PDF CV</a> and on ADS
+  (<a href="https://ui.adsabs.harvard.edu/public-libraries/V1-FHcxYRwmT62YWWRMWEQ">all papers</a>,
+  <a href="https://ui.adsabs.harvard.edu/public-libraries/Gcx6QK7kSjmRDvLAGnvLdQ">led/co-led</a>).
+</p>
+<p class="cv-pub-key">
+  <strong class="cv-me">Me</strong>
+  <span class="cv-student">Students I mentored</span>
+</p>
+
+{% for group in (1..2) %}
+  {% if group == 1 %}{% assign heading = "First author publications" %}{% else %}{% assign heading = "Other major contributions" %}{% endif %}
+  <h3 class="h4">{{ heading }}</h3>
+  <ol class="cv-pub-list" reversed>
+  {% for p in pubs.papers %}
+    {% assign contrib = nil %}
+    {% if p.arxiv != "" %}{% assign contrib = major[p.arxiv] %}{% endif %}
+    {% unless contrib %}{% assign contrib = major[p.bibcode] %}{% endunless %}
+    {% if p.first_author %}{% assign g = 1 %}{% elsif contrib %}{% assign g = 2 %}{% else %}{% assign g = 3 %}{% endif %}
+    {% if g == group %}
+      {% comment %} Highlight mentored students: match whole names between the list's commas. {% endcomment %}
+      {% assign authors = ", " | append: p.authors_html | append: "," %}
+      {% for s in groups.students %}
+        {% assign from = ", " | append: s | append: "," %}
+        {% assign to = ', <span class="cv-student">' | append: s | append: '</span>,' %}
+        {% assign authors = authors | replace: from, to %}
+      {% endfor %}
+      {% assign len = authors.size | minus: 3 %}
+      {% assign authors = authors | slice: 2, len %}
+    <li>
+      <a href="{{ p.url }}">{{ p.title_html }}</a>,
+      {{ authors }}{% if p.journal != "" %}, <em>{{ p.journal | escape }}</em>{% endif %}, {{ p.year }}.
+      {% if g == 2 %}<em>Contrib: {{ contrib | escape }}.</em>{% endif %}
+      <span class="cv-pub-meta faded">
+        {% if p.citations and p.citations > 0 %}{{ p.citations }} citation{% if p.citations != 1 %}s{% endif %}{% endif %}
+        {% if p.bibcode != "" %}
+        <a href="{{ p.ads_url }}" class="no-mark-external">ADS</a>
+        <a href="https://ui.adsabs.harvard.edu/abs/{{ p.bibcode }}/exportcitation" class="no-mark-external">BibTeX</a>
+        {% endif %}
+      </span>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ol>
+{% endfor %}

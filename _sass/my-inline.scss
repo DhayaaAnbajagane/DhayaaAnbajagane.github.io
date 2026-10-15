@@ -9,20 +9,45 @@
 }
 
 
+/* Site palette: one set of colors with a light-mode and a dark-mode value each.
+   Light values keep text at WCAG contrast >= 4.5:1 on white; dark values are the original site colors.
+   The dark values are set for both the theme's dark-mode toggle (body.dark-mode) and the OS setting
+   (unless the toggle forces light mode), so the two always agree. */
+body {
+  --c-accent-red: #c2414b;  /* headings, project card titles */
+  --c-soft-red:   #b5525a;  /* highlighted text, CV item titles */
+  --c-teal:       #2a7f87;  /* my name in the publication list */
+  --c-blue:       #3f6fb0;  /* mentored students in the publication list */
+}
+
+body.dark-mode {
+  --c-accent-red: #ff8484;
+  --c-soft-red:   #f2a7a7;
+  --c-teal:       #a6dade;
+  --c-blue:       #b4cbef;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not(.light-mode) {
+    --c-accent-red: #ff8484;
+    --c-soft-red:   #f2a7a7;
+    --c-teal:       #a6dade;
+    --c-blue:       #b4cbef;
+  }
+}
+
 /* Global heading color */
-h1, h2, h3, h4, h5, h6 { color: #ff8484; }
+h1, h2, h3, h4, h5, h6 { color: var(--c-accent-red); }
 
 /* Ensure links inside headings inherit the same color */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
 
-/* Default (light mode) */
 .project-card-title a {
-  color: #ff8484;   /* your chosen color */
+  color: var(--c-accent-red);
 }
 
-/* Optional hover effect */
 .project-card-title a:hover {
-  color: #ff8484;
+  text-decoration: underline;
 }
 
 .content p {
@@ -34,7 +59,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
 .page__content strong.bold-accent,
 .content .bold-accent,
 .page__content .bold-accent {
-  color: #fea2a2 !important;   /* your red */
+  color: var(--c-soft-red) !important;
+}
+
+/* Content figures (`{:.lead}` images): full-width and centered by default; a figure can still
+   set its own width inline, e.g. `{:.lead style="width:80%"}` */
+#_main img.lead {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Click-to-zoom figures (medium-zoom, set up in _includes/my-scripts.html):
@@ -42,6 +76,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
   z-index: 1000;
+}
+
+/* Figures can also be zoomed from the keyboard (Enter/Space), so show where focus is */
+#_main img.lead[tabindex]:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
 }
 
 /* Scroll fade-in for figures; the script skips this when the visitor prefers reduced motion */
@@ -56,15 +96,21 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
   transform: none;
 }
 
-@media print {
-  .reveal { opacity: 1; transform: none; }
+/* Brief highlight on the heading you jump to (table of contents, section links) */
+@keyframes jump-target {
+  from { background-color: var(--accent-color-highlight); }
+  to   { background-color: transparent; }
+}
+
+#_main .is-target {
+  animation: jump-target 1.6s ease-out;
 }
 
 /* "Copied" toast shared by heading links and inline-code copy (see my-scripts.html) */
 .copy-toast {
   position: fixed;
   left: 50%;
-  bottom: 1.5rem;
+  bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
   z-index: 1001;
   max-width: calc(100vw - 2rem);
   padding: .4rem .8rem;
@@ -105,40 +151,44 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
   outline-offset: 1px;
 }
 
-/* Jargon tooltips: undo the theme's small-caps abbr style inside page content,
-   keep a dotted underline, and show the definition on focus (tap or keyboard).
-   Mouse users get the browser's native title tooltip. */
+/* A short flash on the code name you just copied */
+@keyframes copied-flash {
+  from { background-color: var(--accent-color-faded); }
+  to   { background-color: transparent; }
+}
+
+.click-to-copy.copied {
+  animation: copied-flash 700ms ease-out;
+}
+
+/* Jargon tooltips: undo the theme's small-caps abbr style inside page content and keep a dotted
+   underline. The definition itself is shown by Hydejack's own tooltip (on click/tap); the script
+   also opens it from the keyboard. */
 #_main abbr[title] {
-  position: relative;
   font-size: inherit;
   font-weight: inherit;
   text-transform: none;
   text-decoration: none;
-  border-bottom: 1px dotted var(--gray);
+  border-bottom: 1px dotted var(--border-color);
   cursor: help;
 }
 
-#_main abbr[data-title]:focus {
-  outline: none;
+/* No tooltip underline in titles: headings and the table of contents */
+#_main h1 abbr[title],
+#_main h2 abbr[title],
+#_main h3 abbr[title],
+#_main h4 abbr[title],
+#_main h5 abbr[title],
+#_main h6 abbr[title],
+#_main #markdown-toc abbr[title] {
+  border-bottom: none;
 }
 
-#_main abbr[data-title]:focus::after {
-  content: attr(data-title);
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + .4em);
-  z-index: 10;
-  width: max-content;
-  max-width: 16rem;
-  padding: .3em .6em;
-  border-radius: .25rem;
-  background: var(--body-color);
-  color: var(--body-bg);
-  font-size: .8rem;
-  line-height: 1.3;
-  text-align: left;
-  transform: translateX(-50%);
-  pointer-events: none;
+/* Pages wrapped in <div class="no-link-underline" markdown="1"> (e.g. code.md): links show only
+   the theme's external-link arrow, without the underline */
+#_main .no-link-underline a:not(.btn) {
+  text-decoration: none;
+  border-bottom: none;
 }
 
 /* GitHub / PyPI badges under the code headings */
@@ -152,8 +202,62 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
   border-bottom: none;
 }
 
+/* Collapsible blocks (e.g. the BibTeX list on the data release page) open smoothly where the
+   browser supports animating to `height: auto`; elsewhere they simply snap open. */
+:root {
+  interpolate-size: allow-keywords;
+}
+
+#_main details::details-content {
+  block-size: 0;
+  overflow: clip;
+  transition: block-size 250ms ease, content-visibility 250ms allow-discrete;
+}
+
+#_main details[open]::details-content {
+  block-size: auto;
+}
+
+/* Respect the visitor's reduced-motion setting, including for theme animations */
 @media (prefers-reduced-motion: reduce) {
-  .copy-toast { transition: none; }
+  .copy-toast,
+  #_main details::details-content {
+    transition: none;
+  }
+
+  #_main .is-target,
+  .click-to-copy.copied {
+    animation: none;
+  }
+
+  /* medium-zoom waits for its transition to end before closing, so shorten it rather than remove it.
+     `html` raises specificity above the styles medium-zoom injects. */
+  html .medium-zoom-image,
+  html .medium-zoom-overlay {
+    transition-duration: .01ms !important;
+  }
+
+  .project-card,
+  .project-card:hover {
+    transition: none;
+    transform: none;
+  }
+
+  .tippy-box {
+    transition-duration: 0s !important;
+  }
+}
+
+@media print {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .copy-toast {
+    display: none;
+  }
 }
 
 /* Extra CV sections (teaching, mentoring, publications) from _includes/my-resume-after.html */
@@ -174,7 +278,51 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
   text-align: left;
 }
 
+/* Publication titles: no underline; the theme's external-link arrow still marks them as links */
+#_main .cv-pub-list a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* CV page colors (from the site palette above): my name and mentored students in the
+   publication list, and the faint red item titles in the CV sections */
+.cv-publications .cv-me,
+.cv-pub-list strong {
+  color: var(--c-teal);
+}
+
+.cv-publications .cv-student {
+  color: var(--c-blue);
+}
+
+/* Item titles in the CV sections (the first bold phrase of each Overleaf entry); descriptions stay plain */
+.cv-section .cv-item-title {
+  color: var(--c-soft-red);
+}
+
+.cv-section p {
+  margin-bottom: .35rem;
+}
+
+/* Dates and citation counts: the theme's faded gray is just under 4.5:1 on white */
+.cv-section .faded,
+.cv-publications .faded {
+  color: var(--gray-text);
+}
+
+.cv-pub-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1.5rem;
+  font-size: .85em;
+}
+
 .cv-pub-list .faded {
   font-size: .85em;
   white-space: nowrap;
+}
+
+/* Citation count and ADS / BibTeX links after each paper */
+.cv-pub-meta a {
+  margin-left: .5em;
 }

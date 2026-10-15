@@ -33,3 +33,11 @@ layout: page
 
   {% if forloop.last %}</div>{% endif %}
 {% endfor %}
+
+{% comment %} Optional publication list below the project cards: `show_publications: true` in front matter {% endcomment %}
+{% if page.show_publications and site.data.publications.papers.size > 0 %}
+<section class="cv-extra cv-publications">
+  <h2 id="paper-list" class="h3 hr-bottom">Paper list <span class="symbol icon-book"></span></h2>
+  {% include my-pub-list.html %}
+</section>
+{% endif %}

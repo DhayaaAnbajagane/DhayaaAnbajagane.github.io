@@ -9,6 +9,7 @@ The CV page (_includes/my-resume-after.html) groups the papers using
 _data/publication_groups.yml; first-author papers are detected here.
 Only the standard library is used, so the workflow needs no installs.
 """
+import difflib
 import html
 import json
 import os
@@ -16,6 +17,7 @@ import re
 import sys
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import date
 
 ORCID = "0000-0003-3312-909X"
@@ -56,11 +58,48 @@ def format_authors(authors):
     return ", ".join(parts) + (", et al." if et_al else "")
 
 
+MATHML_NS = "http://www.w3.org/1998/Math/MathML"
+INLINE_FORMULA = re.compile(r"<inline-formula>(.*?)</inline-formula>", re.S)
+
+
+def mathml_html(node):
+    """Render a MathML element as HTML: text with <sup>/<sub>, single-letter variables in italics."""
+    tag = node.tag.split("}")[-1]
+    kids = list(node)
+    if tag in ("msup", "msub") and len(kids) == 2:
+        wrap = "sup" if tag == "msup" else "sub"
+        return f"{mathml_html(kids[0])}<{wrap}>{mathml_html(kids[1])}</{wrap}>"
+    if tag == "msubsup" and len(kids) == 3:
+        return f"{mathml_html(kids[0])}<sub>{mathml_html(kids[1])}</sub><sup>{mathml_html(kids[2])}</sup>"
+    if tag in ("mi", "mn", "mo", "mtext"):
+        text = html.escape((node.text or "").replace("\u00a0", " "), quote=False)
+        return f"<i>{text}</i>" if tag == "mi" and len(text) == 1 else text
+    return "".join(mathml_html(k) for k in kids)
+
+
+def inline_formula_html(fragment):
+    """Journal titles from ADS can embed MathML (e.g. "13,000 deg²"); fall back to its plain text."""
+    xml = fragment.replace("<mml:math", f'<mml:math xmlns:mml="{MATHML_NS}"', 1)
+    try:
+        return mathml_html(ET.fromstring(xml))
+    except ET.ParseError:
+        return html.escape(re.sub(r"<[^>]+>", "", fragment), quote=False)
+
+
 def title_html(title):
-    """Escape the title but keep ADS's <sup>/<sub> tags, and turn $...$ into MathJax \\(...\\)."""
-    out = html.escape(title.replace("~", " "), quote=False)
+    """Escape the title but keep ADS's <sup>/<sub> tags, render MathML, and turn $...$ into MathJax \\(...\\)."""
+    formulas = []
+
+    def stash(match):
+        formulas.append(inline_formula_html(match.group(1)))
+        return f"\x00{len(formulas) - 1}\x00"
+
+    out = INLINE_FORMULA.sub(stash, title.replace("~", " "))
+    out = html.escape(out, quote=False)
     out = re.sub(r"&lt;(/?)(sup|sub)&gt;", lambda m: f"<{m.group(1)}{m.group(2).lower()}>", out, flags=re.I)
-    return re.sub(r"\$([^$]+)\$", r"\\(\1\\)", out)
+    out = re.sub(r"\$([^$]+)\$", r"\\(\1\\)", out)
+    out = re.sub(r"\x00(\d+)\x00", lambda m: formulas[int(m.group(1))], out)
+    return re.sub(r"[ \u00a0]{2,}", " ", out).strip()
 
 
 def h_index(citations):
@@ -102,6 +141,41 @@ def build_record(doc):
     }
 
 
+def _plain(text):
+    return re.sub(r"[^a-z0-9]+", " ", html.unescape(re.sub(r"<[^>]+>", "", text)).lower()).strip()
+
+
+def merge_journal_versions(papers):
+    """Fold journal records that ADS kept apart from their preprint into that preprint.
+
+    ADS occasionally lists a journal version (no arXiv ID, sometimes retitled) as a separate
+    record. Such a record is merged into the preprint with the same first author and the most
+    similar title (at least 80% alike). Only records without an arXiv ID are ever merged, since
+    distinct preprints in a series can have near-identical titles.
+    """
+    with_arxiv = [p for p in papers if p["arxiv"]]
+    kept = list(with_arxiv)
+    for rec in (p for p in papers if not p["arxiv"]):
+        first = _plain(rec["authors_html"].split(",")[0])
+        best, best_ratio = None, 0.0
+        for cand in with_arxiv:
+            if _plain(cand["authors_html"].split(",")[0]) != first:
+                continue
+            ratio = difflib.SequenceMatcher(None, _plain(rec["title_html"]), _plain(cand["title_html"])).ratio()
+            if ratio > best_ratio:
+                best, best_ratio = cand, ratio
+        if best is None or best_ratio < 0.8:
+            kept.append(rec)
+            continue
+        # Keep the preprint's arXiv link; take the journal's title, venue and date.
+        for field in ("bibcode", "title_html", "journal", "year", "pubdate", "ads_url"):
+            if rec[field]:
+                best[field] = rec[field]
+        if rec["citations"] is not None:
+            best["citations"] = (best["citations"] or 0) + rec["citations"]
+    return kept
+
+
 def build_output(docs, source):
     papers = {}
     for doc in docs:
@@ -112,7 +186,7 @@ def build_output(docs, source):
         # ADS can list a preprint and its journal version separately; keep the better-cited one.
         if key not in papers or (rec["citations"] or 0) > (papers[key]["citations"] or 0):
             papers[key] = rec
-    ordered = sorted(papers.values(), key=lambda p: p["pubdate"], reverse=True)
+    ordered = sorted(merge_journal_versions(list(papers.values())), key=lambda p: p["pubdate"], reverse=True)
     first = [p for p in ordered if p["first_author"]]
     have_cites = any(p["citations"] is not None for p in ordered)
     stats = {
@@ -127,10 +201,17 @@ def build_output(docs, source):
 
 
 def write_if_changed(out):
-    """Write only when papers or stats changed, so unchanged weeks make no commit."""
+    """Write only when papers or stats changed, so unchanged weeks make no commit.
+
+    Refuses to write if the list shrank to under 80% of the current one, which points to a
+    partial ADS response rather than real changes.
+    """
     try:
         with open(OUT, encoding="utf-8") as f:
             old = json.load(f)
+        if len(out["papers"]) < 0.8 * len(old.get("papers", [])):
+            sys.exit(f"ADS returned {len(out['papers'])} papers, under 80% of the current "
+                     f"{len(old['papers'])}; leaving _data/publications.json unchanged.")
         if old.get("papers") == out["papers"] and old.get("stats") == out["stats"] and old.get("source") == out["source"]:
             print("No changes.")
             return

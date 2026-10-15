@@ -3,7 +3,6 @@
 # Change `author1` to your shortname.
 author1:
   name:              Dhayaa Anbajagane
-  email:             None
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
@@ -22,7 +21,7 @@ author1:
   # You can also provide an absolute URL (starting with https://) instead of usernames
   social:
     github:          DhayaaAnbajagane
-    email:           <dhayaa@stanford.edu>
+    email:           dhayaa@stanford.edu
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
     # google:          <number>

@@ -19,7 +19,8 @@ layout: base
 
 <article class="page mb6" role="article">
   <header>
-    <h1 class="page-title">{{ page.title }}</h1>
+    {% comment %} display_title: visible heading if different from the search/preview title; title_lang: its language {% endcomment %}
+    <h1 class="page-title"{% if page.title_lang %} lang="{{ page.title_lang }}"{% endif %}>{{ page.display_title | default: page.title }}</h1>
     {% include components/message.html text=page.description hide=page.hide_description %}
   </header>
 

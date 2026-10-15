@@ -4,7 +4,25 @@
 # - First-author papers are detected automatically.
 # - Papers listed under `major` show under "Other major contributions", with the text as the
 #   "Contrib:" note. Key them by arXiv ID (or by ADS bibcode if a paper has no arXiv ID).
-# - Every other paper shows under "Supporting contributions".
+# - Every other paper is left to the PDF CV (supporting contributions aren't listed on the page).
+# - Names under `students` are highlighted as mentored students, written exactly as they appear
+#   in the author lists on the page (e.g. "M. J. Shao"), since ADS spells some names differently.
+students:
+  - C. Delgado
+  - E. J. Gao
+  - M. Shao
+  - M. J. Shao
+  - E. L. Gagnon
+  - N. Chicoine
+  - R. Teixeira
+  - Z. Zhang
+  - S. Charney
+  - K. Miller
+  - B. Sherwin
+  - L. Choi
+  - M. Gaido
+  - B. Cohen
+
 major:
   "2610.03946": Primary academic mentor, coordinated and helped with entire analysis
   "2610.03544": Primary academic mentor, coordinated and helped with entire analysis

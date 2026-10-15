@@ -2,7 +2,7 @@
  "updated": "2026-10-15",
  "source": "NASA ADS",
  "stats": {
-  "papers": 74,
+  "papers": 73,
   "first_author": 18,
   "citations": 1411,
   "h_index": 22,
@@ -21,19 +21,6 @@
    "pubdate": "2026-10-00",
    "url": "https://arxiv.org/abs/2610.03447",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv261003447D",
-   "citations": 0
-  },
-  {
-   "bibcode": "2026ApJ..1010...47S",
-   "arxiv": "",
-   "title_html": "Backlighting the Universe with Fast Radio Bursts: An Anthology of Dispersion Measure Cross Correlations with Tracers of Large-scale Structure and Baryonic Matter",
-   "authors_html": "K. Sharma, E. Krause, V. Ravi, <strong>D. Anbajagane</strong>, et al.",
-   "first_author": false,
-   "journal": "The Astrophysical Journal",
-   "year": "2026",
-   "pubdate": "2026-10-00",
-   "url": "https://doi.org/10.3847/1538-4357/ae9a79",
-   "ads_url": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1010...47S",
    "citations": 0
   },
   {
@@ -76,6 +63,19 @@
    "citations": 0
   },
   {
+   "bibcode": "2026ApJ..1010...47S",
+   "arxiv": "2604.22105",
+   "title_html": "Backlighting the Universe with Fast Radio Bursts: An Anthology of Dispersion Measure Cross Correlations with Tracers of Large-scale Structure and Baryonic Matter",
+   "authors_html": "K. Sharma, E. Krause, V. Ravi, <strong>D. Anbajagane</strong>, et al.",
+   "first_author": false,
+   "journal": "The Astrophysical Journal",
+   "year": "2026",
+   "pubdate": "2026-10-00",
+   "url": "https://arxiv.org/abs/2604.22105",
+   "ads_url": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1010...47S",
+   "citations": 7
+  },
+  {
    "bibcode": "2026NatAs.tmp..196S",
    "arxiv": "2604.17162",
    "title_html": "Signatures of suppressed matter clustering revealed by fast radio bursts",
@@ -104,7 +104,7 @@
   {
    "bibcode": "2026PhRvD.114d3527A",
    "arxiv": "2509.03582",
-   "title_html": "Dark Energy Camera All Data Everywhere cosmic shear project. V. Constraints on cosmology and astrophysics from 270 million galaxies across &lt;inline-formula&gt;&lt;mml:math&gt;&lt;mml:mn&gt;13,000&lt;/mml:mn&gt;&lt;mml:mtext&gt; &lt;/mml:mtext&gt;&lt;mml:mrow&gt;&lt;mml:msup&gt;&lt;mml:mrow&gt;&lt;mml:mi&gt;deg&lt;/mml:mi&gt;&lt;/mml:mrow&gt;&lt;mml:mrow&gt;&lt;mml:mn&gt;2&lt;/mml:mn&gt;&lt;/mml:mrow&gt;&lt;/mml:msup&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; of the sky",
+   "title_html": "Dark Energy Camera All Data Everywhere cosmic shear project. V. Constraints on cosmology and astrophysics from 270 million galaxies across 13,000 deg<sup>2</sup> of the sky",
    "authors_html": "<strong>D. Anbajagane</strong>, C. Chang, A. Drlica-Wagner, et al.",
    "first_author": true,
    "journal": "Physical Review D",
@@ -195,7 +195,7 @@
   {
    "bibcode": "2026PhRvD.113l3549D",
    "arxiv": "2510.23565",
-   "title_html": "Dark Energy Survey Year 6 results: Clustering redshifts and importance sampling of self-organized-maps &lt;inline-formula&gt;&lt;mml:math&gt;&lt;mml:mi&gt;n&lt;/mml:mi&gt;&lt;mml:mo&gt;(&lt;/mml:mo&gt;&lt;mml:mi&gt;z&lt;/mml:mi&gt;&lt;mml:mo&gt;)&lt;/mml:mo&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; realizations for &lt;inline-formula&gt;&lt;mml:math&gt;&lt;mml:mn&gt;3&lt;/mml:mn&gt;&lt;mml:mo&gt;×&lt;/mml:mo&gt;&lt;mml:mn&gt;2&lt;/mml:mn&gt;&lt;mml:mi&gt;pt&lt;/mml:mi&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; samples",
+   "title_html": "Dark Energy Survey Year 6 results: Clustering redshifts and importance sampling of self-organized-maps &lt;i&gt;n&lt;/i&gt;(&lt;i&gt;z&lt;/i&gt;) realizations for 3×2pt samples",
    "authors_html": "W. d&#x27;Assignies, G. M. Bernstein, B. Yin, et al.",
    "first_author": false,
    "journal": "Physical Review D",
@@ -284,22 +284,9 @@
    "citations": 14
   },
   {
-   "bibcode": "2026arXiv260422105S",
-   "arxiv": "2604.22105",
-   "title_html": "Backlighting the Cosmic Web with Fast Radio Bursts: An Anthology of Dispersion Measure Cross-Correlations with Large-Scale Structure and Baryon Tracers",
-   "authors_html": "K. Sharma, E. Krause, V. Ravi, <strong>D. Anbajagane</strong>, et al.",
-   "first_author": false,
-   "journal": "",
-   "year": "2026",
-   "pubdate": "2026-04-00",
-   "url": "https://arxiv.org/abs/2604.22105",
-   "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv260422105S",
-   "citations": 7
-  },
-  {
    "bibcode": "2026PhRvD.113h1303G",
    "arxiv": "2509.03798",
-   "title_html": "DECADE+DES Y3 weak lensing mass map: A &lt;inline-formula&gt;&lt;mml:math&gt;&lt;mml:mrow&gt;&lt;mml:mn&gt;13&lt;/mml:mn&gt;&lt;mml:mo&gt;,&lt;/mml:mo&gt;&lt;mml:mn&gt;000&lt;/mml:mn&gt;&lt;mml:mtext&gt; &lt;/mml:mtext&gt;&lt;mml:mtext&gt; &lt;/mml:mtext&gt;&lt;mml:mrow&gt;&lt;mml:msup&gt;&lt;mml:mrow&gt;&lt;mml:mi&gt;deg&lt;/mml:mi&gt;&lt;/mml:mrow&gt;&lt;mml:mrow&gt;&lt;mml:mn&gt;2&lt;/mml:mn&gt;&lt;/mml:mrow&gt;&lt;/mml:msup&gt;&lt;/mml:mrow&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; view of cosmic structure from 270 million galaxies",
+   "title_html": "DECADE+DES Y3 weak lensing mass map: A 13,000 deg<sup>2</sup> view of cosmic structure from 270 million galaxies",
    "authors_html": "M. Gatti, <strong>D. Anbajagane</strong>, C. Chang, et al.",
    "first_author": false,
    "journal": "Physical Review D",
@@ -312,7 +299,7 @@
   {
    "bibcode": "2026PhRvD.113h3501T",
    "arxiv": "2511.04681",
-   "title_html": "Dark Energy Survey Year 3 results: Simulation-based &lt;inline-formula&gt;&lt;mml:math&gt;&lt;mml:mrow&gt;&lt;mml:mi&gt;w&lt;/mml:mi&gt;&lt;mml:mi&gt;CDM&lt;/mml:mi&gt;&lt;/mml:mrow&gt;&lt;/mml:math&gt;&lt;/inline-formula&gt; inference from weak lensing and galaxy clustering maps with deep learning: Analysis design",
+   "title_html": "Dark Energy Survey Year 3 results: Simulation-based &lt;i&gt;w&lt;/i&gt;CDM inference from weak lensing and galaxy clustering maps with deep learning: Analysis design",
    "authors_html": "A. Thomsen, J. Bucko, T. Kacprzak, et al.",
    "first_author": false,
    "journal": "Physical Review D",

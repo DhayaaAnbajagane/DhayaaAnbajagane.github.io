@@ -36,6 +36,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update publications from NASA ADS"
+          # Another workflow (or a push of yours) may have landed meanwhile; replay this commit on top.
+          git pull --rebase origin "$GITHUB_REF_NAME"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 

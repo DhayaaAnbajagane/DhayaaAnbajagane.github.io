@@ -7,13 +7,13 @@
 # - Variable CV_ROOT_FILE (optional): the project's main document; defaults to main.tex.
 # - Variable CV_COMPILER (optional): xelatex or lualatex if the project uses one; defaults to pdfLaTeX.
 #
-# Runs daily and only recompiles when the Overleaf project changed; run it by hand from the
-# Actions tab to update right away.
+# Runs weekly (Mondays, after the ADS publication update) and only recompiles when the Overleaf
+# project changed; run it by hand from the Actions tab to update right away.
 name: Compile CV from Overleaf
 
 on:
   schedule:
-    - cron: "41 7 * * *" # daily, 07:41 UTC
+    - cron: "41 7 * * 1" # Mondays, 07:41 UTC
   workflow_dispatch:
 
 permissions:
@@ -54,6 +54,12 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      # Rebuilds the CV page's sections (_data/cv.json) from the Overleaf rubric files.
+      # Fails the run, without changing anything, if a section can't be read.
+      - name: Read CV sections for the website
+        if: steps.fetch.outputs.changed == 'true'
+        run: python3 .github/scripts/cv_from_overleaf.py cv-source
+
       - name: Compile LaTeX
         if: steps.fetch.outputs.changed == 'true'
         uses: xu-cheng/latex-action@v3
@@ -68,7 +74,7 @@ jobs:
         if: steps.fetch.outputs.changed == 'true'
         run: |
           cp "cv-source/${ROOT_FILE%.tex}.pdf" assets/CV.pdf
-          git add assets/CV.pdf .github/cv-overleaf-commit
+          git add assets/CV.pdf _data/cv.json .github/cv-overleaf-commit
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
@@ -76,6 +82,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update CV PDF from Overleaf"
+          # Another workflow (or a push of yours) may have landed meanwhile; replay this commit on top.
+          git pull --rebase origin "$GITHUB_REF_NAME"
           git push
           echo "pushed=true" >> "$GITHUB_OUTPUT"
 

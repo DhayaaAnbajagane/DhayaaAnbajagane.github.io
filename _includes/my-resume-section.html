@@ -1,0 +1,41 @@
+{% comment %}
+  CV sections read from the Overleaf CV source, placed in a resume column like the theme's
+  own sections: list `cv:<key>` (e.g. `cv:awards`) under `left_column` / `right_column` in cv.md.
+  Included from _layouts/resume.html for any section name the theme doesn't know.
+  The data is _data/cv.json, rebuilt from the Overleaf rubric files by
+  .github/scripts/cv_from_overleaf.py whenever .github/workflows/compile-cv.yml runs.
+{% endcomment %}
+{% assign key = include.section | remove_first: "cv:" %}
+{% assign cv_sec = site.data.cv.sections[key] %}
+{% if include.section contains "cv:" and cv_sec.entries.size > 0 %}
+{% case key %}
+  {% when "work" %}{% assign icon = "icon-briefcase" %}
+  {% when "education" %}{% assign icon = "icon-library" %}
+  {% when "teaching" %}{% assign icon = "icon-quill" %}
+  {% when "awards" %}{% assign icon = "icon-trophy" %}
+  {% when "service" %}{% assign icon = "icon-earth" %}
+  {% when "mentoring" %}{% assign icon = "icon-user-plus" %}
+  {% else %}{% assign icon = "icon-link" %}
+{% endcase %}
+<section class="cv-section">
+  <div class="npb">
+  <h2 id="{{ key }}" class="h3 hr-bottom">{{ cv_sec.title }} <span class="symbol {{ icon }}"></span></h2>
+  {% for e in cv_sec.entries %}
+  <section>
+    <header class="{% unless forloop.first %}mt2{% endunless %}">
+      <p class="faded">{{ e.when }}</p>
+    </header>
+    {% if e.students %}
+    <ul class="cv-mentoring">
+      {% for s in e.students %}
+      <li><span class="cv-item-title">{{ s.name }}</span>{% if s.now != "" %} <span class="faded">[{{ s.now }}]</span>{% endif %}, {{ s.project }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      {% for p in e.paragraphs %}<p>{{ p }}</p>{% endfor %}
+    {% endif %}
+  </section>
+  {% if forloop.first %}</div>{% endif %}
+  {% endfor %}
+</section>
+{% endif %}
