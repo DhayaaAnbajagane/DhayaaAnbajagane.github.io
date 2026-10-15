@@ -14,7 +14,7 @@ sitemap: False
 ## List of data products
 First, we list the different products made available so far. Each is detailed further below in its own subsection. If you do not see a product of interest in this list, please contact me! Our goal is to have made all useful products available right away.
 
-**1. Shear Catalog:**{: .bold-accent} The shear catalog is available at [Noirlab](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.decade_shear), and [via Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671). If you want to query small subsets, then the Noirlab portal is the best place to go. If you want to use the full catalog (e.g., for correlation studies) the Globus portal is easier. This portal also contains a single HDF5 file (`shear_catalog_sparse.hdf`) which is a curated subset of all objects relevant for the cosmology analysis alone. This is a significantly smaller subset of the full catalog. The globus portal also contains the redshift distributions for the four bins. The necessary calibrations are found in the Table below, can also be obtained from the [paper release here](/_projects/DECADE.md). You will need to apply the shear response yourself.
+**1. Shear Catalog:**{: .bold-accent} The shear catalog is available at [Noirlab](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.decade_shear), and [via Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671). If you want to query small subsets, then the Noirlab portal is the best place to go. If you want to use the full catalog (e.g., for correlation studies) the Globus portal is easier. This portal also contains a single HDF5 file (`shear_catalog_sparse.hdf5`) which is a curated subset of all objects relevant for the cosmology analysis alone. This is a significantly smaller subset of the full catalog. The Globus portal also contains the redshift distributions for the four bins. The necessary calibrations are found in the Table below, and can also be obtained from the [paper release here](/_projects/DECADE.md). You will need to apply the shear response yourself.
 
 
 **2. Cosmology Likelihood:**{: .bold-accent} The full cosmology likelihood is available in the `cosmosis-standard-library`. The ini file for the decam13k likelihood is [here](https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/decam-13k.ini) and is the recommended starting point. This file can run a combination of DECADE NGC, DECADE SGC, and DES Y3. All the necessary data for the likelihood runs are already on cosmosis.
@@ -26,7 +26,7 @@ First, we list the different products made available so far. Each is detailed fu
 **4. DELVE DR3:**{: .bold-accent} The superset `DELVE DR3` catalog, which contains all detected objects, is available at [Noirlab via a queryable database](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.coadd_objects). See also this page for more details on the [DELVE data release](https://datalab.noirlab.edu/data/delve). The raw coadd images, including a cutout service, are made available via Noirlab.
 
 
-**5. Cosmology Posteriors:**{: .bold-accent} The chains from the various results shown in [Anbajagane, Chang et. al (2025e)](https://arxiv.org/abs/2509.03582) are all available as MCMC chains [provided here](https://drive.google.com/drive/folders/1hg8m-Zyk87wCI-ajMn5XstGZQ4bWDVUc?usp=sharing). See the subsection below for details on what chains are available and what the filenames map to.
+**5. Cosmology Posteriors:**{: .bold-accent} The chains from the various results shown in [Anbajagane, Chang et al. (2025e)](https://arxiv.org/abs/2509.03582) are all available as MCMC chains [provided here](https://drive.google.com/drive/folders/1hg8m-Zyk87wCI-ajMn5XstGZQ4bWDVUc?usp=sharing). See the subsection below for details on what chains are available and what the filenames map to.
 
 
 **6. Balrog (SSI) Catalog:**{: .bold-accent} The Balrog catalog is available [via Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671). This is used to compute the transfer function, i.e., the probability of selecting an object in our sample given some object properties. The main file of interest is the ``balrog/matched_catalog.hdf5`` file, which contains the injections matched to their noisy, "widefield" realizations.
@@ -100,7 +100,7 @@ Here is a description of all the columns in the catalog:
 | MCAL\_G\_1\_(NOSHEAR, 1P, 1M, 2P, 2M) | First component of object ellipticity |
 | MCAL\_G\_2\_(NOSHEAR, 1P, 1M, 2P, 2M) | Second component of object ellipticity |
 | MCAL\_G\_COV\_0\_0\_(NOSHEAR, 1P, 1M, 2P, 2M) | Covariance of the G\_1 estimate |
-| MCAL\_G\_COV\_0\_1\_(NOSHEAR, 1P, 1M, 2P, 2M) | Cross covariance of G\_1 and G2 |
+| MCAL\_G\_COV\_0\_1\_(NOSHEAR, 1P, 1M, 2P, 2M) | Cross covariance of G\_1 and G\_2 |
 | MCAL\_G\_COV\_1\_0\_(NOSHEAR, 1P, 1M, 2P, 2M) | Cross covariance of G\_2 and G\_1 (same as COV\_0\_1) |
 | MCAL\_G\_COV\_1\_1\_(NOSHEAR, 1P, 1M, 2P, 2M) | Covariance of the G\_2 estimate |
 | MCAL\_W\_(NOSHEAR, 1P, 1M, 2P, 2M) | Shear weights used in the cosmology analysis |
@@ -110,7 +110,7 @@ Here is a description of all the columns in the catalog:
 | MCAL\_S2N\_(NOSHEAR, 1P, 1M, 2P, 2M) | Signal-to-noise of the object |
 | MCAL\_SEL\_(NOSHEAR, 1P, 1M, 2P, 2M) | Object selection for the cosmology sample. If "mcal\_sel == 0" the object is not selected. Objects are assigned values of [1, 4] depending on which tomographic redshift bin they are assigned to. |
 | MCAL\_T\_(NOSHEAR, 1P, 1M, 2P, 2M) | Size of the object (after PSF deconvolution) |
-| MCAL\_T\_RATIO\_(NOSHEAR, 1P, 1M, 2P, 2M) | Ratio of  object and PSF sizes |
+| MCAL\_T\_RATIO\_(NOSHEAR, 1P, 1M, 2P, 2M) | Ratio of object and PSF sizes |
 | RA | Right ascension |
 
 Note that the catalogs contain redshift point estimates from the "Directional Neighborhood Fitting" (DNF) algorithm. These were not used in our fiducial cosmology analysis, but are provided here as they are useful for cluster lensing and other downstream uses of the public catalog. This redshift was determined using the SOF (single object fitting) fluxes provided in the DELVE DR3 processing. 
@@ -131,10 +131,10 @@ This table describes the chains [provided here](https://drive.google.com/drive/f
 | decade-sgc.txt | DECADE SGC-only results|
 | des.txt | Results from DES Y3 (note we never use shear ratio in any of our analyses)|
 | decam13k-ext.txt | Combination of DECam 13k with DES Y5 SNe and DESI DR2 BAO|
-| decam13k-ext-w0wa.txt | Decam13k + Ext constraints on the w0-wa dynamical dark energy model|
-| decam13k-ext-wphi.txt | Decam13k + Ext constraints on the wphi model of Shajib & Frieman 2025|
+| decam13k-ext-w0wa.txt | DECam13k + Ext constraints on the w0-wa dynamical dark energy model|
+| decam13k-ext-wphi.txt | DECam13k + Ext constraints on the wphi model of Shajib & Frieman 2025|
 | decam13k-bacco.txt | DECam13k analysis using all scales and modelling baryons with the public Bacco emulator|
-| decam13k-bcemu.txt | DECam13k analysis using all scales and modelling baryons with the public Bcemu emulator|
+| decam13k-bcemu.txt | DECam13k analysis using all scales and modelling baryons with the public BCemu emulator|
 | decam13k-Tagn.txt | DECam13k analysis using all scales and modelling baryons with HMCode 2020|
 | decam13k-bfg-bacco.txt | DECam13k analysis using all scales and modelling baryons with BaryonForge-based halo model of Bacco|
 | decam13k-bfg-bcemu.txt | DECam13k analysis using all scales and modelling baryons with BaryonForge-based halo model of BCemu|
@@ -147,6 +147,11 @@ This table describes the chains [provided here](https://drive.google.com/drive/f
 Here are some utils for reading the chains into a dataframe.
 
 ~~~python
+import os
+import numpy as np
+import pandas as pd
+from getdist import MCSamples
+
 def _get_names(file):
 
     with open(file, 'r') as f:
@@ -181,12 +186,13 @@ def load_chain_info(file):
     return CHAINS
 
 
-def setup_MCsamples(C, P):
+def setup_MCsamples(C, P, labels = None):
     """
     C is the list of chains (as dataframes) and P is the list of param names you want.
     If a given param name is not in a given chain, we will drop the param from the call for
-    that chain
+    that chain. labels is an optional dict mapping param names to LaTeX labels for plotting.
     """
+    labels = labels or {}
     F = []
     for c in C: 
         
@@ -219,23 +225,23 @@ Here is a description of all the columns in the catalog:
 | d_arcsec                          | Angular separation between the injected object position and the nearest detected object, in arcseconds. |
 | d_contam_arcsec                   | Angular distance to the second nearest neighbor object, in arcseconds. If this is < 1.5 arcsec, we consider the injection contaminated.|
 | dec                               | Declination of the detected object, in degrees.|
-| good_inj                          | Flag indicating whether this specific injection is good for the cosmology analysis. Injections are removed if they come from deepfield objects that we don't use (e.g., they only have 4-band and not 8-band flux measurements), or fail the d_contam_arcsec < 1.5 cut.|
+| good_inj                          | Flag indicating whether this specific injection is good for the cosmology analysis. Injections are removed if they come from deepfield objects that we don't use (e.g., they only have 4-band and not 8-band flux measurements), or have a contaminant within 1.5 arcsec (i.e., we keep only d_contam_arcsec > 1.5).|
 | id_y3_deepfield                   | Unique identifier of the injection associated with the DES Y3 deep field catalog.  |
 | injection_class                   | Index identifying which injection scheme the object was placed under. Follows, 0 - uniform/random sampling, 1 - preferentially sample mag_i < 23.5 with sigmoid, 2 - Same as (1) but only inject deepfield objects with redshift estimates.|
 | mcal_T_noshear                    | Size of the object (after PSF deconvolution) |
-| mcal_T_ratio_noshear              | Ratio of  object and PSF sizes |
-| mcal_flux_noshear_dered_sfd98     | Flux (in riz) corrected for Galactic extinction using the SFD98. Convert to mag as $$m = 30 - 2.5\\log_{10}f$$|
-| mcal_flux_err_noshear_dered_sfd98 | Flux (in riz) corrected for Galactic extinction using the SFD98. |
+| mcal_T_ratio_noshear              | Ratio of object and PSF sizes |
+| mcal_flux_noshear_dered_sfd98     | Flux (in riz) corrected for Galactic extinction using the SFD98 map. Convert to mag as $$m = 30 - 2.5\log_{10}f$$|
+| mcal_flux_err_noshear_dered_sfd98 | Flux error (in riz) corrected for Galactic extinction using the SFD98 map. |
 | mcal_g_noshear                    | Object ellipticity components |
-| mcal_psf_T_noshear                | Size of the PSF  in arcsec^2 |
+| mcal_psf_T_noshear                | Size of the PSF in arcsec^2 |
 | mcal_psf_g_noshear                | PSF ellipticity components |
 | mcal_s2n_noshear                  | Signal-to-noise ratio of the object.|
 | ra                                | Right ascension of the detected object, in degrees.                            |
 | selection                         | Flag indicating if the object passes the cosmology sample selection criteria   |
-| tomobin                           | Tomographic redshift bin assignment used for cosmological analysis. Some objecs that don't pass the selection criteria still have assignments, but note these objects are not actually used in anny calibrations. |
+| tomobin                           | Tomographic redshift bin assignment used for cosmological analysis. Some objects that don't pass the selection criteria still have assignments, but note these objects are not actually used in any calibrations. |
 | true_bdf_flux_i                   | True (i)-band flux in the object's BDF fit model from DES Y3 deepfields |
 | true_bdf_flux_r                   | True (r)-band flux in the object's BDF fit model from DES Y3 deepfields |
 | true_bdf_flux_z                   | True (z)-band flux in the object's BDF fit model from DES Y3 deepfields |
-| true_dec                          | Declination of the the chosen injection location |
-| true_ra                           | Right ascension of the the chosen injection location |
+| true_dec                          | Declination of the chosen injection location |
+| true_ra                           | Right ascension of the chosen injection location |
 | z_weights                         | The weighting used in redshift estimation, $$w_z = w_\gamma \times R_\gamma$$, which includes both the shear weight and the response. See equation (5) in [Paper II](https://arxiv.org/pdf/2502.17675)|

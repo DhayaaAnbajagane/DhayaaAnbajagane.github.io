@@ -6,7 +6,7 @@ sitemap: true
 
 
 ## Who am I?
-A sixth-year graduate student at UChicago and the Kavli Institute for Cosmological Physics. I will be starting as a NASA Einstein and KIPAC fellow at Stanford in Fall 2026. I did my undergrad at the University of Michigan (Go Blue!), and spent the eighteen years prior to that growing up in a coastal city in South India. I pronounce my name just the way it is written (Da-ya An-buh-jug-uh-neigh). My full name in the Tamil script is written as தயா அன்பழகன். The phrase தயா is a Sanskrit word for compassion, and அன்பழகன் is derived from the Tamil word for beauty and affection.
+A NASA Einstein and KIPAC fellow at Stanford. I did my PhD at UChicago and the Kavli Institute for Cosmological Physics, and my undergrad at the University of Michigan (Go Blue!). Before that, I spent eighteen years growing up in a coastal city in South India. I pronounce my name just the way it is written (Da-ya An-buh-jug-uh-neigh). My full name in the Tamil script is written as தயா அன்பழகன். The phrase தயா is a Sanskrit word for compassion, and அன்பழகன் is derived from the Tamil word for beauty and affection.
 
 
 ## What do I do?
@@ -21,4 +21,4 @@ I've built a couple of tools and datasets that are in use by the community. If y
 
 ## Get in touch!
 
-If you're looking to contact me, you can find me at dhayaa at uchicago dot edu. If you're on a common slack workspace (the LSST one is quite bit ;)) just send me a message!
+If you're looking to contact me, you can find me at dhayaa at stanford dot edu. If you're on a common Slack workspace (the LSST one is quite big ;)) just send me a message!

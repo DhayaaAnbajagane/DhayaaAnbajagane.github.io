@@ -9,18 +9,18 @@ basics:
   phone: ""
   website: ""
   summary: >
-    A fifth year graduate student at UChicago, former undergrad at U. Michigan, 
+    A NASA Einstein and KIPAC fellow at Stanford, PhD from UChicago, former undergrad at U. Michigan,
     and long-time resident of a coastal city in South India. I work on
-    all aspects of using structure formation for cosmology; making datasets from images, 
+    all aspects of using structure formation for cosmology: making datasets from images, 
     generating sims, validating models, and performing cosmological inference. 
     My primary expertise is in photometric datasets, but I also work with mm-wave datasets
     from CMB surveys.
   location:
     address: ""
     postalCode: ""
-    city: "Chicago"
+    city: "Stanford"
     countryCode: "US"
-    region: "Illinois"
+    region: "California"
   profiles:
     - network: "LinkedIn"
       username: "DhayaaAnbajagane"
@@ -30,7 +30,7 @@ education:
     area: "Astronomy and Astrophysics"
     studyType: "PhD"
     startDate: "2020-10-01"
-    endDate: "2026-06-01 (expected)"
+    endDate: "2026-06-01"
     advisor: Chihway Chang
 
   - institution: "University of Michigan, Ann Arbor"
@@ -41,12 +41,12 @@ education:
     advisor: Gus Evrard
 
 awards:
-  - title: "CCAP Price award"
+  - title: "CCAPP Prize Award"
     date: "2023-08-01"
     awarder: "OSU CCAPP"
     summary: >
       "Recognizes research excellence and exceptional promise in areas related to 
-      initiatives of the Center of Cosmology and Astroparticle physics at Ohio State University." 
+      initiatives of the Center for Cosmology and AstroParticle Physics at Ohio State University." 
       Awarded to two students per year, globally.
 
 publications:

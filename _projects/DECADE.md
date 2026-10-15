@@ -8,11 +8,11 @@ image:
   path: /assets/img/research/DECam.jpg
 links:
   - title: Data
-    url: https://qwtel.com/
+    url: /data
 sitemap: false
 ---
 
-The Dark Energy Camera is well known for being the instrument used to conduct the Dark Energy Survey (DES), covering $$5,\!000\,{\rm deg}^2$$ of the sky. However, over the thirteen years its been taking data it has also been convering other parts of the sky. There is in fact archival data covering the entire $$20,\!000\,{\rm deg}^2$$ accessible from Chile. Given it is archival data, the image quality is highly variable and non-uniform, but the data is still usable.
+The Dark Energy Camera is well known for being the instrument used to conduct the Dark Energy Survey (DES), covering $$5,\!000\,{\rm deg}^2$$ of the sky. However, over the thirteen years it's been taking data it has also been covering other parts of the sky. There is in fact archival data covering the entire $$20,\!000\,{\rm deg}^2$$ accessible from Chile. Given it is archival data, the image quality is highly variable and non-uniform, but the data is still usable.
 
 ### DECADE Cosmic Shear
 
@@ -28,5 +28,5 @@ I led the end-to-end analysis, from pixels to calibration to modelling to cosmol
 
 ![](/assets/img/research/DECam.jpg){:.lead style="width:100%;height:auto;display:block;margin:0 auto"}
 
-*Illustration of the sky coverage from the DECADE survey*
+*Illustration of the sky coverage from the DECADE survey.*
 {:.figcaption}
