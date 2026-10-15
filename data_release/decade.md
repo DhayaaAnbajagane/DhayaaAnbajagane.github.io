@@ -28,6 +28,9 @@ First, we list the different products made available so far. Each is detailed fu
 **6. Balrog (SSI) Catalog:**{: .bold-accent} The Balrog catalog is available [via Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671). This is used to compute the transfer function, i.e., the probability of selecting an object in our sample given some object properties. The main file of interest is the ``balrog/matched_catalog.hdf5`` file, which contains the injections matched to their noisy, "widefield" realizations.
 
 
+**7. Mass Maps:**{: .bold-accent} The DECADE+DES Y3 weak lensing mass maps from [Gatti, Anbajagane et al. (2025)](https://arxiv.org/abs/2509.03798) are available [via Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671), in the `MassMap` folder. These are HEALPix maps of the convergence over the ~13,000 deg$$^2$$ combined footprint, made from 270 million galaxies. We provide the unsmoothed Kaiser-Squires map, the Wiener filter map, five Wiener posterior samples, and the footprint mask. See the [Mass maps](#mass-maps) section below for a description of the files.
+
+
 ## How to cite
 
 If you use these products, please cite the DECADE cosmic shear papers. Expand the list below and use the copy button on each entry.
@@ -112,6 +115,30 @@ If you use these products, please cite the DECADE cosmic shear papers. Expand th
     volume = "114",
     number = "4",
     pages = "043527",
+    year = "2026"
+}
+```
+
+</details>
+
+If you use the mass maps, please also cite the mass map paper below, along with the shear catalog papers covering the NGC ([Paper I](https://arxiv.org/abs/2502.17674)) and SGC ([Paper V](https://arxiv.org/abs/2509.03582)) listed above.
+
+<details markdown="1">
+<summary>BibTeX for the DECADE+DES Y3 mass map paper</summary>
+
+```bibtex
+@article{Gatti:2025xcc,
+    author = "Gatti, M. and others",
+    title = "{DECADE+DES Y3 weak lensing mass map: A 13,000{\,}{\,}deg2 view of cosmic structure from 270~million galaxies}",
+    eprint = "2509.03798",
+    archivePrefix = "arXiv",
+    primaryClass = "astro-ph.CO",
+    reportNumber = "FERMILAB-PUB-25-0642-PPD",
+    doi = "10.1103/lg8b-9ykz",
+    journal = "Phys. Rev. D",
+    volume = "113",
+    number = "8",
+    pages = "L081303",
     year = "2026"
 }
 ```
@@ -336,5 +363,33 @@ Here is a description of all the columns in the catalog:
 | true_dec                          | Declination of the chosen injection location |
 | true_ra                           | Right ascension of the chosen injection location |
 | z_weights                         | The weighting used in redshift estimation, $$w_z = w_\gamma \times R_\gamma$$, which includes both the shear weight and the response. See equation (5) in [Paper II](https://arxiv.org/pdf/2502.17675)|
+
+
+## Mass maps
+
+A weak lensing mass map is a reconstruction of the convergence, $$\kappa$$, which is the projected mass along each line of sight. It is built from the noisy shear measured from galaxy shapes. Our map is described in [Gatti, Anbajagane et al. (2025)](https://arxiv.org/abs/2509.03798). It combines DES Y3 (~100 million galaxies) and DECADE (~170 million galaxies) over ~13,000 deg$$^2$$. The DES Y3 data cover the "tank-shaped" region in the middle of the footprint, and everything outside that is DECADE. We do not split by redshift: the maps use the full, unbinned source samples, not the four tomographic bins.
+
+We first build shear maps on a HEALPix grid with NSIDE = 1024 (pixels of ~3.44 arcmin, holding ~60 galaxies each on average). Each pixel holds the weighted mean ellipticity divided by the mean Metacalibration response,
+
+$$\gamma^{\nu}_{\rm obs} = \frac{\sum_j \epsilon^{\nu}_j w_j}{\bar{R} \sum_j w_j}, \quad \nu = 1, 2.$$
+
+The residual percent-level multiplicative bias, $$m$$, is **not** included in the maps, and you should apply it yourself if your analysis needs it. We then reconstruct $$\kappa$$ with two methods, Kaiser-Squires (KS) and the Wiener filter.
+
+### Files
+
+All files are in the `MassMap` folder of the [Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671) endpoint. Each file holds a single full-sky HEALPix map (NSIDE = 1024, RING ordering) in equatorial coordinates.
+
+| File | Description |
+|---|---|
+| mask.fits | Footprint mask: the pixels where we have shear data. Map values outside it are unconstrained, so apply the mask to every map before use. |
+| ks\_unsmoothed.fits | Kaiser-Squires E-mode convergence map, with no smoothing. It is noise-dominated at the pixel scale, so you will usually want to smooth it. |
+| wiener.fits | Wiener filter best-fit (maximum a posteriori) convergence map. This is the map shown in Figure 1 of the paper. |
+| wiener\_realization\_002.fits | Posterior sample (constrained realization) of $$\kappa$$ from the Wiener filter. |
+| wiener\_realization\_004.fits | Same as above, a different posterior sample. |
+| wiener\_realization\_005.fits | Same as above, a different posterior sample. |
+| wiener\_realization\_006.fits | Same as above, a different posterior sample. |
+| wiener\_realization\_010.fits | Same as above, a different posterior sample. |
+
+The five realizations are a random selection of the Wiener posterior samples; the numbers in the file names are just sample labels.
 
 {% include abbreviations.md %}

@@ -71,6 +71,18 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
   color: var(--c-soft-red) !important;
 }
 
+/* Table of contents: number second-tier entries i, ii, iii (the top tier stays 1, 2, 3) */
+#markdown-toc ol {
+  list-style-type: lower-roman;
+}
+
+/* Display equations: the theme lets them scroll sideways (for wide equations on phones), which in CSS
+   also turns on vertical scrolling, so a fraction a pixel taller than its box showed a scroll bar.
+   Keep the sideways scrolling only. */
+#_main mjx-container[jax][display="true"] {
+  overflow-y: hidden;
+}
+
 /* Content figures (`{:.lead}` images): full-width and centered by default; a figure can still
    set its own width inline, e.g. `{:.lead style="width:80%"}` */
 #_main img.lead {
