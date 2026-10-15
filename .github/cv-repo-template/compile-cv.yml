@@ -1,0 +1,52 @@
+# Copy this file to `.github/workflows/compile-cv.yml` in the GitHub repo that Overleaf syncs your CV to.
+# On every push from Overleaf it compiles the CV and commits the PDF to the website as assets/CV.pdf,
+# which the "PDF" button on the CV page links to.
+#
+# Setup (once):
+# 1. Create a fine-grained personal access token (GitHub → Settings → Developer settings) with
+#    access to ONLY the DhayaaAnbajagane.github.io repo and "Contents: Read and write" permission.
+# 2. In the CV repo, add it as a repository secret named WEBSITE_REPO_TOKEN.
+# 3. Set ROOT_FILE below to the CV's main .tex file (the one Overleaf compiles).
+name: Compile CV and publish to website
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  ROOT_FILE: main.tex
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Overleaf's default compiler is pdfLaTeX; if your CV uses custom fonts via fontspec,
+      # set latexmk_use_xelatex (or latexmk_use_lualatex) to true instead.
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: ${{ env.ROOT_FILE }}
+          latexmk_use_xelatex: false
+
+      - name: Commit the PDF to the website
+        env:
+          TOKEN: ${{ secrets.WEBSITE_REPO_TOKEN }}
+        run: |
+          pdf="${ROOT_FILE%.tex}.pdf"
+          git clone --depth 1 "https://x-access-token:${TOKEN}@github.com/DhayaaAnbajagane/DhayaaAnbajagane.github.io.git" website
+          cp "$pdf" website/assets/CV.pdf
+          cd website
+          git add assets/CV.pdf
+          if git diff --cached --quiet; then
+            echo "CV PDF unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update CV PDF from Overleaf"
+          git push

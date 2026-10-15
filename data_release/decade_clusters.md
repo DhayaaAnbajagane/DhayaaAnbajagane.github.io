@@ -4,6 +4,8 @@ title: DECADE redMaPPer public release
 sitemap: False
 ---
 
+0. 
+{:toc}
 
 We have generated cluster catalogs for the DECADE and DES footprints, at richness thresholds λ > 20 (main sample) and λ > 5. This was produced using redMaPPer v0.8.7. For each footprint we provide clusters with halo mass estimates, member galaxies, randoms and per-cluster weak-lensing profiles.
 
@@ -174,3 +176,5 @@ with h5py.File('RedmapperCatalog.hdf5', 'r') as cat, h5py.File('RedmapperShear.h
 ```
 
 **Boost factors** use `sum_pzbf`, the weighted sum of source redshift PDFs per radial bin, with shape (N, 29, 899) on the `zbins_pdf` grid. Read it by row (`g['sum_pzbf'][rows]`, with `rows` increasing).
+
+{% include abbreviations.md %}

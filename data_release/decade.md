@@ -11,6 +11,9 @@ sitemap: False
 }
 </style>
 
+0. 
+{:toc}
+
 ## List of data products
 First, we list the different products made available so far. Each is detailed further below in its own subsection. If you do not see a product of interest in this list, please contact me! Our goal is to have made all useful products available right away.
 
@@ -30,6 +33,97 @@ First, we list the different products made available so far. Each is detailed fu
 
 
 **6. Balrog (SSI) Catalog:**{: .bold-accent} The Balrog catalog is available [via Globus](https://app.globus.org/file-manager?origin_id=0b5ae9e1-9026-4b94-bc29-ff5f51f94671). This is used to compute the transfer function, i.e., the probability of selecting an object in our sample given some object properties. The main file of interest is the ``balrog/matched_catalog.hdf5`` file, which contains the injections matched to their noisy, "widefield" realizations.
+
+
+## How to cite
+
+If you use these products, please cite the DECADE cosmic shear papers. Expand the list below and use the copy button on each entry.
+
+<details markdown="1">
+<summary>BibTeX for the five DECADE cosmic shear papers</summary>
+
+```bibtex
+@article{Anbajagane:2025oww,
+    author = "Anbajagane, D. and others",
+    title = "{The DECADE cosmic shear project I: A new weak lensing shape catalog of 107 million galaxies}",
+    eprint = "2502.17674",
+    archivePrefix = "arXiv",
+    primaryClass = "astro-ph.CO",
+    reportNumber = "FERMILAB-PUB-25-0063-LDRD-PPD",
+    doi = "10.33232/001c.146158",
+    journal = "Open J. Astrophys.",
+    volume = "8",
+    pages = "146158",
+    year = "2025"
+}
+```
+
+```bibtex
+@article{Anbajagane:2025pvn,
+    author = "Anbajagane, D. and others",
+    title = "{The DECADE cosmic shear project II: photometric redshift calibration of the source galaxy sample}",
+    eprint = "2502.17675",
+    archivePrefix = "arXiv",
+    primaryClass = "astro-ph.CO",
+    reportNumber = "FERMILAB-PUB-25-0064-LDRD-PPD",
+    doi = "10.33232/001c.146159",
+    journal = "Open J. Astrophys.",
+    volume = "8",
+    pages = "146159",
+    year = "2025"
+}
+```
+
+```bibtex
+@article{Anbajagane:2025yvy,
+    author = "Anbajagane, D. and others",
+    title = "{The DECADE cosmic shear project III: validation of analysis pipeline using spatially inhomogeneous data}",
+    eprint = "2502.17676",
+    archivePrefix = "arXiv",
+    primaryClass = "astro-ph.CO",
+    reportNumber = "FERMILAB-PUB-25-0065-LDRD-PPD",
+    doi = "10.33232/001c.146160",
+    journal = "Open J. Astrophys.",
+    volume = "8",
+    pages = "146160",
+    year = "2025"
+}
+```
+
+```bibtex
+@article{Anbajagane:2025hlf,
+    author = "Anbajagane, D. and others",
+    title = "{The DECADE cosmic shear project IV: cosmological constraints from 107 million galaxies across 5,400 deg$^2$ of the sky}",
+    eprint = "2502.17677",
+    archivePrefix = "arXiv",
+    primaryClass = "astro-ph.CO",
+    reportNumber = "FERMILAB-PUB-25-0066-LDRD-PPD",
+    doi = "10.33232/001c.146161",
+    journal = "Open J. Astrophys.",
+    volume = "8",
+    pages = "146161",
+    year = "2025"
+}
+```
+
+```bibtex
+@article{Anbajagane:2025goh,
+    author = "Anbajagane, D. and others",
+    title = "{Dark Energy Camera All Data Everywhere cosmic shear project. V. Constraints on cosmology and astrophysics from 270~million galaxies across 13,000{\,}deg2 of the sky}",
+    eprint = "2509.03582",
+    archivePrefix = "arXiv",
+    primaryClass = "astro-ph.CO",
+    reportNumber = "FERMILAB-PUB-25-0644-CSAID-PPD",
+    doi = "10.1103/k4lq-2s73",
+    journal = "Phys. Rev. D",
+    volume = "114",
+    number = "4",
+    pages = "043527",
+    year = "2026"
+}
+```
+
+</details>
 
 
 ## Shear catalog
@@ -245,3 +339,5 @@ Here is a description of all the columns in the catalog:
 | true_dec                          | Declination of the chosen injection location |
 | true_ra                           | Right ascension of the chosen injection location |
 | z_weights                         | The weighting used in redshift estimation, $$w_z = w_\gamma \times R_\gamma$$, which includes both the shear weight and the response. See equation (5) in [Paper II](https://arxiv.org/pdf/2502.17675)|
+
+{% include abbreviations.md %}

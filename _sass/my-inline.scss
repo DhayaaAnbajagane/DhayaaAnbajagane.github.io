@@ -36,3 +36,145 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
 .page__content .bold-accent {
   color: #fea2a2 !important;   /* your red */
 }
+
+/* Click-to-zoom figures (medium-zoom, set up in _includes/my-scripts.html):
+   keep the zoomed image above the sidebar and navbar */
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 1000;
+}
+
+/* Scroll fade-in for figures; the script skips this when the visitor prefers reduced motion */
+.reveal {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media print {
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* "Copied" toast shared by heading links and inline-code copy (see my-scripts.html) */
+.copy-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 1001;
+  max-width: calc(100vw - 2rem);
+  padding: .4rem .8rem;
+  border-radius: .25rem;
+  background: var(--body-color);
+  color: var(--body-bg);
+  font-size: .8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, .5rem);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.copy-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Heading links: Hydejack only reveals them on hover, so keep them faintly visible on touch screens */
+@media (hover: none) {
+  #_main h2[id] > .permalink,
+  #_main h3[id] > .permalink {
+    opacity: .35;
+  }
+}
+
+/* Click-to-copy inline code on the data release pages */
+.click-to-copy {
+  cursor: copy;
+}
+
+.click-to-copy:hover,
+.click-to-copy:focus {
+  outline: 1px dashed var(--accent-color);
+  outline-offset: 1px;
+}
+
+/* Jargon tooltips: undo the theme's small-caps abbr style inside page content,
+   keep a dotted underline, and show the definition on focus (tap or keyboard).
+   Mouse users get the browser's native title tooltip. */
+#_main abbr[title] {
+  position: relative;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: none;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gray);
+  cursor: help;
+}
+
+#_main abbr[data-title]:focus {
+  outline: none;
+}
+
+#_main abbr[data-title]:focus::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + .4em);
+  z-index: 10;
+  width: max-content;
+  max-width: 16rem;
+  padding: .3em .6em;
+  border-radius: .25rem;
+  background: var(--body-color);
+  color: var(--body-bg);
+  font-size: .8rem;
+  line-height: 1.3;
+  text-align: left;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* GitHub / PyPI badges under the code headings */
+.repo-badges img {
+  display: inline-block;
+  height: 20px;
+  margin-right: .25rem;
+}
+
+.repo-badges a {
+  border-bottom: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy-toast { transition: none; }
+}
+
+/* Extra CV sections (teaching, mentoring, publications) from _includes/my-resume-after.html */
+.cv-extra {
+  margin-top: 2rem;
+}
+
+.cv-mentoring {
+  margin-top: .25rem;
+}
+
+.cv-pub-list {
+  padding-left: 2.25rem;
+}
+
+.cv-pub-list li {
+  margin-bottom: .6rem;
+  text-align: left;
+}
+
+.cv-pub-list .faded {
+  font-size: .85em;
+  white-space: nowrap;
+}

@@ -30,3 +30,5 @@ I led the end-to-end analysis, from pixels to calibration to modelling to cosmol
 
 *Illustration of the sky coverage from the DECADE survey.*
 {:.figcaption}
+
+{% include abbreviations.md %}

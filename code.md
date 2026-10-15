@@ -12,6 +12,11 @@ My research has a heavy computational component, so I write a lot of code! Here 
 
 ## [BaryonForge](https://github.com/DhayaaAnbajagane/BaryonForge)
 
+[![GitHub stars](https://img.shields.io/github/stars/DhayaaAnbajagane/BaryonForge?style=flat)](https://github.com/DhayaaAnbajagane/BaryonForge)
+[![Last commit](https://img.shields.io/github/last-commit/DhayaaAnbajagane/BaryonForge?style=flat)](https://github.com/DhayaaAnbajagane/BaryonForge/commits)
+[![PyPI version](https://img.shields.io/pypi/v/BaryonForge?style=flat)](https://pypi.org/project/BaryonForge/)
+{:.repo-badges}
+
 ![](/assets/img/code/BaryonForge.png){:.lead style="width:100%;height:auto"}
 
 
@@ -20,13 +25,34 @@ My research has a heavy computational component, so I write a lot of code! Here 
 
 ## [Aarambam](https://github.com/DhayaaAnbajagane/Aarambam)
 
+[![GitHub stars](https://img.shields.io/github/stars/DhayaaAnbajagane/Aarambam?style=flat)](https://github.com/DhayaaAnbajagane/Aarambam)
+[![Last commit](https://img.shields.io/github/last-commit/DhayaaAnbajagane/Aarambam?style=flat)](https://github.com/DhayaaAnbajagane/Aarambam/commits)
+{:.repo-badges}
+
 ![](/assets/img/code/Aarambam.png){:.lead style="width:100%;height:auto;display:block;margin:0 auto"}
 
 
 [`Aarambam`](https://github.com/DhayaaAnbajagane/Aarambam) is a pipeline for generating non-Gaussian initial conditions for simulations. It provides an end-to-end pipeline for generating the ICs of an N-body simulation given some analytic bispectrum template. The novelty in the codebase is performing a decomposition of arbitrary bispectra into separable functions, and then subsequently generating non-Gaussian initial conditions corresponding to these functions. The output field will contain a three-point correlation consistent with the input bispectra, while ensuring the original two-point correlations are preserved to better than $$0.01\%$$. The methodology is introduced and extensively validated in [Anbajagane & Lee 2025a](https://arxiv.org/abs/2509.02693) and [Anbajagane & Lee 2025b](https://arxiv.org/abs/2509.02695).
 
 
+## [Vaanam](https://github.com/DhayaaAnbajagane/Vaanam)
+
+[![GitHub stars](https://img.shields.io/github/stars/DhayaaAnbajagane/Vaanam?style=flat)](https://github.com/DhayaaAnbajagane/Vaanam)
+[![Last commit](https://img.shields.io/github/last-commit/DhayaaAnbajagane/Vaanam?style=flat)](https://github.com/DhayaaAnbajagane/Vaanam/commits)
+{:.repo-badges}
+
+![](/assets/img/code/Vaanam.png){:.lead style="width:100%;height:auto;display:block;margin:0 auto"}
+
+
+[`Vaanam`](https://github.com/DhayaaAnbajagane/Vaanam) (Tamil for "sky") is a pipeline for producing mock skies from simulations. It builds lightcones from particle or halo catalogs and turns them into weak-lensing convergence maps, millimeter-wave maps (tSZ/kSZ, CMB foregrounds, beams, and noise), and X-ray maps, with all map-making steps parallelized. Documentation is available on [readthedocs](https://vaanam.readthedocs.io/en/latest).
+
+
 ## [kllr](https://github.com/afarahi/kllr)
+
+[![GitHub stars](https://img.shields.io/github/stars/afarahi/kllr?style=flat)](https://github.com/afarahi/kllr)
+[![Last commit](https://img.shields.io/github/last-commit/afarahi/kllr?style=flat)](https://github.com/afarahi/kllr/commits)
+[![PyPI version](https://img.shields.io/pypi/v/kllr?style=flat)](https://pypi.org/project/kllr/)
+{:.repo-badges}
 
 ![](/assets/img/code/KLLR.png){:.lead style="width:30%;height:auto;display:block;margin:0 auto"}
 
@@ -59,3 +85,5 @@ Some other codes that I use very often:
 * [pkdgrav3](https://bitbucket.org/dpotter/pkdgrav3/)
 * [2LPTPNG](https://github.com/dsjamieson/2LPTPNG)
 * [mpi-rockstar](https://github.com/Tomoaki-Ishiyama/mpi-rockstar) 
+
+{% include abbreviations.md %}

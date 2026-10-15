@@ -50,3 +50,5 @@ A large part of my research is processing image-level data from photometric surv
 
 ## Other things!
 An assortment of other topics I've worked on are: efficient statistics for non-Gaussian information, localized linear regression techniques, galaxy velocity bias, large-scale structure from gravitational wave experiments etc.
+
+{% include abbreviations.md %}

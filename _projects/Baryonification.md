@@ -42,3 +42,15 @@ In [Anbajagane, Pandey & Chang 2024](https://arxiv.org/abs/2409.03822) we introd
 
 *[Figure 7 in R.S+ 2025](https://arxiv.org/abs/2507.13317). The halo-model based predictions are fit to a set of three power spectra and can predict the matter fractions and halo profiles in a consistent manner. The Schneider model performs the best, while the other two are still reasonable though not quite as precise.*
 {:.figcaption}
+
+
+### Baryons with Fast Radio Bursts
+
+Fast radio bursts (FRBs) give a completely different window into the baryons. In [Sharma+ 2026 (inc. Anbajagane)](https://arxiv.org/abs/2604.17162) and many associated works, we used FRBs to constrain the suppression of the matter power spectrum on scales $$k \sim 0.1-3\,h/{\rm Mpc}$$ and the gas fractions of groups and clusters. All models for these analyses are done using `BaryonForge`. We have since extended this to cross-correlations of the dispersion measures of 3,455 CHIME/FRB sources with ten different large-scale structure and baryon tracers in [Sharma, Krause, Ravi, Anbajagane+ 2026](https://arxiv.org/abs/2604.22105).
+
+![](/assets/img/projects/FRB_PkSuppression.svg){:.lead style="width:100%;height:auto;display:block;margin:0 auto"}
+
+*[Figure 4 in Sharma+ 2026](https://arxiv.org/abs/2604.17162). The suppression of the matter power spectrum inferred from FRBs compared to constraints from cosmic shear, X-ray, and SZ observations, and to predictions from hydrodynamical simulations. The FRBs prefer moderate feedback.*
+{:.figcaption}
+
+{% include abbreviations.md %}

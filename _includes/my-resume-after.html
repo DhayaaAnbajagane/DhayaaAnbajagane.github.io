@@ -1,0 +1,79 @@
+{% comment %}
+  Extra CV sections, shown full-width below the theme's two resume columns
+  (included from _layouts/resume.html).
+  - Teaching and mentoring come from `teaching` / `mentoring` in _data/resume.yml.
+  - Publications come from _data/publications.json (refreshed weekly from NASA ADS by
+    .github/workflows/update-publications.yml), grouped using _data/publication_groups.yml.
+{% endcomment %}
+{% assign resume = page.resume | default:site.data.resume %}
+
+{% if resume.teaching.size > 0 %}
+<section class="cv-extra">
+  <h2 id="teaching" class="h3 hr-bottom">Teaching <span class="symbol icon-library"></span></h2>
+  {% for t in resume.teaching %}
+  <section>
+    <header class="{% unless forloop.first %}mt2{% endunless %}">
+      <p class="faded">{{ t.when }}</p>
+      <h3 class="h4 faded"><span class="bc">{{ t.title }}</span></h3>
+    </header>
+    <p>{{ t.role }}</p>
+  </section>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if resume.mentoring.size > 0 %}
+<section class="cv-extra">
+  <h2 id="mentoring" class="h3 hr-bottom">Mentoring <span class="symbol icon-user-plus"></span></h2>
+  {% for m in resume.mentoring %}
+  <section>
+    <header class="{% unless forloop.first %}mt2{% endunless %}">
+      <p class="faded">{{ m.when }}</p>
+    </header>
+    <ul class="cv-mentoring">
+      {% for s in m.students %}
+      <li><span class="bc">{{ s.name }}</span>{% if s.now %} <span class="faded">[{{ s.now }}]</span>{% endif %}, <em>{{ s.project }}</em></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% assign pubs = site.data.publications %}
+{% if pubs.papers.size > 0 %}
+{% assign major = site.data.publication_groups.major %}
+<section class="cv-extra cv-publications">
+  <h2 id="publications" class="h3 hr-bottom">Publications <span class="symbol icon-book"></span></h2>
+  <p class="faded">
+    {{ pubs.stats.papers }} publications{% if pubs.stats.citations %} with {{ pubs.stats.citations }} citations, h-index of {{ pubs.stats.h_index }}{% endif %};
+    {{ pubs.stats.first_author }} as first author{% if pubs.stats.first_author_citations %} ({{ pubs.stats.first_author_citations }} citations, h-index of {{ pubs.stats.first_author_h_index }}){% endif %}.
+    Updated {{ pubs.updated }} from {{ pubs.source }}. Also on ADS:
+    <a href="https://ui.adsabs.harvard.edu/public-libraries/V1-FHcxYRwmT62YWWRMWEQ">all papers</a>,
+    <a href="https://ui.adsabs.harvard.edu/public-libraries/Gcx6QK7kSjmRDvLAGnvLdQ">led/co-led</a>.
+  </p>
+
+  {% for group in (1..3) %}
+    {% if group == 1 %}{% assign heading = "First author publications" %}
+    {% elsif group == 2 %}{% assign heading = "Other major contributions" %}
+    {% else %}{% assign heading = "Supporting contributions" %}{% endif %}
+    <h3 class="h4">{{ heading }}</h3>
+    <ol class="cv-pub-list" reversed>
+    {% for p in pubs.papers %}
+      {% assign contrib = nil %}
+      {% if p.arxiv != "" %}{% assign contrib = major[p.arxiv] %}{% endif %}
+      {% unless contrib %}{% assign contrib = major[p.bibcode] %}{% endunless %}
+      {% if p.first_author %}{% assign g = 1 %}{% elsif contrib %}{% assign g = 2 %}{% else %}{% assign g = 3 %}{% endif %}
+      {% if g == group %}
+      <li>
+        <a href="{{ p.url }}">{{ p.title_html }}</a>,
+        {{ p.authors_html }}{% if p.journal != "" %}, <em>{{ p.journal | escape }}</em>{% endif %}, {{ p.year }}.
+        {% if g == 2 %}<em>Contrib: {{ contrib | escape }}.</em>{% endif %}
+        {% if p.citations and p.citations > 0 %}<span class="faded">{{ p.citations }} citation{% if p.citations != 1 %}s{% endif %}</span>{% endif %}
+      </li>
+      {% endif %}
+    {% endfor %}
+    </ol>
+  {% endfor %}
+</section>
+{% endif %}

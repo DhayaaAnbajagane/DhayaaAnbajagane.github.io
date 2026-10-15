@@ -35,3 +35,25 @@ We then extracted the concentration--mass relation from the CAMELS simulations. 
 
 *[Figure 6 in Shao, Anbajagane, and Chang 2022](https://arxiv.org/abs/2212.05964). Variations in the concentration mass relation as you vary six parameters from the CAMELS suite.*
 {:.figcaption}
+
+
+### Concentration and 28 model parameters in CAMELS
+
+We then expanded the CAMELS analysis to all 28 cosmological and astrophysical parameters (23 for galaxy formation, 5 for cosmology), using 2048 IllustrisTNG simulations and redshifts $$0 < z < 3$$. Each feedback mechanism leaves clear mass- and redshift-dependent features on the concentration--mass relation, and we compress these into a simple three-component model. Cami Delgado, an undergrad at UChicago, led this work in [Delgado and Anbajagane 2026](https://arxiv.org/abs/2610.03544).
+
+![](/assets/img/projects/CAMELS_cM_28params_slopes.svg){:.lead style="width:100%;height:auto;display:block;margin:0 auto"}
+
+*[Figure 1 in Delgado and Anbajagane 2026](https://arxiv.org/abs/2610.03544). The dependence of concentration on each of the 28 parameters, as a function of halo mass.*
+{:.figcaption}
+
+
+### The full concentration distribution in CAMELS
+
+Most models only use the mean concentration at a given halo mass. Elisa Gao, an undergrad at UChicago, led [Gao and Anbajagane 2026](https://arxiv.org/abs/2610.03946), where we used normalizing flows to model the full distribution --- the mean, scatter, skewness, and kurtosis --- as a function of halo mass, redshift, and six CAMELS parameters. With galaxy formation, the scatter shows a non-monotonic feature at the Milky Way mass scale, which depends strongly on the baryon fraction and supernova feedback.
+
+![](/assets/img/projects/CAMELS_cM_scatter.svg){:.lead style="width:100%;height:auto;display:block;margin:0 auto"}
+
+*[Figure 4 in Gao and Anbajagane 2026](https://arxiv.org/abs/2610.03946). The scatter in concentration as a function of halo mass, for variations in each of the six CAMELS parameters.*
+{:.figcaption}
+
+{% include abbreviations.md %}

@@ -47,3 +47,5 @@ I've generated curated, Rockstar-like catalogs from IllustrisTNG and they are pa
 * [CAMELS](https://camels.readthedocs.io/)
 * [DES Y3](https://des.ncsa.illinois.edu/releases/y3a2)
 * [Planck @ Lambda](https://lambda.gsfc.nasa.gov/product/planck/)
+
+{% include abbreviations.md %}

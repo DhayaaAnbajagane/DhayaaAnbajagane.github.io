@@ -1,0 +1,47 @@
+# Refreshes the CV page's publication list (_data/publications.json) from NASA ADS.
+# Setup: create an ADS API token at https://ui.adsabs.harvard.edu/user/settings/token and add it
+# as a repository secret named ADS_TOKEN (Settings → Secrets and variables → Actions).
+name: Update publications from NASA ADS
+
+on:
+  schedule:
+    - cron: "17 6 * * 1" # Mondays, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency: update-publications
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Query ADS
+        env:
+          ADS_TOKEN: ${{ secrets.ADS_TOKEN }}
+        run: python3 .github/scripts/update_publications.py
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          git add _data/publications.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update publications from NASA ADS"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Pushes made with the workflow token don't start a Pages build on their own.
+      - name: Rebuild the site
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"

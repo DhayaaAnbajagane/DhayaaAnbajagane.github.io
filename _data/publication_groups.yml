@@ -1,0 +1,28 @@
+# How the CV page groups publications. The papers themselves come from NASA ADS
+# (_data/publications.json, refreshed weekly by .github/workflows/update-publications.yml).
+#
+# - First-author papers are detected automatically.
+# - Papers listed under `major` show under "Other major contributions", with the text as the
+#   "Contrib:" note. Key them by arXiv ID (or by ADS bibcode if a paper has no arXiv ID).
+# - Every other paper shows under "Supporting contributions".
+major:
+  "2610.03946": Primary academic mentor, coordinated and helped with entire analysis
+  "2610.03544": Primary academic mentor, coordinated and helped with entire analysis
+  "2509.20458": data, validation, interpretation
+  "2509.03798": data, validation, interpretation
+  "2508.14018": simulation-based covariance, validation
+  "2507.13317": Full halo model pipeline, analysis, interpretation
+  "2505.07949": Full baryon modelling pipeline, analysis, interpretation
+  "2505.05570": Built entire synthetic source injection pipeline
+  "2503.03964": simulation-based covariance, validation
+  "2402.00110": Simulations, validation, interpretation
+  "2401.18072": Simulations, modeling
+  "2312.16289": Primary academic mentor, coordinated and helped with entire analysis
+  "2311.08664": Simulations, methodology, analysis
+  "2311.03491": Primary academic mentor, coordinated and helped with entire analysis
+  "2212.05964": Primary academic mentor, coordinated and helped with entire analysis
+  "2207.05834": Simulations, analysis, interpretation
+  "2204.13578": Simulations, analysis
+  "2202.14006": Simulations, analysis
+  "2202.09903": Co-lead developer of software, methodology validation
+  "2107.07538": Co-analysis lead

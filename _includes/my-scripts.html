@@ -53,3 +53,121 @@ The snippet below will run the code on every `hy-push-state-load` event instead.
   });
 </script>
 {% endcomment %}
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"
+  integrity="sha384-o0gqi06am9fKVfa/jWO8/UE7OxHG6t+fgq/XaASsuwT8OBsFcxN7YhjtqyTfIxtS"
+  crossorigin="anonymous" defer></script>
+<script>
+  (function () {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var zoom = null;
+
+    // Figures are the `{:.lead}` images in page content; images inside links keep their link behavior.
+    function figures() {
+      return Array.prototype.filter.call(document.querySelectorAll('#_main img.lead'), function (img) {
+        return !img.closest('a');
+      });
+    }
+
+    // Click-to-zoom on figures.
+    function setupZoom() {
+      if (!window.mediumZoom) return;
+      if (zoom) zoom.detach();
+      zoom = mediumZoom(figures(), { margin: 24, background: 'var(--body-bg)' });
+    }
+
+    // Fade figures (and their captions) in as they scroll into view.
+    // Anything already on screen is left alone so nothing flickers on page load.
+    function setupReveal() {
+      if (reduceMotion || !('IntersectionObserver' in window)) return;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -10% 0px' });
+
+      figures().forEach(function (img) {
+        var block = img.closest('p');
+        if (!block) return;
+        var caption = block.nextElementSibling;
+        var targets = caption && caption.classList.contains('figcaption') ? [block, caption] : [block];
+        targets.forEach(function (el) {
+          if (el.getBoundingClientRect().top < window.innerHeight) return;
+          el.classList.add('reveal');
+          observer.observe(el);
+        });
+      });
+    }
+
+    // A single "Copied" toast, outside #_main so it survives push-state page swaps.
+    // aria-live lets screen readers announce it.
+    var toast = document.createElement('div');
+    toast.className = 'copy-toast';
+    toast.setAttribute('role', 'status');
+    toast.setAttribute('aria-live', 'polite');
+    document.body.appendChild(toast);
+    var toastTimer = null;
+
+    function copyText(text, message) {
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(text).then(function () {
+        toast.textContent = message;
+        toast.classList.add('is-visible');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toast.classList.remove('is-visible'); }, 1500);
+      });
+    }
+
+    // Hydejack adds a `#` permalink to every heading; clicking it now also copies the section URL.
+    // Registered once on the document, since the permalinks are re-created on every page.
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest && e.target.closest('#_main a.permalink');
+      if (!link) return;
+      var url = location.origin + location.pathname + link.getAttribute('href');
+      copyText(url, 'Link to section copied');
+    });
+
+    // Data release pages: inline code (file names, HDF5 paths, column names) copies on click.
+    // Code inside links keeps its link behavior; code blocks already have Hydejack's copy button.
+    function setupCodeCopy() {
+      if (location.pathname.indexOf('/data_release/') !== 0) return;
+      document.querySelectorAll('#_main code').forEach(function (el) {
+        if (el.closest('pre, a') || el.classList.contains('click-to-copy')) return;
+        el.classList.add('click-to-copy');
+        el.setAttribute('role', 'button');
+        el.setAttribute('tabindex', '0');
+        el.setAttribute('title', 'Click to copy');
+        var copy = function () { copyText(el.textContent, 'Copied ' + el.textContent); };
+        el.addEventListener('click', copy);
+        el.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); copy(); }
+        });
+      });
+    }
+
+    // Jargon tooltips come from _includes/abbreviations.md (kramdown <abbr title>).
+    // Native title tooltips need a mouse, so make them focusable for touch and keyboard;
+    // CSS shows the definition on focus.
+    function setupAbbr() {
+      document.querySelectorAll('#_main abbr[title]').forEach(function (el) {
+        el.setAttribute('tabindex', '0');
+        el.setAttribute('data-title', el.getAttribute('title'));
+      });
+    }
+
+    function init() {
+      setupZoom();
+      setupReveal();
+      setupCodeCopy();
+      setupAbbr();
+    }
+
+    // Run on the first page view, then again after each Hydejack push-state page change.
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+    var pushState = document.getElementById('_pushState');
+    if (pushState) pushState.addEventListener('hy-push-state-load', init);
+  })();
+</script>
