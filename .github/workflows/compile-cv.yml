@@ -1,0 +1,87 @@
+# Pulls the CV from Overleaf (via Overleaf's Git access), compiles it, and commits the PDF to
+# assets/CV.pdf, which the "PDF" button on the CV page links to.
+#
+# Setup (Settings → Secrets and variables → Actions):
+# - Secret   OVERLEAF_GIT_TOKEN: Overleaf → Account Settings → Git Integration → generate a token.
+# - Variable OVERLEAF_PROJECT_ID: the ID in the project's URL, overleaf.com/project/<ID>.
+# - Variable CV_ROOT_FILE (optional): the project's main document; defaults to main.tex.
+# - Variable CV_COMPILER (optional): xelatex or lualatex if the project uses one; defaults to pdfLaTeX.
+#
+# Runs daily and only recompiles when the Overleaf project changed; run it by hand from the
+# Actions tab to update right away.
+name: Compile CV from Overleaf
+
+on:
+  schedule:
+    - cron: "41 7 * * *" # daily, 07:41 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency: compile-cv
+
+env:
+  ROOT_FILE: ${{ vars.CV_ROOT_FILE || 'main.tex' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The last compiled Overleaf commit is recorded in .github/cv-overleaf-commit,
+      # so scheduled runs skip the compile when nothing changed.
+      - name: Fetch the CV from Overleaf
+        id: fetch
+        env:
+          OVERLEAF_TOKEN: ${{ secrets.OVERLEAF_GIT_TOKEN }}
+          PROJECT_ID: ${{ vars.OVERLEAF_PROJECT_ID }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          if [ -z "$OVERLEAF_TOKEN" ] || [ -z "$PROJECT_ID" ]; then
+            echo "Set the OVERLEAF_GIT_TOKEN secret and the OVERLEAF_PROJECT_ID variable first."
+            exit 1
+          fi
+          git clone --depth 1 "https://git:${OVERLEAF_TOKEN}@git.overleaf.com/${PROJECT_ID}" cv-source
+          sha=$(git -C cv-source rev-parse HEAD)
+          if [ "$EVENT" != "workflow_dispatch" ] && [ "$sha" = "$(cat .github/cv-overleaf-commit 2>/dev/null)" ]; then
+            echo "CV unchanged since the last build."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "$sha" > .github/cv-overleaf-commit
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Compile LaTeX
+        if: steps.fetch.outputs.changed == 'true'
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: cv-source
+          root_file: ${{ env.ROOT_FILE }}
+          latexmk_use_xelatex: ${{ vars.CV_COMPILER == 'xelatex' }}
+          latexmk_use_lualatex: ${{ vars.CV_COMPILER == 'lualatex' }}
+
+      - name: Commit the PDF
+        id: commit
+        if: steps.fetch.outputs.changed == 'true'
+        run: |
+          cp "cv-source/${ROOT_FILE%.tex}.pdf" assets/CV.pdf
+          git add assets/CV.pdf .github/cv-overleaf-commit
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update CV PDF from Overleaf"
+          git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      # Pushes made with the workflow token don't start a Pages build on their own.
+      - name: Rebuild the site
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
