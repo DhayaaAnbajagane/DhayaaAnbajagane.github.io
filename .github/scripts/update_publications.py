@@ -25,6 +25,7 @@ SURNAME = "Anbajagane"
 QUERY = f'(orcid:"{ORCID}" OR author:"{SURNAME}, D") doctype:(article OR eprint)'
 FIELDS = "bibcode,title,author,pubdate,pub,identifier,doi,citation_count"
 API = "https://api.adsabs.harvard.edu/v1/search/query"
+EXPORT_API = "https://api.adsabs.harvard.edu/v1/export/bibtex"
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "_data", "publications.json")
 
 SKIP_TITLE = re.compile(r"^(erratum|corrigendum|publisher'?s note)", re.I)
@@ -230,6 +231,21 @@ def fetch_ads(token):
         return json.load(resp)["response"]["docs"]
 
 
+def fetch_bibtex(token, bibcodes):
+    """BibTeX for each bibcode, from the ADS export API (one request); keyed by bibcode."""
+    body = json.dumps({"bibcode": bibcodes}).encode()
+    req = urllib.request.Request(EXPORT_API, data=body, method="POST", headers={
+        "Authorization": f"Bearer {token}", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        text = json.load(resp)["export"]
+    entries = {}
+    for entry in re.split(r"\n(?=@)", text.strip()):
+        key = re.match(r"@\w+\{([^,]+),", entry.strip())
+        if key:
+            entries[key.group(1).strip()] = entry.strip()
+    return entries
+
+
 def main():
     token = os.environ.get("ADS_TOKEN")
     if not token:
@@ -237,7 +253,12 @@ def main():
     docs = fetch_ads(token)
     if not docs:
         sys.exit("ADS returned no papers; leaving _data/publications.json unchanged.")
-    write_if_changed(build_output(docs, "NASA ADS"))
+    out = build_output(docs, "NASA ADS")
+    # BibTeX for the CV page's pop-up; a paper without one falls back to a link to ADS.
+    bibtex = fetch_bibtex(token, [p["bibcode"] for p in out["papers"] if p["bibcode"]])
+    for p in out["papers"]:
+        p["bibtex"] = bibtex.get(p["bibcode"], "")
+    write_if_changed(out)
 
 
 if __name__ == "__main__":

@@ -18,6 +18,9 @@ body {
   --c-soft-red:   #b5525a;  /* highlighted text, CV item titles */
   --c-teal:       #2a7f87;  /* my name in the publication list */
   --c-blue:       #3f6fb0;  /* mentored students in the publication list */
+  --c-pop-bg:     #f4f5f7;  /* BibTeX pop-up box */
+  --c-pop-text:   #222;
+  --c-pop-border: #d6d9dd;
 }
 
 body.dark-mode {
@@ -25,6 +28,9 @@ body.dark-mode {
   --c-soft-red:   #f2a7a7;
   --c-teal:       #a6dade;
   --c-blue:       #b4cbef;
+  --c-pop-bg:     #383c40;
+  --c-pop-text:   #e8e8e8;
+  --c-pop-border: #4f555b;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +39,9 @@ body.dark-mode {
     --c-soft-red:   #f2a7a7;
     --c-teal:       #a6dade;
     --c-blue:       #b4cbef;
+    --c-pop-bg:     #383c40;
+    --c-pop-text:   #e8e8e8;
+    --c-pop-border: #4f555b;
   }
 }
 
@@ -325,4 +334,93 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
 /* Citation count and ADS / BibTeX links after each paper */
 .cv-pub-meta a {
   margin-left: .5em;
+}
+
+/* BibTeX pop-up (a <dialog> created by my-scripts.html). It fades and rises in like the figures do:
+   the script adds `is-open` one frame after opening, and removes it before closing. */
+.bibtex-dialog {
+  width: min(40rem, calc(100vw - 2rem));
+  max-height: 80vh;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--c-pop-border);
+  border-radius: .75rem;
+  background: var(--c-pop-bg);
+  color: var(--c-pop-text);
+  box-shadow: 0 .75rem 2.5rem rgba(0, 0, 0, .35);
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.bibtex-dialog.is-open {
+  opacity: 1;
+  transform: none;
+}
+
+.bibtex-dialog::backdrop {
+  background: rgba(0, 0, 0, .4);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.bibtex-dialog.is-open::backdrop {
+  opacity: 1;
+}
+
+.bibtex-dialog-bar {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .7rem 1rem;
+  border-bottom: 1px solid var(--c-pop-border);
+  font-size: .85rem;
+}
+
+.bibtex-dialog-title {
+  margin-right: auto;
+  font-weight: 600;
+}
+
+.bibtex-dialog-bar button {
+  padding: .2rem .75rem;
+  border: 1px solid var(--c-pop-border);
+  border-radius: .4rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: border-color 150ms ease;
+}
+
+.bibtex-dialog-bar button:hover,
+.bibtex-dialog-bar button:focus-visible {
+  border-color: var(--c-pop-text);
+}
+
+/* `html` raises specificity above the theme's own <pre> styles */
+html .bibtex-dialog .bibtex-text {
+  max-height: calc(80vh - 3.5rem);
+  margin: 0;
+  padding: 1rem 1.25rem 1.25rem;
+  overflow: auto;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: .8rem;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bibtex-dialog,
+  .bibtex-dialog::backdrop {
+    transition: none;
+  }
+}
+
+@media print {
+  .bibtex-dialog { display: none; }
 }

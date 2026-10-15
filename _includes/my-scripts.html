@@ -213,6 +213,68 @@ The snippet below will run the code on every `hy-push-state-load` event instead.
       }
     });
 
+    /* BibTeX pop-up for the publication lists (_includes/my-pub-list.html). One <dialog> for the whole
+       visit, outside #_main; each paper's "BibTeX" link opens the entry kept in its hidden <pre>
+       (without the script, the link still goes to ADS's export page). Opening and closing fade and
+       slide like the figures do: the `is-open` class drives the CSS transition, and the dialog is only
+       closed once the fade-out has finished. The browser returns focus to the link on close. */
+    var bibDialog = null;
+    var bibCloseTimer = null;
+    function closeBibtex(immediately) {
+      if (!bibDialog || !bibDialog.open) return;
+      bibDialog.classList.remove('is-open');
+      clearTimeout(bibCloseTimer);
+      if (immediately || reduceMotion.matches) bibDialog.close();
+      else bibCloseTimer = setTimeout(function () { bibDialog.close(); }, 320);
+    }
+    function bibtexDialog() {
+      if (bibDialog) return bibDialog;
+      bibDialog = document.createElement('dialog');
+      bibDialog.className = 'bibtex-dialog';
+      bibDialog.setAttribute('aria-label', 'BibTeX entry');
+      bibDialog.innerHTML =
+        '<div class="bibtex-dialog-bar"><span class="bibtex-dialog-title">BibTeX</span>' +
+        '<button type="button" class="bibtex-copy">Copy</button>' +
+        '<button type="button" class="bibtex-close" aria-label="Close">×</button></div>' +
+        '<pre class="bibtex-text"></pre>';
+      document.body.appendChild(bibDialog);
+      var copyBtn = bibDialog.querySelector('.bibtex-copy');
+      var copyTimer = null;
+      copyBtn.addEventListener('click', function () {
+        if (!navigator.clipboard) return;
+        navigator.clipboard.writeText(bibDialog.querySelector('.bibtex-text').textContent).then(function () {
+          /* The page's toast would sit under the open dialog, so confirm on the button itself. */
+          copyBtn.textContent = 'Copied';
+          clearTimeout(copyTimer);
+          copyTimer = setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1500);
+        });
+      });
+      bibDialog.querySelector('.bibtex-close').addEventListener('click', function () { closeBibtex(); });
+      /* Escape: animate the close instead of the browser's instant one. */
+      bibDialog.addEventListener('cancel', function (e) { e.preventDefault(); closeBibtex(); });
+      /* A click on the dimmed backdrop lands on the <dialog> element itself (its content fills the box). */
+      bibDialog.addEventListener('click', function (e) { if (e.target === bibDialog) closeBibtex(); });
+      return bibDialog;
+    }
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest && e.target.closest('#_main .bibtex-btn');
+      if (!link) return;
+      var item = link.closest('li');
+      var src = item && item.querySelector('.bibtex-data');
+      if (!src) return;
+      e.preventDefault();
+      var dlg = bibtexDialog();
+      clearTimeout(bibCloseTimer);
+      dlg.querySelector('.bibtex-text').textContent = src.textContent;
+      dlg.querySelector('.bibtex-copy').textContent = 'Copy';
+      if (!dlg.open) {
+        if (dlg.showModal) dlg.showModal();
+        else dlg.setAttribute('open', '');
+      }
+      /* Two frames so the closed state is painted before the transition to `is-open` starts. */
+      requestAnimationFrame(function () { requestAnimationFrame(function () { dlg.classList.add('is-open'); }); });
+    });
+
     function init() {
       setupZoom();
       setupReveal();
@@ -227,7 +289,10 @@ The snippet below will run the code on every `hy-push-state-load` event instead.
     if (pushState) {
       pushState.addEventListener('hy-push-state-load', init);
       /* Close an open zoomed figure when leaving the page. */
-      pushState.addEventListener('hy-push-state-start', function () { if (zoom) zoom.close(); });
+      pushState.addEventListener('hy-push-state-start', function () {
+        if (zoom) zoom.close();
+        closeBibtex(true);
+      });
     }
   })();
 </script>

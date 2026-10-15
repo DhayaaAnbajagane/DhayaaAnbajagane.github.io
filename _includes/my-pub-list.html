@@ -49,9 +49,15 @@
         {% if p.citations and p.citations > 0 %}{{ p.citations }} citation{% if p.citations != 1 %}s{% endif %}{% endif %}
         {% if p.bibcode != "" %}
         <a href="{{ p.ads_url }}" class="no-mark-external">ADS</a>
-        <a href="https://ui.adsabs.harvard.edu/abs/{{ p.bibcode }}/exportcitation" class="no-mark-external">BibTeX</a>
+        {% endif %}
+        {% comment %} A plain link to ADS's export page, styled like "ADS"; when the paper has a stored
+           entry, my-scripts.html opens it in a pop-up instead of following the link {% endcomment %}
+        {% if p.bibcode != "" %}
+        <a href="https://ui.adsabs.harvard.edu/abs/{{ p.bibcode }}/exportcitation" class="no-mark-external{% if p.bibtex and p.bibtex != "" %} bibtex-btn{% endif %}"{% if p.bibtex and p.bibtex != "" %} aria-haspopup="dialog"{% endif %}>BibTeX</a>
         {% endif %}
       </span>
+      {% comment %} The entry itself, kept in a <pre> so the production HTML compressor leaves its line breaks alone {% endcomment %}
+      {% if p.bibtex and p.bibtex != "" %}<pre class="bibtex-data" hidden>{{ p.bibtex | escape }}</pre>{% endif %}
     </li>
     {% endif %}
   {% endfor %}

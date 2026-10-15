@@ -21,7 +21,8 @@
    "pubdate": "2026-10-00",
    "url": "https://arxiv.org/abs/2610.03447",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv261003447D",
-   "citations": 0
+   "citations": 0,
+   "bibtex": "@article{DES:2026bft,\n    author = \"Doux, C. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 Results: fast and interpretable posterior predictive checks for correlated cosmic probes}\",\n    eprint = \"2610.03447\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-26-0659-PPD\",\n    month = \"10\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026arXiv261003946G",
@@ -34,7 +35,8 @@
    "pubdate": "2026-10-00",
    "url": "https://arxiv.org/abs/2610.03946",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv261003946G",
-   "citations": 0
+   "citations": 0,
+   "bibtex": "@article{Gao:2026ukz,\n    author = \"Gao, Elisa J. and Anbajagane, Dhayaa\",\n    title = \"{Baryonic Imprints on DM Halos: characterizing the full concentration-mass probability distribution with CAMELS}\",\n    eprint = \"2610.03946\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    month = \"10\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026arXiv261008947M",
@@ -47,7 +49,8 @@
    "pubdate": "2026-10-00",
    "url": "https://arxiv.org/abs/2610.08947",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv261008947M",
-   "citations": 0
+   "citations": 0,
+   "bibtex": "@article{SPT-3G:2026xmm,\n    author = \"Martsen, E. S. and others\",\n    collaboration = \"SPT-3G\",\n    title = \"{Measuring the Clustering of tSZ-Selected Galaxy Clusters with SPT-3G}\",\n    eprint = \"2610.08947\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    month = \"10\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026arXiv261003544D",
@@ -60,7 +63,8 @@
    "pubdate": "2026-10-00",
    "url": "https://arxiv.org/abs/2610.03544",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv261003544D",
-   "citations": 0
+   "citations": 0,
+   "bibtex": "@article{Delgado:2026pfk,\n    author = \"Delgado, Cami and Anbajagane, Dhayaa\",\n    title = \"{Baryonic Imprints on DM Halos: the concentration-mass relation and its dependence on 28 model parameters in the CAMELS suite}\",\n    eprint = \"2610.03544\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    month = \"10\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026ApJ..1010...47S",
@@ -73,7 +77,8 @@
    "pubdate": "2026-10-00",
    "url": "https://arxiv.org/abs/2604.22105",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1010...47S",
-   "citations": 7
+   "citations": 7,
+   "bibtex": "@article{Sharma:2026xbg,\n    author = \"Sharma, Kritti and others\",\n    title = \"{Backlighting the Universe with Fast Radio Bursts: An Anthology of Dispersion Measure Cross Correlations with Tracers of Large-scale Structure and Baryonic Matter}\",\n    eprint = \"2604.22105\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.3847/1538-4357/ae9a79\",\n    journal = \"Astrophys. J.\",\n    volume = \"1010\",\n    number = \"1\",\n    pages = \"47\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026NatAs.tmp..196S",
@@ -86,7 +91,8 @@
    "pubdate": "2026-09-00",
    "url": "https://arxiv.org/abs/2604.17162",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026NatAs.tmp..196S",
-   "citations": 5
+   "citations": 5,
+   "bibtex": "@article{Sharma:2026qxh,\n    author = \"Sharma, Kritti and Krause, Elisabeth and Ravi, Vikram and Connor, Liam and Anbajagane, Dhayaa and S, Pranjal R.\",\n    title = \"{Signatures of Suppressed Matter Clustering revealed by Fast Radio Bursts}\",\n    eprint = \"2604.17162\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    month = \"4\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026PhRvD.114f3506S",
@@ -99,7 +105,8 @@
    "pubdate": "2026-09-00",
    "url": "https://arxiv.org/abs/2601.14859",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026PhRvD.114f3506S",
-   "citations": 14
+   "citations": 14,
+   "bibtex": "@article{DES:2026zjp,\n    author = \"Sanchez-Cid, D. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 results: Weak lensing and galaxy clustering cosmological analysis framework}\",\n    eprint = \"2601.14859\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-26-0035-PPD\",\n    doi = \"10.1103/8n76-f6ln\",\n    journal = \"Phys. Rev. D\",\n    volume = \"114\",\n    number = \"6\",\n    pages = \"063506\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026PhRvD.114d3527A",
@@ -112,7 +119,8 @@
    "pubdate": "2026-08-00",
    "url": "https://arxiv.org/abs/2509.03582",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026PhRvD.114d3527A",
-   "citations": 17
+   "citations": 17,
+   "bibtex": "@article{Anbajagane:2025goh,\n    author = \"Anbajagane, D. and others\",\n    title = \"{Dark Energy Camera All Data Everywhere cosmic shear project. V. Constraints on cosmology and astrophysics from 270~million galaxies across 13,000{\\,}deg2 of the sky}\",\n    eprint = \"2509.03582\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-25-0644-CSAID-PPD\",\n    doi = \"10.1103/k4lq-2s73\",\n    journal = \"Phys. Rev. D\",\n    volume = \"114\",\n    number = \"4\",\n    pages = \"043527\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026PhRvD.114b3520G",
@@ -125,7 +133,8 @@
    "pubdate": "2026-07-00",
    "url": "https://arxiv.org/abs/2509.07964",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026PhRvD.114b3520G",
-   "citations": 11
+   "citations": 11,
+   "bibtex": "@article{DES:2025ucw,\n    author = \"Giannini, G. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 results: Redshift calibration of the MagLim++ lens sample}\",\n    eprint = \"2509.07964\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2025-0911, FERMILAB-PUB-25-0641-V\",\n    doi = \"10.1103/mkwr-bfls\",\n    journal = \"Phys. Rev. D\",\n    volume = \"114\",\n    number = \"2\",\n    pages = \"023520\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026arXiv260724939A",
@@ -138,7 +147,8 @@
    "pubdate": "2026-07-00",
    "url": "https://arxiv.org/abs/2607.24939",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv260724939A",
-   "citations": 0
+   "citations": 0,
+   "bibtex": "@article{Anbajagane:2026icf,\n    author = \"Anbajagane, Dhayaa and Dalal, Neal\",\n    title = \"{Primordial Physics in the Nonlinear Universe: Revealing the oscillating halo bias from cosmological collider models}\",\n    eprint = \"2607.24939\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    month = \"7\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026PhRvD.114b3040T",
@@ -151,7 +161,8 @@
    "pubdate": "2026-07-00",
    "url": "https://arxiv.org/abs/2509.20458",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026PhRvD.114b3040T",
-   "citations": 3
+   "citations": 3,
+   "bibtex": "@article{DELVE:2025ugp,\n    author = \"To, Chun-Hao and others\",\n    collaboration = \"DELVE\",\n    title = \"{First detection of weak lensing around spectroscopically confirmed low-mass galaxies}\",\n    eprint = \"2509.20458\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.GA\",\n    doi = \"10.1103/sqkx-dhd4\",\n    journal = \"Phys. Rev. D\",\n    volume = \"114\",\n    number = \"2\",\n    pages = \"023040\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026ApJ..1006L...3S",
@@ -164,7 +175,8 @@
    "pubdate": "2026-07-00",
    "url": "https://arxiv.org/abs/2605.01994",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1006L...3S",
-   "citations": 0
+   "citations": 0,
+   "bibtex": "@article{Sharma:2026tqr,\n    author = \"Sharma, Kritti and others\",\n    title = \"{Baryons in the Darkest Sites of the Universe}\",\n    eprint = \"2605.01994\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.3847/2041-8213/ae81ac\",\n    journal = \"Astrophys. J. Lett.\",\n    volume = \"1006\",\n    number = \"1\",\n    pages = \"L3\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026arXiv260706692A",
@@ -177,7 +189,8 @@
    "pubdate": "2026-07-00",
    "url": "https://arxiv.org/abs/2607.06692",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv260706692A",
-   "citations": 2
+   "citations": 2,
+   "bibtex": "@article{Anbajagane:2026ywu,\n    author = \"Anbajagane, Dhayaa\",\n    title = \"{Primordial Physics in the Nonlinear Universe: Towards particle constraints using the Weak lensing, Thermal SZ, and X-ray fields}\",\n    eprint = \"2607.06692\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    month = \"7\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026JCAP...06..036G",
@@ -190,7 +203,8 @@
    "pubdate": "2026-06-00",
    "url": "https://arxiv.org/abs/2510.13805",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026JCAP...06..036G",
-   "citations": 3
+   "citations": 3,
+   "bibtex": "@article{Gebauer:2025yan,\n    author = \"Gebauer, David and Halder, Anik and Seitz, Stella and Anbajagane, Dhayaa\",\n    title = \"{SBi3PCF: simulation-based inference with the integrated 3PCF}\",\n    eprint = \"2510.13805\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1088/1475-7516/2026/06/036\",\n    journal = \"JCAP\",\n    volume = \"06\",\n    pages = \"036\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026PhRvD.113l3549D",
@@ -203,7 +217,8 @@
    "pubdate": "2026-06-00",
    "url": "https://arxiv.org/abs/2510.23565",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026PhRvD.113l3549D",
-   "citations": 15
+   "citations": 15,
+   "bibtex": "@article{DES:2025fgm,\n    author = \"d'Assignies, W. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 results: Clustering redshifts and importance sampling of self-organized-maps n(z) realizations for 3{\\texttimes}2pt samples}\",\n    eprint = \"2510.23565\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2025-0936, FERMILAB-PUB-25-0733-PPD\",\n    doi = \"10.1103/6lfl-h6dg\",\n    journal = \"Phys. Rev. D\",\n    volume = \"113\",\n    number = \"12\",\n    pages = \"123549\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026PhRvD.113l3520L",
@@ -216,7 +231,8 @@
    "pubdate": "2026-06-00",
    "url": "https://arxiv.org/abs/2601.14833",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026PhRvD.113l3520L",
-   "citations": 7
+   "citations": 7,
+   "bibtex": "@article{DES:2026lhi,\n    author = \"Legnani, E. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey year 6 results: Magnification modeling and its impact on galaxy clustering and galaxy-galaxy lensing cosmology}\",\n    eprint = \"2601.14833\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2025-0949, FERMILAB-PUB-25-1006-PPD\",\n    doi = \"10.1103/rpdb-7zyn\",\n    journal = \"Phys. Rev. D\",\n    volume = \"113\",\n    number = \"12\",\n    pages = \"123520\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026JCAP...05..076A",
@@ -229,7 +245,8 @@
    "pubdate": "2026-05-00",
    "url": "https://arxiv.org/abs/2509.02693",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026JCAP...05..076A",
-   "citations": 13
+   "citations": 13,
+   "bibtex": "@article{Anbajagane:2025uro,\n    author = \"Anbajagane, Dhayaa and Lee, Hayden\",\n    title = \"{Primordial physics in the nonlinear Universe: Mapping cosmological collider models to weak-lensing observables}\",\n    eprint = \"2509.02693\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1088/1475-7516/2026/05/076\",\n    journal = \"JCAP\",\n    volume = \"05\",\n    pages = \"076\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026JCAP...05..077A",
@@ -242,7 +259,8 @@
    "pubdate": "2026-05-00",
    "url": "https://arxiv.org/abs/2509.02695",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026JCAP...05..077A",
-   "citations": 9
+   "citations": 9,
+   "bibtex": "@article{Anbajagane:2025xlt,\n    author = \"Anbajagane, Dhayaa and Lee, Hayden\",\n    title = \"{Primordial physics in the nonlinear Universe: Signatures of inflationary resonances, excitations, and scale dependence}\",\n    eprint = \"2509.02695\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1088/1475-7516/2026/05/077\",\n    journal = \"JCAP\",\n    volume = \"05\",\n    pages = \"077\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026PhRvD.113j3503G",
@@ -255,7 +273,8 @@
    "pubdate": "2026-05-00",
    "url": "https://arxiv.org/abs/2601.15175",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026PhRvD.113j3503G",
-   "citations": 4
+   "citations": 4,
+   "bibtex": "@article{DES:2026qfi,\n    author = \"Giannini, G. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 results: Galaxy-galaxy lensing}\",\n    eprint = \"2601.15175\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2025-0955, FERMILAB-PUB-26-0031-PPD\",\n    doi = \"10.1103/c87p-j9nt\",\n    journal = \"Phys. Rev. D\",\n    volume = \"113\",\n    number = \"10\",\n    pages = \"103503\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026ApJ..1002L..22R",
@@ -268,7 +287,8 @@
    "pubdate": "2026-05-00",
    "url": "https://arxiv.org/abs/2602.10107",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1002L..22R",
-   "citations": 9
+   "citations": 9,
+   "bibtex": "@article{SPTpol:2026xmb,\n    author = \"Raghunathan, S. and others\",\n    collaboration = \"SPTpol, SPT-3G\",\n    title = \"{Measurement of the Full Shape of the Thermal Sunyaev{\\textendash}Zel{\\textquoteright}dovich Power Spectrum from the South Pole Telescope and Herschel{\\textendash}SPIRE Observations}\",\n    eprint = \"2602.10107\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-26-0084-PPD\",\n    doi = \"10.3847/2041-8213/ae5c07\",\n    journal = \"Astrophys. J. Lett.\",\n    volume = \"1002\",\n    number = \"1\",\n    pages = \"L22\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026arXiv260527221D",
@@ -281,7 +301,8 @@
    "pubdate": "2026-05-00",
    "url": "https://arxiv.org/abs/2605.27221",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv260527221D",
-   "citations": 14
+   "citations": 14,
+   "bibtex": "@article{DES:2026jmi,\n    author = \"Abbott, T. M. C. and others\",\n    collaboration = \"DES\",\n    title = \"{Constraints on Dynamical Dark Energy from Multiple Probes in the Full Dark Energy Survey}\",\n    eprint = \"2605.27221\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2026-0979, FERMILAB-PUB-26-0306-PPD\",\n    month = \"5\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026PhRvD.113h1303G",
@@ -294,7 +315,8 @@
    "pubdate": "2026-04-00",
    "url": "https://arxiv.org/abs/2509.03798",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026PhRvD.113h1303G",
-   "citations": 4
+   "citations": 4,
+   "bibtex": "@article{Gatti:2025xcc,\n    author = \"Gatti, M. and others\",\n    title = \"{DECADE+DES Y3 weak lensing mass map: A 13,000{\\,}{\\,}deg2 view of cosmic structure from 270~million galaxies}\",\n    eprint = \"2509.03798\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-25-0642-PPD\",\n    doi = \"10.1103/lg8b-9ykz\",\n    journal = \"Phys. Rev. D\",\n    volume = \"113\",\n    number = \"8\",\n    pages = \"L081303\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026PhRvD.113h3501T",
@@ -307,7 +329,8 @@
    "pubdate": "2026-04-00",
    "url": "https://arxiv.org/abs/2511.04681",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026PhRvD.113h3501T",
-   "citations": 5
+   "citations": 5,
+   "bibtex": "@article{DES:2025jhz,\n    author = \"Thomsen, A. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 3 results: Simulation-based wCDM inference from weak lensing and galaxy clustering maps with deep learning: Analysis design}\",\n    eprint = \"2511.04681\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2025-0952, FERMILAB-PUB-25-0749-PPD\",\n    doi = \"10.1103/3sj1-1l9f\",\n    journal = \"Phys. Rev. D\",\n    volume = \"113\",\n    number = \"8\",\n    pages = \"083501\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026OJAp....959884R",
@@ -320,7 +343,8 @@
    "pubdate": "2026-03-00",
    "url": "https://arxiv.org/abs/2507.13317",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026OJAp....959884R",
-   "citations": 2
+   "citations": 2,
+   "bibtex": "@article{S:2025ikv,\n    author = \"S., Pranjal R. and Pandey, Shivam and Anbajagane, Dhayaa and Krause, Elisabeth and Dolag, Klaus\",\n    title = \"{Testing halo models for constraining astrophysical feedback with multi-probe modeling: I. 3D Power spectra and mass fractions}\",\n    eprint = \"2507.13317\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.33232/001c.159884\",\n    month = \"7\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2026ApJ..1000...87T",
@@ -333,7 +357,8 @@
    "pubdate": "2026-03-00",
    "url": "https://arxiv.org/abs/2509.12313",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1000...87T",
-   "citations": 15
+   "citations": 15,
+   "bibtex": "@article{DELVE:2025ihq,\n    author = \"Tan, Chin Yi and others\",\n    collaboration = \"DELVE, DES\",\n    title = \"{DELVE Milky Way Satellite Galaxy Census. I. Satellite Population and Survey Selection Function in DES, DELVE, and Pan-STARRS}\",\n    eprint = \"2509.12313\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.GA\",\n    reportNumber = \"FERMILAB-PUB-25-0573-LDRD-PPD, DES-2025-0909\",\n    doi = \"10.3847/1538-4357/ae4479\",\n    journal = \"Astrophys. J.\",\n    volume = \"1000\",\n    number = \"1\",\n    pages = \"87\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026ApJ...999..202S",
@@ -346,7 +371,8 @@
    "pubdate": "2026-03-00",
    "url": "https://arxiv.org/abs/2511.16850",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026ApJ...999..202S",
-   "citations": 6
+   "citations": 6,
+   "bibtex": "@article{Sharma:2025lql,\n    author = \"Sharma, Kritti and Ravi, Vikram and Connor, Liam and Krause, Elisabeth and S., Pranjal R. and Anbajagane, Dhayaa\",\n    title = \"{Quantifying the Impact of Selection Effects on FRB DM{\\textendash}z Relation Cosmological Inference}\",\n    eprint = \"2511.16850\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.3847/1538-4357/ae4696\",\n    journal = \"Astrophys. J.\",\n    volume = \"999\",\n    number = \"2\",\n    pages = \"202\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026arXiv260210065D",
@@ -359,7 +385,8 @@
    "pubdate": "2026-02-00",
    "url": "https://arxiv.org/abs/2602.10065",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv260210065D",
-   "citations": 36
+   "citations": 36,
+   "bibtex": "@article{DES:2026mkc,\n    author = \"Abbott, T. M. C. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 Results: Cosmological Constraints from Cosmic Shear}\",\n    eprint = \"2602.10065\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-26-0027-PPD\",\n    month = \"2\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026ApJS..282...62B",
@@ -372,7 +399,8 @@
    "pubdate": "2026-02-00",
    "url": "https://arxiv.org/abs/2501.05739",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026ApJS..282...62B",
-   "citations": 43
+   "citations": 43,
+   "bibtex": "@article{DES:2025key,\n    author = \"Bechtol, K. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 Results: Photometric Dataset for Cosmology}\",\n    eprint = \"2501.05739\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2023-0761, FERMILAB-PUB-24-0932-PPD\",\n    doi = \"10.3847/1538-4365/ae18d3\",\n    journal = \"Astrophys. J. Suppl.\",\n    volume = \"282\",\n    number = \"2\",\n    pages = \"62\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026ApJ...998..109S",
@@ -385,7 +413,8 @@
    "pubdate": "2026-02-00",
    "url": "https://arxiv.org/abs/2509.05866",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026ApJ...998..109S",
-   "citations": 22
+   "citations": 22,
+   "bibtex": "@article{Sharma:2025uij,\n    author = \"Sharma, Kritti and Krause, Elisabeth and Ravi, Vikram and Reischke, Robert and Connor, Liam and S., Pranjal R. and Anbajagane, Dhayaa\",\n    title = \"{Probing Baryonic Feedback and Cosmology with the 3 {\\texttimes} 2-point Statistic of Fast Radio Bursts and Galaxies}\",\n    eprint = \"2509.05866\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.3847/1538-4357/ae2ff9\",\n    journal = \"Astrophys. J.\",\n    volume = \"998\",\n    number = \"1\",\n    pages = \"109\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026arXiv260114559D",
@@ -398,7 +427,8 @@
    "pubdate": "2026-01-00",
    "url": "https://arxiv.org/abs/2601.14559",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026arXiv260114559D",
-   "citations": 68
+   "citations": 68,
+   "bibtex": "@article{DES:2026fyc,\n    author = \"Abbott, T. M. C. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 Results: Cosmological Constraints from Galaxy Clustering and Weak Lensing}\",\n    eprint = \"2601.14559\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2025-0929, FERMILAB-PUB-26-0026-PPD\",\n    month = \"1\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2026MNRAS.545f2152P",
@@ -411,7 +441,8 @@
    "pubdate": "2026-01-00",
    "url": "https://arxiv.org/abs/2506.13439",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2026MNRAS.545f2152P",
-   "citations": 20
+   "citations": 20,
+   "bibtex": "@article{DES:2025akz,\n    author = \"Prat, J. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 3 results: wCDM cosmology from simulation-based inference with persistent homology on the sphere}\",\n    eprint = \"2506.13439\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2025-0898, FERMILAB-PUB-25-0327-PPD\",\n    doi = \"10.1093/mnras/staf2152\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"545\",\n    number = \"3\",\n    pages = \"staf2152\",\n    year = \"2026\"\n}"
   },
   {
    "bibcode": "2025PhRvD.112l3514G",
@@ -424,7 +455,8 @@
    "pubdate": "2025-12-00",
    "url": "https://arxiv.org/abs/2503.03964",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025PhRvD.112l3514G",
-   "citations": 17
+   "citations": 17,
+   "bibtex": "@article{DES:2025tta,\n    author = \"Gomes, R. C. H. and others\",\n    collaboration = \"DES\",\n    title = \"{Cosmology with second- and third-order shear statistics for the Dark Energy Survey: Methods and simulated analysis}\",\n    eprint = \"2503.03964\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-25-0087-PPD\",\n    doi = \"10.1103/3f1p-spfp\",\n    journal = \"Phys. Rev. D\",\n    volume = \"112\",\n    number = \"12\",\n    pages = \"123514\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025PhRvD.112l3515G",
@@ -437,7 +469,8 @@
    "pubdate": "2025-12-00",
    "url": "https://arxiv.org/abs/2508.14018",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025PhRvD.112l3515G",
-   "citations": 17
+   "citations": 17,
+   "bibtex": "@article{DES:2025llp,\n    author = \"Gomes, R. C. H. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 3 Results: Cosmological constraints from second- and third-order shear statistics}\",\n    eprint = \"2508.14018\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-25-0572-PPD\",\n    doi = \"10.1103/sxlz-t9gb\",\n    journal = \"Phys. Rev. D\",\n    volume = \"112\",\n    number = \"12\",\n    pages = \"123515\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025MNRAS.543.4156Y",
@@ -450,7 +483,8 @@
    "pubdate": "2025-11-00",
    "url": "https://arxiv.org/abs/2501.05665",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025MNRAS.543.4156Y",
-   "citations": 33
+   "citations": 33,
+   "bibtex": "@article{Yamamoto:2025jsd,\n    author = \"Yamamoto, M. and others\",\n    title = \"{Dark Energy Survey Year 6 results: cell-based coadds and metadetection weak lensing shape catalogue}\",\n    eprint = \"2501.05665\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2023-0809, FERMILAB-PUB-25-0011-PPD\",\n    doi = \"10.1093/mnras/staf1661\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"543\",\n    number = \"4\",\n    pages = \"4156--4186\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025OJAp....846158A",
@@ -463,7 +497,8 @@
    "pubdate": "2025-10-00",
    "url": "https://arxiv.org/abs/2502.17674",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025OJAp....846158A",
-   "citations": 25
+   "citations": 25,
+   "bibtex": "@article{Anbajagane:2025oww,\n    author = \"Anbajagane, D. and others\",\n    title = \"{The DECADE cosmic shear project I: A new weak lensing shape catalog of 107 million galaxies}\",\n    eprint = \"2502.17674\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-25-0063-LDRD-PPD\",\n    doi = \"10.33232/001c.146158\",\n    journal = \"Open J. Astrophys.\",\n    volume = \"8\",\n    pages = \"146158\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025OJAp....846159A",
@@ -476,7 +511,8 @@
    "pubdate": "2025-10-00",
    "url": "https://arxiv.org/abs/2502.17675",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025OJAp....846159A",
-   "citations": 14
+   "citations": 14,
+   "bibtex": "@article{Anbajagane:2025pvn,\n    author = \"Anbajagane, D. and others\",\n    title = \"{The DECADE cosmic shear project II: photometric redshift calibration of the source galaxy sample}\",\n    eprint = \"2502.17675\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-25-0064-LDRD-PPD\",\n    doi = \"10.33232/001c.146159\",\n    journal = \"Open J. Astrophys.\",\n    volume = \"8\",\n    pages = \"146159\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025arXiv251023566Y",
@@ -489,7 +525,8 @@
    "pubdate": "2025-10-00",
    "url": "https://arxiv.org/abs/2510.23566",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025arXiv251023566Y",
-   "citations": 12
+   "citations": 12,
+   "bibtex": "@article{DES:2025azr,\n    author = \"Yin, B. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 Results: Redshift Calibration of the Weak Lensing Source Galaxies}\",\n    eprint = \"2510.23566\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2025-0948, FERMILAB-PUB-25-0751-PPD\",\n    month = \"10\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025PhRvD.112h3535A",
@@ -502,7 +539,8 @@
    "pubdate": "2025-10-00",
    "url": "https://arxiv.org/abs/2503.13632",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025PhRvD.112h3535A",
-   "citations": 69
+   "citations": 69,
+   "bibtex": "@article{DES:2025tna,\n    author = \"Abbott, T. M. C. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark energy survey year 3 results: Cosmological constraints from cluster abundances, weak lensing, and galaxy clustering}\",\n    eprint = \"2503.13632\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2025-0885, FERMILAB-PUB-25-0115-PPD\",\n    doi = \"10.1103/3dzh-d8f5\",\n    journal = \"Phys. Rev. D\",\n    volume = \"112\",\n    number = \"8\",\n    pages = \"083535\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025OJAp....846160A",
@@ -515,7 +553,8 @@
    "pubdate": "2025-10-00",
    "url": "https://arxiv.org/abs/2502.17676",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025OJAp....846160A",
-   "citations": 8
+   "citations": 8,
+   "bibtex": "@article{Anbajagane:2025yvy,\n    author = \"Anbajagane, D. and others\",\n    title = \"{The DECADE cosmic shear project III: validation of analysis pipeline using spatially inhomogeneous data}\",\n    eprint = \"2502.17676\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-25-0065-LDRD-PPD\",\n    doi = \"10.33232/001c.146160\",\n    journal = \"Open J. Astrophys.\",\n    volume = \"8\",\n    pages = \"146160\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025OJAp....846161A",
@@ -528,7 +567,8 @@
    "pubdate": "2025-10-00",
    "url": "https://arxiv.org/abs/2502.17677",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025OJAp....846161A",
-   "citations": 22
+   "citations": 22,
+   "bibtex": "@article{Anbajagane:2025hlf,\n    author = \"Anbajagane, D. and others\",\n    title = \"{The DECADE cosmic shear project IV: cosmological constraints from 107 million galaxies across 5,400 deg$^2$ of the sky}\",\n    eprint = \"2502.17677\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-25-0066-LDRD-PPD\",\n    doi = \"10.33232/001c.146161\",\n    journal = \"Open J. Astrophys.\",\n    volume = \"8\",\n    pages = \"146161\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025arXiv250907943R",
@@ -541,7 +581,8 @@
    "pubdate": "2025-09-00",
    "url": "https://arxiv.org/abs/2509.07943",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025arXiv250907943R",
-   "citations": 11
+   "citations": 11,
+   "bibtex": "@article{DES:2025grp,\n    author = \"Rodr{\\'\\i}guez-Monroy, M. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 Results: improved mitigation of spatially varying observational systematics with masking for the MagLim++ lens sample}\",\n    eprint = \"2509.07943\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2024-0878 / FERMILAB-PUB-25-0630-PPD, DES-2024-0878, FERMILAB-PUB-25-0630-PPD\",\n    month = \"9\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025JCAP...09..073Z",
@@ -554,7 +595,8 @@
    "pubdate": "2025-09-00",
    "url": "https://arxiv.org/abs/2505.07949",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025JCAP...09..073Z",
-   "citations": 9
+   "citations": 9,
+   "bibtex": "@article{Zhou:2025tdd,\n    author = \"Zhou, Alan Junzhe and Gatti, Marco and Anbajagane, Dhayaa and Dodelson, Scott and Schaller, Matthieu and Schaye, Joop\",\n    title = \"{Map-level baryonification: unified treatment of weak lensing two-point and higher-order statistics}\",\n    eprint = \"2505.07949\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-25-0351-PPD\",\n    doi = \"10.1088/1475-7516/2025/09/073\",\n    journal = \"JCAP\",\n    volume = \"09\",\n    pages = \"073\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025PhRvD.112f3537T",
@@ -567,7 +609,8 @@
    "pubdate": "2025-09-00",
    "url": "https://arxiv.org/abs/2503.13631",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025PhRvD.112f3537T",
-   "citations": 13
+   "citations": 13,
+   "bibtex": "@article{DES:2025xse,\n    author = \"To, Chun-Hao and others\",\n    collaboration = \"DES\",\n    title = \"{Dark energy survey: Modeling strategy for multiprobe cluster cosmology and validation for the full six-year dataset}\",\n    eprint = \"2503.13631\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2025-0883, FERMILAB-PUB-25-0114-PPD\",\n    doi = \"10.1103/ynqj-6hsb\",\n    journal = \"Phys. Rev. D\",\n    volume = \"112\",\n    number = \"6\",\n    pages = \"063537\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025ApJ...989...21D",
@@ -580,7 +623,8 @@
    "pubdate": "2025-08-00",
    "url": "https://arxiv.org/abs/2505.05570",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025ApJ...989...21D",
-   "citations": 15
+   "citations": 15,
+   "bibtex": "@article{DELVE:2025khn,\n    author = \"Doliva-Dolinsky, Amandine and others\",\n    collaboration = \"DELVE\",\n    title = \"{The NGC 3109 Satellite System: The First Systematic Resolved Search for Dwarf Galaxies Around an SMC-mass Host}\",\n    eprint = \"2505.05570\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.GA\",\n    reportNumber = \"FERMILAB-PUB-25-0349-PPD\",\n    doi = \"10.3847/1538-4357/ade9b8\",\n    journal = \"Astrophys. J.\",\n    volume = \"989\",\n    number = \"1\",\n    pages = \"21\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025arXiv250607432P",
@@ -593,7 +637,8 @@
    "pubdate": "2025-06-00",
    "url": "https://arxiv.org/abs/2506.07432",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025arXiv250607432P",
-   "citations": 41
+   "citations": 41,
+   "bibtex": "@article{ACT:2025llb,\n    author = \"Pandey, S. and others\",\n    collaboration = \"ACT, DES\",\n    title = \"{Constraints on cosmology and baryonic feedback with joint analysis of Dark Energy Survey Year 3 lensing data and ACT DR6 thermal Sunyaev-Zel'dovich effect observations}\",\n    eprint = \"2506.07432\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-25-0394-PPD\",\n    month = \"6\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025OJAp....8E..65A",
@@ -606,7 +651,8 @@
    "pubdate": "2025-05-00",
    "url": "https://arxiv.org/abs/2501.05683",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025OJAp....8E..65A",
-   "citations": 21
+   "citations": 21,
+   "bibtex": "@article{DES:2025cup,\n    author = \"Anbajagane, Dhayaa and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 6 Results: Synthetic-source Injection Across the Full Survey Using Balrog}\",\n    eprint = \"2501.05683\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-24-0940-T, DES-2024-0867\",\n    doi = \"10.33232/001c.138627\",\n    journal = \"Open J. Astrophys.\",\n    volume = \"8\",\n    pages = \"001c.138627\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025ApJ...982..186L",
@@ -619,7 +665,8 @@
    "pubdate": "2025-04-00",
    "url": "https://arxiv.org/abs/2409.04535",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025ApJ...982..186L",
-   "citations": 10
+   "citations": 10,
+   "bibtex": "@article{ACT:2024fqd,\n    author = \"Lokken, M. and others\",\n    collaboration = \"ACT, DES\",\n    title = \"{Superclustering with the Atacama Cosmology Telescope and Dark Energy Survey. II. Anisotropic Large-scale Coherence in Hot Gas, Galaxies, and Dark Matter}\",\n    eprint = \"2409.04535\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-24-0570-PPD\",\n    doi = \"10.3847/1538-4357/adb622\",\n    journal = \"Astrophys. J.\",\n    volume = \"982\",\n    number = \"2\",\n    pages = \"186\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025PhRvD.111f3504G",
@@ -632,7 +679,8 @@
    "pubdate": "2025-03-00",
    "url": "https://arxiv.org/abs/2405.10881",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025PhRvD.111f3504G",
-   "citations": 32
+   "citations": 32,
+   "bibtex": "@article{DES:2024jgw,\n    author = \"Gatti, M. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 3 results: Simulation-based cosmological inference with wavelet harmonics, scattering transforms, and moments of weak lensing mass maps. II. cosmological results}\",\n    eprint = \"2405.10881\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2023-0820, FERMILAB-PUB-24-0255-PPD\",\n    doi = \"10.1103/PhysRevD.111.063504\",\n    journal = \"Phys. Rev. D\",\n    volume = \"111\",\n    number = \"6\",\n    pages = \"063504\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025ApJ...979..176T",
@@ -645,7 +693,8 @@
    "pubdate": "2025-02-00",
    "url": "https://arxiv.org/abs/2408.00865",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025ApJ...979..176T",
-   "citations": 36
+   "citations": 36,
+   "bibtex": "@article{DELVE:2024yct,\n    author = \"Tan, Chin Yi and others\",\n    collaboration = \"DELVE\",\n    title = \"{A Pride of Satellites in the Constellation Leo? Discovery of the Leo VI Milky Way Satellite Ultra-faint Dwarf Galaxy with DELVE Early Data Release 3}\",\n    eprint = \"2408.00865\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.GA\",\n    reportNumber = \"FERMILAB-PUB-24-0358-LDRD-PPD\",\n    doi = \"10.3847/1538-4357/ad9b0c\",\n    journal = \"Astrophys. J.\",\n    volume = \"979\",\n    number = \"2\",\n    pages = \"176\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025ApJ...979..223W",
@@ -658,7 +707,8 @@
    "pubdate": "2025-02-00",
    "url": "https://arxiv.org/abs/2311.08664",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025ApJ...979..223W",
-   "citations": 5
+   "citations": 5,
+   "bibtex": "@article{Wang:2023xdb,\n    author = \"Wang, Kuan and Mansfield, Philip and Anbajagane, Dhayaa and Avestruz, Camille\",\n    title = \"{Merger Response of Halo Anisotropy Properties}\",\n    eprint = \"2311.08664\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.3847/1538-4357/ada4aa\",\n    journal = \"Astrophys. J.\",\n    volume = \"979\",\n    number = \"2\",\n    pages = \"223\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2025PhRvD.111d3529P",
@@ -671,7 +721,8 @@
    "pubdate": "2025-02-00",
    "url": "https://arxiv.org/abs/2401.18072",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2025PhRvD.111d3529P",
-   "citations": 18
+   "citations": 18,
+   "bibtex": "@article{Pandey:2024pyt,\n    author = \"Pandey, Shivam and Salcido, Jaime and To, Chun-Hao and Hill, J. Colin and Anbajagane, Dhayaa and Baxter, Eric J. and McCarthy, Ian G.\",\n    title = \"{Accurate connected modeling of gas thermodynamics and matter distribution}\",\n    eprint = \"2401.18072\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1103/PhysRevD.111.043529\",\n    journal = \"Phys. Rev. D\",\n    volume = \"111\",\n    number = \"4\",\n    pages = \"043529\",\n    year = \"2025\"\n}"
   },
   {
    "bibcode": "2024OJAp....7E.108A",
@@ -684,7 +735,8 @@
    "pubdate": "2024-12-00",
    "url": "https://arxiv.org/abs/2409.03822",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2024OJAp....7E.108A",
-   "citations": 34
+   "citations": 34,
+   "bibtex": "@article{Anbajagane:2024nzx,\n    author = \"Anbajagane, Dhayaa and Pandey, Shivam and Chang, Chihway\",\n    title = \"{Map-level baryonification: Efficient modelling of higher-order correlations in the weak lensing and thermal Sunyaev-Zeldovich fields}\",\n    eprint = \"2409.03822\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.33232/001c.126788\",\n    month = \"9\",\n    year = \"2024\"\n}"
   },
   {
    "bibcode": "2024OJAp....7E.110G",
@@ -697,7 +749,8 @@
    "pubdate": "2024-12-00",
    "url": "https://arxiv.org/abs/2312.16289",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2024OJAp....7E.110G",
-   "citations": 7
+   "citations": 7,
+   "bibtex": "@article{Gagnon:2023mnd,\n    author = \"Gagnon, E. L. and Anbajagane, D. and Prat, J. and Chang, C. and Frieman, J.\",\n    title = \"{Cosmological Constraints from Combining Photometric Galaxy Surveys and Gravitational Wave Observatories}\",\n    eprint = \"2312.16289\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-23-0838-PPD\",\n    doi = \"10.33232/001c.127131\",\n    month = \"12\",\n    year = \"2023\"\n}"
   },
   {
    "bibcode": "2024OJAp....7E..89C",
@@ -710,7 +763,8 @@
    "pubdate": "2024-10-00",
    "url": "https://arxiv.org/abs/2407.19081",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2024OJAp....7E..89C",
-   "citations": 5
+   "citations": 5,
+   "bibtex": "@article{DES:2024xup,\n    author = \"Chicoine, N. and others\",\n    collaboration = \"DES\",\n    title = \"{Weak Gravitational Lensing around Low Surface Brightness Galaxies in the DES Year 3 Data}\",\n    eprint = \"2407.19081\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.GA\",\n    reportNumber = \"DES-2023-0778, FERMILAB-PUB-23-380-PPD\",\n    doi = \"10.33232/001c.124536\",\n    journal = \"Open J. Astrophys.\",\n    volume = \"7\",\n    pages = \"001c.124536\",\n    year = \"2024\"\n}"
   },
   {
    "bibcode": "2024ApJ...974....4H",
@@ -723,7 +777,8 @@
    "pubdate": "2024-10-00",
    "url": "https://arxiv.org/abs/2312.08337",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2024ApJ...974....4H",
-   "citations": 1
+   "citations": 1,
+   "bibtex": "@article{Han:2023aba,\n    author = \"Han, Chi and Wang, Kuan and Avestruz, Camille and Anbajagane, Dhayaa\",\n    title = \"{Subhalos in Galaxy Clusters: Coherent Accretion and Internal Orbits}\",\n    eprint = \"2312.08337\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.GA\",\n    doi = \"10.3847/1538-4357/ad736b\",\n    journal = \"Astrophys. J.\",\n    volume = \"974\",\n    number = \"1\",\n    pages = \"4\",\n    year = \"2024\"\n}"
   },
   {
    "bibcode": "2024JCAP...07..037T",
@@ -736,7 +791,8 @@
    "pubdate": "2024-07-00",
    "url": "https://arxiv.org/abs/2402.00110",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2024JCAP...07..037T",
-   "citations": 21
+   "citations": 21,
+   "bibtex": "@article{To:2024oaf,\n    author = \"To, Chun-Hao and Pandey, Shivam and Krause, Elisabeth and Dalal, Nihar and Anbajagane, Dhayaa and Weinberg, David H.\",\n    title = \"{Deciphering baryonic feedback with galaxy clusters}\",\n    eprint = \"2402.00110\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1088/1475-7516/2024/07/037\",\n    journal = \"JCAP\",\n    volume = \"07\",\n    pages = \"037\",\n    year = \"2024\"\n}"
   },
   {
    "bibcode": "2024OJAp....7E..29S",
@@ -749,7 +805,8 @@
    "pubdate": "2024-04-00",
    "url": "https://arxiv.org/abs/2311.03491",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2024OJAp....7E..29S",
-   "citations": 8
+   "citations": 8,
+   "bibtex": "@article{Shao:2023stb,\n    author = \"Shao, Mufan and Anbajagane, Dhayaa\",\n    title = \"{Baryonic Imprints on DM Halos: the concentration-mass relation and its dependence on halo and galaxy properties}\",\n    eprint = \"2311.03491\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.GA\",\n    doi = \"10.33232/001c.116969\",\n    month = \"11\",\n    year = \"2023\"\n}"
   },
   {
    "bibcode": "2024PhRvD.109f3534G",
@@ -762,7 +819,8 @@
    "pubdate": "2024-03-00",
    "url": "https://arxiv.org/abs/2310.17557",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2024PhRvD.109f3534G",
-   "citations": 47
+   "citations": 47,
+   "bibtex": "@article{DES:2023qwe,\n    author = \"Gatti, M. and others\",\n    collaboration = \"DES\",\n    title = \"{Dark Energy Survey Year 3 results: Simulation-based cosmological inference with wavelet harmonics, scattering transforms, and moments of weak lensing mass maps. Validation on simulations}\",\n    eprint = \"2310.17557\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"DES-2015-0048, FERMILAB-PUB-23-634-PPD\",\n    doi = \"10.1103/PhysRevD.109.063534\",\n    journal = \"Phys. Rev. D\",\n    volume = \"109\",\n    number = \"6\",\n    pages = \"063534\",\n    year = \"2024\"\n}"
   },
   {
    "bibcode": "2024JCAP...03..062A",
@@ -775,7 +833,8 @@
    "pubdate": "2024-03-00",
    "url": "https://arxiv.org/abs/2310.02349",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2024JCAP...03..062A",
-   "citations": 14
+   "citations": 14,
+   "bibtex": "@article{Anbajagane:2023wif,\n    author = \"Anbajagane, Dhayaa and Chang, Chihway and Lee, Hayden and Gatti, Marco\",\n    title = \"{Primordial non-Gaussianities with weak lensing: information on non-linear scales in the Ulagam full-sky simulations}\",\n    eprint = \"2310.02349\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1088/1475-7516/2024/03/062\",\n    journal = \"JCAP\",\n    volume = \"03\",\n    pages = \"062\",\n    year = \"2024\"\n}"
   },
   {
    "bibcode": "2024MNRAS.527.9378A",
@@ -788,7 +847,8 @@
    "pubdate": "2024-01-00",
    "url": "https://arxiv.org/abs/2310.00059",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2024MNRAS.527.9378A",
-   "citations": 21
+   "citations": 21,
+   "bibtex": "@article{DES:2023laf,\n    author = \"Anbajagane, D. and others\",\n    collaboration = \"DES, SPT, ACT\",\n    title = \"{Cosmological shocks around galaxy clusters: a coherent investigation with DES, SPT,~and ACT}\",\n    eprint = \"2310.00059\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.GA\",\n    reportNumber = \"FERMILAB-PUB-23-525-PPD\",\n    doi = \"10.1093/mnras/stad3726\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"527\",\n    number = \"3\",\n    pages = \"9378--9404\",\n    year = \"2024\"\n}"
   },
   {
    "bibcode": "2023MNRAS.526.5530A",
@@ -801,7 +861,8 @@
    "pubdate": "2023-12-00",
    "url": "https://arxiv.org/abs/2308.03863",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2023MNRAS.526.5530A",
-   "citations": 36
+   "citations": 36,
+   "bibtex": "@article{DES:2023juo,\n    author = \"Anbajagane, D. and others\",\n    collaboration = \"DES\",\n    title = \"{Beyond the 3rd moment: a practical study of using lensing convergence CDFs for cosmology with DES Y3}\",\n    eprint = \"2308.03863\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-23-415-PPD\",\n    doi = \"10.1093/mnras/stad3118\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"526\",\n    number = \"4\",\n    pages = \"5530--5554\",\n    year = \"2023\"\n}"
   },
   {
    "bibcode": "2023MNRAS.523.3258S",
@@ -814,7 +875,8 @@
    "pubdate": "2023-08-00",
    "url": "https://arxiv.org/abs/2212.05964",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.3258S",
-   "citations": 18
+   "citations": 18,
+   "bibtex": "@article{JonShao:2022ixl,\n    author = \"(Jon) Shao, M. and Anbajagane, Dhayaa and Chang, Chihway\",\n    title = \"{Baryonic imprints on DM haloes: the concentration{\\textendash}mass relation in the C~amels simulations}\",\n    eprint = \"2212.05964\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1093/mnras/stad1620\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"523\",\n    number = \"3\",\n    pages = \"3258--3273\",\n    year = \"2023\"\n}"
   },
   {
    "bibcode": "2022MNRAS.517.5303L",
@@ -827,7 +889,8 @@
    "pubdate": "2022-12-00",
    "url": "https://arxiv.org/abs/2207.05834",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2022MNRAS.517.5303L",
-   "citations": 33
+   "citations": 33,
+   "bibtex": "@article{Lee:2022svd,\n    author = \"Lee, Elizabeth and Anbajagane, Dhayaa and Singh, Priyanka and Chluba, Jens and Nagai, Daisuke and Kay, Scott T. and Cui, Weiguang and Dolag, Klaus and Yepes, Gustavo\",\n    title = \"{A multisimulation study of relativistic SZ temperature scalings in galaxy clusters and groups}\",\n    eprint = \"2207.05834\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1093/mnras/stac2781\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"517\",\n    number = \"4\",\n    pages = \"5303--5324\",\n    year = \"2022\"\n}"
   },
   {
    "bibcode": "2022MNRAS.514.1645A",
@@ -840,7 +903,8 @@
    "pubdate": "2022-08-00",
    "url": "https://arxiv.org/abs/2111.04778",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2022MNRAS.514.1645A",
-   "citations": 41
+   "citations": 41,
+   "bibtex": "@article{Anbajagane:2021bnx,\n    author = \"Anbajagane, D. and others\",\n    title = \"{Shocks in the stacked Sunyaev-Zel{\\textquoteright}dovich profiles of clusters II: Measurements from SPT-SZ +~Planck Compton-y map}\",\n    eprint = \"2111.04778\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    reportNumber = \"FERMILAB-PUB-21-731-PPD\",\n    doi = \"10.1093/mnras/stac1376\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"514\",\n    number = \"2\",\n    pages = \"1645--1663\",\n    year = \"2022\"\n}"
   },
   {
    "bibcode": "2022MNRAS.514.4026S",
@@ -853,7 +917,8 @@
    "pubdate": "2022-08-00",
    "url": "https://arxiv.org/abs/2202.14006",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2022MNRAS.514.4026S",
-   "citations": 34
+   "citations": 34,
+   "bibtex": "@article{Stiskalek:2022nsr,\n    author = \"Stiskalek, Richard and Bartlett, Deaglan J. and Desmond, Harry and Anbajagane, Dhayaa\",\n    title = \"{The scatter in the galaxy{\\textendash}halo connection: a machine learning analysis}\",\n    eprint = \"2202.14006\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.GA\",\n    doi = \"10.1093/mnras/stac1609\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"514\",\n    number = \"3\",\n    pages = \"4026--4045\",\n    year = \"2022\"\n}"
   },
   {
    "bibcode": "2022ApJ...933...48F",
@@ -866,7 +931,8 @@
    "pubdate": "2022-07-00",
    "url": "https://arxiv.org/abs/2204.13578",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2022ApJ...933...48F",
-   "citations": 12
+   "citations": 12,
+   "bibtex": "@article{Farahi:2022sbc,\n    author = \"Farahi, Arya and Nagai, Daisuke and Anbajagane, Dhayaa\",\n    title = \"{Correlations of Dark Matter, Gas, and Stellar Profiles in Dark Matter Halos}\",\n    eprint = \"2204.13578\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.3847/1538-4357/ac721e\",\n    journal = \"Astrophys. J.\",\n    volume = \"933\",\n    number = \"1\",\n    pages = \"48\",\n    year = \"2022\"\n}"
   },
   {
    "bibcode": "2022MNRAS.514..977C",
@@ -879,7 +945,8 @@
    "pubdate": "2022-07-00",
    "url": "https://arxiv.org/abs/2202.14038",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2022MNRAS.514..977C",
-   "citations": 93
+   "citations": 93,
+   "bibtex": ""
   },
   {
    "bibcode": "2022ApJ...931..166F",
@@ -892,7 +959,8 @@
    "pubdate": "2022-06-00",
    "url": "https://arxiv.org/abs/2202.09903",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2022ApJ...931..166F",
-   "citations": 17
+   "citations": 17,
+   "bibtex": ""
   },
   {
    "bibcode": "2022MNRAS.510.2980A",
@@ -905,7 +973,8 @@
    "pubdate": "2022-02-00",
    "url": "https://arxiv.org/abs/2110.01683",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2022MNRAS.510.2980A",
-   "citations": 32
+   "citations": 32,
+   "bibtex": "@article{Anbajagane:2021gfx,\n    author = \"Anbajagane, Dhayaa and others\",\n    title = \"{Galaxy velocity bias in cosmological simulations: towards per cent-level calibration}\",\n    eprint = \"2110.01683\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1093/mnras/stab3587\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"510\",\n    number = \"2\",\n    pages = \"2980--2997\",\n    year = \"2022\"\n}"
   },
   {
    "bibcode": "2022MNRAS.509.3441A",
@@ -918,7 +987,8 @@
    "pubdate": "2022-01-00",
    "url": "https://arxiv.org/abs/2109.02713",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.3441A",
-   "citations": 58
+   "citations": 58,
+   "bibtex": "@article{Anbajagane:2021bvx,\n    author = \"Anbajagane, Dhayaa and Evrard, August E. and Farahi, Arya\",\n    title = \"{Baryonic imprints on DM haloes: population statistics from dwarf galaxies to galaxy clusters}\",\n    eprint = \"2109.02713\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1093/mnras/stab3177\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"509\",\n    number = \"3\",\n    pages = \"3441--3461\",\n    year = \"2021\"\n}"
   },
   {
    "bibcode": "2021JCAP...11..014A",
@@ -931,7 +1001,8 @@
    "pubdate": "2021-11-00",
    "url": "https://arxiv.org/abs/2107.07538",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2021JCAP...11..014A",
-   "citations": 19
+   "citations": 19,
+   "bibtex": "@article{Andrade:2021njl,\n    author = \"Andrade, Uendert and Anbajagane, Dhayaa and von Marttens, Rodrigo and Huterer, Dragan and Alcaniz, Jailson\",\n    title = \"{A test of the standard cosmological model with geometry and growth}\",\n    eprint = \"2107.07538\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.CO\",\n    doi = \"10.1088/1475-7516/2021/11/014\",\n    journal = \"JCAP\",\n    volume = \"11\",\n    pages = \"014\",\n    year = \"2021\"\n}"
   },
   {
    "bibcode": "2020MNRAS.495..686A",
@@ -944,7 +1015,8 @@
    "pubdate": "2020-06-00",
    "url": "https://arxiv.org/abs/2001.02283",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2020MNRAS.495..686A",
-   "citations": 50
+   "citations": 50,
+   "bibtex": "@article{Anbajagane:2020sww,\n    author = \"Anbajagane, Dhayaa and Evrard, August E. and Farahi, Arya and Barnes, David J. and Dolag, Klaus and McCarthy, Ian G. and Nelson, Dylan and Pillepich, Annalisa\",\n    title = \"{Stellar property statistics of massive haloes from cosmological hydrodynamics simulations: common kernel shapes}\",\n    eprint = \"2001.02283\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"astro-ph.GA\",\n    doi = \"10.1093/mnras/staa1147\",\n    journal = \"Mon. Not. Roy. Astron. Soc.\",\n    volume = \"495\",\n    number = \"1\",\n    pages = \"686--704\",\n    year = \"2020\"\n}"
   },
   {
    "bibcode": "2018NIMPA.903..267P",
@@ -957,7 +1029,8 @@
    "pubdate": "2018-09-00",
    "url": "https://arxiv.org/abs/1805.11306",
    "ads_url": "https://ui.adsabs.harvard.edu/abs/2018NIMPA.903..267P",
-   "citations": 28
+   "citations": 28,
+   "bibtex": "@article{Pushkin:2018wdl,\n    author = \"Pushkin, K. and others\",\n    title = \"{Study of radon reduction in gases for rare event search experiments}\",\n    eprint = \"1805.11306\",\n    archivePrefix = \"arXiv\",\n    primaryClass = \"physics.ins-det\",\n    doi = \"10.1016/j.nima.2018.06.076\",\n    journal = \"Nucl. Instrum. Meth. A\",\n    volume = \"903\",\n    pages = \"267--276\",\n    year = \"2018\"\n}"
   }
  ]
 }
