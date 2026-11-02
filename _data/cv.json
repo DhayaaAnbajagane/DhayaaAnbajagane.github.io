@@ -7,13 +7,19 @@
     {
      "when": "2026 –",
      "paragraphs": [
-      "<strong class=\"cv-item-title\">NASA Einstein Fellow</strong> at Stanford"
+      "<strong class=\"cv-item-title\">NHFP Einstein Fellow</strong> at Stanford University"
      ]
     },
     {
      "when": "2026 –",
      "paragraphs": [
-      "<strong class=\"cv-item-title\">KIPAC Fellow</strong> at Stanford/SLAC."
+      "<strong class=\"cv-item-title\">KIPAC Fellow</strong> at Stanford University/SLAC."
+     ]
+    },
+    {
+     "when": "2026 –",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Visiting Researcher</strong> at Perimeter Institute"
      ]
     }
    ]
@@ -44,6 +50,12 @@
    "title": "Teaching",
    "entries": [
     {
+     "when": "Fall 2026",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Astrophysical Data Analysis with the Rubin Observatory</strong>, Guest lecturer for two weeks, focusing on cosmology in photometric surveys"
+     ]
+    },
+    {
      "when": "Spring 2023, 2024",
      "paragraphs": [
       "<strong class=\"cv-item-title\">Intro to Astrophysics</strong>, Teaching Assistant &amp; Guest lecturer for ASTRO 133, Introduction to Astrophysics for Majors"
@@ -63,7 +75,7 @@
     {
      "when": "2026",
      "paragraphs": [
-      "<strong class=\"cv-item-title\">NASA Hubble Einstein Fellowship</strong>"
+      "<strong class=\"cv-item-title\">NASA Hubble Fellowship Program, Einstein Fellowship</strong>"
      ]
     },
     {
@@ -138,9 +150,15 @@
    "title": "Service",
    "entries": [
     {
-     "when": "2022 – 2026",
+     "when": "2024 – 2026",
      "paragraphs": [
       "<strong class=\"cv-item-title\">Working group lead, Synthetic Source Injection</strong>, Dark Energy Survey. <em>Lead a group of grad students, postdocs, and senior researchers in developing data-driven methods to calibrate the image data and processing pipelines for the Dark Energy Survey legacy dataset. Our group produced the largest synthetic, calibration catalog to date.</em>"
+     ]
+    },
+    {
+     "when": "2025 – 2026",
+     "paragraphs": [
+      "<strong class=\"cv-item-title\">Organizer, Academic Pathways seminar series</strong>, Astronomy and Astrophysics, University of Chicago. <em>Started a new series centered on candid conversations with senior academics (faculty, lecturers, staff scientists, etc.) on the various pathways to pursuing futures in academia.</em>"
      ]
     },
     {
@@ -178,17 +196,22 @@
       {
        "name": "Kyle Miller",
        "now": "",
-       "project": "<em>PNG constraints with WL 3pt functions</em>"
+       "project": "<em>Constraining higher-spin PNGs with WL 3pt functions</em>"
       },
       {
        "name": "Ben Sherwin",
        "now": "",
-       "project": "<em>Baryons and Cosmology from 3pt cross-correlations</em>"
+       "project": "<em>Baryons and Cosmology from 3pt cross-correlations of WL and tSZ</em>"
+      },
+      {
+       "name": "Zhuoqi (Jackie) Zhang",
+       "now": "",
+       "project": "<em>Inverse galaxy galaxy-lensing with DES Y6 and DECADE</em>"
       },
       {
        "name": "Lyla Choi",
        "now": "",
-       "project": "<em>Non-linear predictions of cosmological colliders</em>"
+       "project": "<em>Non-linear predictions of scalar and spin-2 cosmological colliders</em>"
       }
      ]
     },
