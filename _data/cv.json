@@ -32,8 +32,7 @@
      "paragraphs": [
       "<strong class=\"cv-item-title\">Ph.D., University of Chicago</strong> in Astronomy and Astrophysics.",
       "Advisor: Chihway Chang",
-      "Thesis: <em>\"Constraining the physics of inflation using wide-field weak lensing and tSZ surveys\"</em>",
-      "Research Interests: Weak lensing, inflation, wide-field photometric surveys, millimeter-wave surveys, cosmological simulations, data processing"
+      "Thesis: <em>\"Constraining the physics of inflation using wide-field weak lensing and tSZ surveys\"</em>"
      ]
     },
     {
@@ -52,7 +51,7 @@
     {
      "when": "Fall 2026",
      "paragraphs": [
-      "<strong class=\"cv-item-title\">Astrophysical Data Analysis with the Rubin Observatory</strong>, Guest lecturer for two weeks, focusing on cosmology in photometric surveys"
+      "<strong class=\"cv-item-title\">Astrophysical Data Analysis with the Rubin Observatory</strong>, Guest lecturer for three weeks, on measurements and inference in photometric surveys"
      ]
     },
     {
@@ -75,7 +74,7 @@
     {
      "when": "2026",
      "paragraphs": [
-      "<strong class=\"cv-item-title\">NASA Hubble Fellowship Program, Einstein Fellowship</strong>"
+      "<strong class=\"cv-item-title\">NASA Hubble Fellowship Program, Einstein Fellow</strong>"
      ]
     },
     {
@@ -129,7 +128,7 @@
     {
      "when": "2020",
      "paragraphs": [
-      "<strong class=\"cv-item-title\">NSF Graduate Research Fellow,</strong> awarded $100,000+ over 3 years for development of personal research program."
+      "<strong class=\"cv-item-title\">NSF Graduate Research Fellow,</strong> awarded $100,000+ over 3 years for developing my independent research program."
      ]
     },
     {
@@ -193,6 +192,11 @@
     {
      "when": "2026 –",
      "students": [
+      {
+       "name": "Roy Zhao",
+       "now": "",
+       "project": "<em>Understanding PNGs in LSS using topological statistics</em>"
+      },
       {
        "name": "Kyle Miller",
        "now": "",
